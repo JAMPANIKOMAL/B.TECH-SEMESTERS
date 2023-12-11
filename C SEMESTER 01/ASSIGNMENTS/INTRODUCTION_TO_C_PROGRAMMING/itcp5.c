@@ -9,21 +9,22 @@ int main()
     scanf("%d", &b);
     printf("Enter 0 for Sum, 1 for Difference, 2 for Product and 3 for Division of your numbers. ");
     scanf("%d", &n);
+
     if(n==0)
     {
-        printf("%d", a+b);
+        printf("%d+%d=%d", a, b, a+b);
     }
     else if(n==1)
     {
-        printf("%d", a-b);
+        printf("%d-%d=%d", a, b, a-b);
     }
     else if(n==2)
     {
-        printf("%d", a*b);
+        printf("%d*%d=%d", a, b, a*b);
     }
     else if(n==3)
     {
-        printf("%d", a/b);
+        printf("%d/%d=%d", a, b, a/b);
     }
     else
     {
