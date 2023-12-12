@@ -10,6 +10,7 @@ int main()
     b=e-c; //Difference.
     d=b/a; //Division.
     a=b*c*d*e; //Product.
+    printf("a=%d, b=%d, c=%d, d=%d, e=%d\n", a, b, c, d, e);
 
     //Data type: Float (float).
     //Initialization:
@@ -19,6 +20,7 @@ int main()
     b1=e1-c1; //Difference.
     d1=b1/a1; //Division.
     a1=b1*c1*d1*e1; //Product.
+    printf("a1=%f, b1=%f, c1=%f, d1=%f, e1=%f\n", a1, b1, c1, d1, e1);
 
 
     //For int, float and char:
