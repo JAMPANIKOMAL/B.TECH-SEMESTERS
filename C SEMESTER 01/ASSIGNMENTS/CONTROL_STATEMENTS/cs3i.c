@@ -1,26 +1,22 @@
-//Program to print 9th question * pattern 
+//Practice using loops (while, do-while, for) to print all 10 patterns (triangles, squares, etc.).
+//Program to print a rectangle of stars using for loop.
 #include <stdio.h>
 int main()
 {
-	int i, j, k, n;
-	printf("Enter your number: ");
+	int i, j, m, n;
+	printf("Enter width of rectangle: ");
 	scanf("%d", &n);
+	printf("Enter height of rectangle: ");
+	scanf("%d", &m);
 
-	for(i=1; i<=n; i++)
+	for(i=1; i<=m; i++)
 	{
-		for(j=1; j<=i-1; j++)
+		for(j=1; j<=n; j++)
 		{
-			printf(" ");
+			printf("* ");
 		}
-		
-		for(k=1; k<=n-i+1; k++)
-		{
-			printf("*");
-		}
-		
-	    printf("\n");	
-	
-	}
+		printf("\n");
+	}	
 	
 	return 0;
 }

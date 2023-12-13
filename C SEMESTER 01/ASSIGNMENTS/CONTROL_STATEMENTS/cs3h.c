@@ -1,27 +1,43 @@
-//Program to print 8th question number pattern.
+//Practice using loops (while, do-while, for) to print all 10 patterns (triangles, squares, etc.).
+//Program to print a square (only outline) of stars using while loop.
 #include <stdio.h>
 int main()
 {
-	int i, j, k, l=0, n;
-	printf("Enter your number: ");
+	int i=1, j=1, k=1, m, n;
+	printf("Enter your number: ");  //Number is length of side of sqaure.
 	scanf("%d", &n);
 
-	for(i=1; i<=n; i++)
+	while(i<=n)
 	{
-		for(j=1; j<=n-i; j++)
+		if(i!=1 && i!=n)
 		{
-			printf(" ");
+			while(j<=n)
+			{
+			if (j==1 || j==n)
+			{
+				printf("* ");
+			}
+			else
+			{
+				printf("  ");
+			}
+			j++;
+			}
+			j=1;
 		}
-		
-		for(k=1; k<=i; k++)
+		else
 		{
-			l=l+1;
-			printf("%d", l);
-		}
-		
-	    printf("\n");	
+			while(k<=n)
+			{
+				printf("* ");
+				k++;
+			}
+			k=1;
+		}	
+		printf("\n");
+		i++;
 	}
 	
-
+	
 	return 0;
 }

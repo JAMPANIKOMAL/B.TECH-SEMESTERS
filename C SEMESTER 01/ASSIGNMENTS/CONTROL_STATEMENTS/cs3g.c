@@ -4,13 +4,14 @@
 int main()
 {
 	int i=1, j=1, n;
-	printf("Enter your number: ");
+	printf("Enter your number: ");  //Number is length of side of sqaure.
 	scanf("%d", &n);
+
 	do 
 	{	
 		do 
 		{
-			printf("*");
+			printf(" *");
 			j++;
 		}
 		while(j<=n);
