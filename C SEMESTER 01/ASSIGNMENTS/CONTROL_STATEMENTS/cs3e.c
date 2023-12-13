@@ -1,21 +1,25 @@
-//Program to print 5th question number pattern.
+//Practice using loops (while, do-while, for) to print all 10 patterns (triangles, squares, etc.).
+//Program to print a right angled triangle right angled at right hand side pointing downwards of stars using for loop.
 #include <stdio.h>
 int main()
 {
-	int i, j, k=0, n;
-	printf("Enter your number: ");
+	int i, j, k, n;
+	printf("Enter your number: ");  //Number is height of triangle.
 	scanf("%d", &n);
 
-	for(i=1; i<=n; i++)
+	for(i=n; 1<=i; i--)
 	{
-		for(j=n; i<=j; j--)
+		for(j=1; j<=(n-i); j++)
 		{
-			k=k+1;
-			printf("%d",k);
+			printf(" ");
 		}
 		
-	    printf("\n");	
-	
+		for(k=1; k<=n-j+1; k++)
+		{
+			printf("*");
+		}
+		
+		printf("\n");	
 	}
 	
 

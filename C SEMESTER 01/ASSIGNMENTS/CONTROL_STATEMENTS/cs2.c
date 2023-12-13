@@ -9,6 +9,7 @@ int main()
     scanf("%d", &b);
     printf("Enter 0 for Addition, 1 for Subtraction, 2 for multiplication and 3 for Division.\n");
     scanf("%d", &c);
+    
     switch(c)
     {
         case 0:

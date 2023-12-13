@@ -1,26 +1,25 @@
-//Program to print 1st question * pattern (refer questions in photos)
+//Practice using loops (while, do-while, for) to print all 10 patterns (triangles, squares, etc.).
+//Program to print a square of stars using do while loop.
 #include <stdio.h>
 int main()
 {
-	int i, j, k, n;
+	int i=1, j=1, n;
 	printf("Enter your number: ");
 	scanf("%d", &n);
-
-	for(i=1; i<=n; i++)
-	{
-		for(j=1; j<=n-i; j++)
-		{
-			printf(" ");
-		}
-		
-		for(k=1; k<=i; k++)
+	do 
+	{	
+		do 
 		{
 			printf("*");
+			j++;
 		}
-		
-	    printf("\n");	
+		while(j<=n);
+		printf("\n");
+		i++;
+		j=1;
 	}
+	while(i<=n);
 	
-
+	
 	return 0;
 }
