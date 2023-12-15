@@ -36,7 +36,7 @@ int main()
     {
         if(count!=0)
         {
-            for(int temp, count=0, k=0; k<=s-1; k++)
+            for(int temp, count=0, k=0; k<=s-2; k++)
             {
                 if (a[k] >= a[k+1])
                 {

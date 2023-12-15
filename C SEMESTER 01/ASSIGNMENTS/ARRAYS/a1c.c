@@ -4,7 +4,7 @@
 int main()
 {
     int s, p;
-    printf("Enter the size of 1d array: ");
+    printf("\nEnter the size of 1d array: ");
     scanf("%d", &s);
     int i, a[s];
     printf("\n");
@@ -17,7 +17,7 @@ int main()
     }
     printf("\n");
     
-    printf("Your 1d array is: \n");
+    printf("Your 1d array is: ");
 
     printf("{");
     for(i=0; i<s-1; i++)
@@ -32,21 +32,30 @@ int main()
 
     printf("\n");
 
-    printf("Enter the number to be searched in 1d array to be deleted: ");
+    printf("\nEnter the number to be searched in 1d array: ");
     scanf("%d", &p);
 
-    for(i=0; i<s; i++)
+    //printf("\n");
+
+    int count=0;
+
+    for(int i=0; i<s; i++)
     {
-       if (p=a[i])
+       if (p==a[i])
        {
-         printf("%d is in the array.", p);
-       }
-       else
-       {
-         printf("%d is not in the array.", p);
+         printf("%d is in the array.\n", p);
+         count=1;
        }
     }
-            
+
+    printf("\n");
+
+    if(count==0)
+    {
+      printf("%d is not in the array.\n", p);
+    }
+
+    printf("\n");      
 
     return 0;            
 
