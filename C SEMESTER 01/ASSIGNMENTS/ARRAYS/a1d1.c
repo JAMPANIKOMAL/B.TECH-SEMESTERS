@@ -16,16 +16,19 @@ int main()
         scanf("%d", &a[i]);
     }
     printf("\n");
+    
     printf("Your 1d array is: \n");
 
-    for(i=0; i<s; i++)
+    printf("{");
+    for(i=0; i<s-1; i++)
     {
-        printf("{");
         printf("%d, ", a[i]);
-        printf("}");
-        
-
     }
+    for(i=s-1; i<s; i++)
+    {
+        printf("%d", a[i]);
+    }
+    printf("}");
 
     printf("\n");
 
@@ -39,20 +42,26 @@ int main()
         scanf("%d", &p);
 
     } 
-        for(i=p; i<s-1; i++)
-        {
-            a[i]=a[i+1];
-        }
-        
+    for(i=p; i<s-1; i++)
+    {
+       a[i]=a[i+1];
+    }
+            
 
-        printf("Your new 1d array is: \n");
+    printf("Your new 1d array is: \n");
 
-        for(i=0; i<s-1; i++)
-        {
-            printf("{");
-            printf("%d, ", a[i]);
-            printf("}");
-        
-        }          
+    printf("{");
+    for(i=0; i<s-2; i++)
+    {
+        printf("%d, ", a[i]);
+    }
+    for(i=s-2; i<s-1; i++)
+    {
+        printf("%d", a[i]);
+    }
+    printf("}");
+
+
+    return 0;            
 
 }
