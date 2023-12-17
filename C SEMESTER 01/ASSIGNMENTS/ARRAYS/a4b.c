@@ -7,7 +7,6 @@ int main()
     int sizea;
     printf("Enter the size of of your first 1d sorted array: ");
     scanf("%d", &sizea);
-    int z=sizea;
     int a[sizea];
     printf("Enter the values of first 1d sorted array: \n");
     //Scanning values of first 1d sorted array from user.
@@ -19,7 +18,6 @@ int main()
     int sizeb;
     printf("Enter the size of of your second 1d sorted array: ");
     scanf("%d", &sizeb);
-    int y=sizeb;
     int b[sizeb];
     printf("Enter the values of second 1d sorted array: \n");
     //Scanning values of second 1d sorted array from user.
@@ -54,13 +52,15 @@ int main()
     }
     printf("}\n");
     
-    int sizec = y+z;
-    printf("%d", sizec);
+    int sizec = sizea+sizeb;
+    
     int c[sizec];
+
+    i=0, j=0, k=0;
 
     while (i<sizea || j<sizeb || k<sizec)
     {
-        if (a[i]<=b[j])
+        if (a[i]<=b[j] && i<sizea)
         {
             c[k]=a[i];
             k++;
