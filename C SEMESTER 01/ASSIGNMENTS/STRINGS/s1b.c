@@ -5,15 +5,18 @@
 int main ()
 {
     int sizea, sizeb;
-    printf("Enter the size of your first string: ");
+    printf("\nEnter the size of your first string: ");
     scanf("%d", &sizea);
-    printf("Enter the size of your first string: ");
-    scanf("%d", &sizeb);
-    char a[sizea], b[sizeb];
+    char a[sizea];
     printf("Enter your first string: ");
     scanf("%s", a);
+    printf("Enter the size of your second string: ");
+    scanf("%d", &sizeb);
+    char b[sizeb];
     printf("Enter your second string: ");
     scanf("%s", b);
+    printf("Your first string is %s.\n", a);
+    printf("Your second string is %s.\n", b);
     if (strlen(a) != strlen(b))
     {
         printf("Entered strings are not anagrams of each other.\n");
