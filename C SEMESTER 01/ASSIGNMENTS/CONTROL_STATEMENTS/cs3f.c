@@ -4,9 +4,9 @@
 int main()
 {
 	int i, j, n;
-	printf("Enter your number: ");  //Number is height of triangle.
+	printf("\nEnter your number: ");  //Number is height of triangle.
 	scanf("%d", &n);
-
+	printf("\n");
 	for(i=n; 1<=i; i--)
 	{
 		for(j=1; j<=i; j++)

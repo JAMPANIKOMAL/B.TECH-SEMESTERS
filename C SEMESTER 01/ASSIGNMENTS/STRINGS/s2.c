@@ -7,40 +7,40 @@ int main ()
     int sizea;
     printf("Enter the size of your string: ");
     scanf("%d", &sizea);
-    char a[sizea];
+    char astr[sizea];
     printf("Enter your string: ");
-    scanf("%s", a);
+    scanf("%s", astr);
     // char test='s';
     // test=test-32;
     // printf("%c", test);
 
     //Converting string to uppercases.
-    for (int i=0; i<strlen(a); i++)
+    for (int i=0; i<strlen(astr); i++)
     {
-        if (97<=a[i]<=122)
+        if ('a'<=astr[i] || astr[i]<='z')
         {
-            a[i]=a[i]-32;
+            astr[i]=astr[i]-32;
         }
         else
         {
             continue;
         }
     }
-    printf("String with all uppercases: %s\n", a);
+    printf("String with all uppercases: %s\n", astr);
+
     //Converting string to lowercase.
-    for (int i=0; i<strlen(a); i++)
+    for (int i=0; i<strlen(astr); i++)
     {
-        if (65<=a[i]<=90)
+        if ('A'<=astr[i] || astr[i]<='Z')
         {
-            a[i]=a[i]+32;
+            astr[i]=astr[i]+32;
         }
         else
         {
             continue;
         }
     }
-    
-    printf("String with all lowercases: %s\n", a);
+    printf("String with all lowercases: %s\n", astr);
     
 
     return 0;

@@ -6,7 +6,7 @@ int print_fibonacci(int g);
 int main()
 {
     int n, i;
-    printf("Enter your number n: ");
+    printf("\nEnter your number n: ");
     scanf("%d", &n);
 
     for(i=0; i<=n; i++)

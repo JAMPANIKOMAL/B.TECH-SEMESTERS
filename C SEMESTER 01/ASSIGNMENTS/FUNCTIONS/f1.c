@@ -6,7 +6,7 @@ int print_power(int g, int h);
 int main()
 {
     int m, n;
-    printf("Enter your base number m: ");
+    printf("\nEnter your base number m: ");
     scanf("%d", &m);
     printf("Enter your power n: ");
     scanf("%d", &n);
@@ -17,7 +17,7 @@ int main()
     }
     else
     {
-        printf("%d raised to the power %d is %d\n.", m, n, print_power(m,n));
+        printf("%d raised to the power %d is %d.\n", m, n, print_power(m,n));
     }
 
     return 0;

@@ -22,15 +22,16 @@ int main()
 
     // Printong the elements of the 1d array.
     printf("Your 1d array is: {");
-    for(i=0; i<size-2; i++)
+    for(i=0; i<size-1; i++)
     {
         printf("%d, ", a[i]);
     }
-    for(i=size-2; i<size-1; i++)
+    for(i=size-1; i<size; i++)
     {
         printf("%d", a[i]);
     }
     printf("}\n");
+    free(a);
  
  
     return 0;

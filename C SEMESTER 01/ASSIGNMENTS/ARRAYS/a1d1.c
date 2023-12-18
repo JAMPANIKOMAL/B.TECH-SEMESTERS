@@ -4,7 +4,7 @@
 int main()
 {
     int s, p;
-    printf("Enter the size of 1d array: ");
+    printf("\nEnter the size of 1d array: ");
     scanf("%d", &s);
     int i, a[s];
     printf("\n");
@@ -17,7 +17,7 @@ int main()
     }
     printf("\n");
     
-    printf("Your 1d array is: \n");
+    printf("Your 1d array is: ");
 
     printf("{");
     for(i=0; i<s-1; i++)
@@ -48,7 +48,7 @@ int main()
     }
             
 
-    printf("Your new 1d array is: \n");
+    printf("Your new 1d array is: ");
 
     printf("{");
     for(i=0; i<s-2; i++)
@@ -59,7 +59,7 @@ int main()
     {
         printf("%d", a[i]);
     }
-    printf("}");
+    printf("}\n");
 
 
     return 0;            

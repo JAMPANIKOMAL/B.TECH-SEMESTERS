@@ -4,7 +4,7 @@ void print_max(int g, int h, int i);
 int main()
 {
     int a, b, c;
-    printf("Enter your first number: ");
+    printf("\nEnter your first number: ");
     scanf("%d", &a);
     printf("Enter your second number: ");
     scanf("%d", &b);

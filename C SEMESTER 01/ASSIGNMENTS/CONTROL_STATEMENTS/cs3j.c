@@ -4,11 +4,11 @@
 int main()
 {
 	int i, j, k, m, n;
-	printf("Enter width of rectangle: ");
+	printf("\nEnter width of rectangle: ");
 	scanf("%d", &n);
 	printf("Enter height of rectangle: ");
 	scanf("%d", &m);
-
+	printf("\n");
 	for(i=1; i<=m; i++)
 	{
 			if(i!=1 && i!=m)

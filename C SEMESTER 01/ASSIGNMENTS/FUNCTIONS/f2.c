@@ -5,7 +5,7 @@ void check_prime(int g);
 int main()
 {
     int m, n;
-    printf("Enter your number: ");
+    printf("\nEnter your number: ");
     scanf("%d", &m);
     
     if(m==0)

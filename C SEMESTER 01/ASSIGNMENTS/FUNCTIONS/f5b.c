@@ -6,7 +6,7 @@ int print_factorial(int g);
 int main()
 {
     int n;
-    printf("Enter your number n: ");
+    printf("\nEnter your number n: ");
     scanf("%d", &n);
     printf("Factorial of %d is %d.\n", n, print_factorial(n));
 

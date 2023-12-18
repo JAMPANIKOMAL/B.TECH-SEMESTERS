@@ -4,8 +4,9 @@
 int main()
 {
 	int i=1, j=1, n;
-	printf("Enter your number: ");  //Number is length of side of sqaure.
+	printf("\nEnter your number: ");  //Number is length of side of sqaure.
 	scanf("%d", &n);
+	printf("\n");
 
 	do 
 	{	
