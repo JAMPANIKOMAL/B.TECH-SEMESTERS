@@ -1,6 +1,8 @@
 //Write a program to convert a string to uppercase or lowercase.
+//Not verified
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 int main ()
 {
@@ -10,36 +12,38 @@ int main ()
     char astr[sizea];
     printf("Enter your string: ");
     scanf("%s", astr);
+    toupper(astr);
     // char test='s';
     // test=test-32;
     // printf("%c", test);
 
     //Converting string to uppercases.
-    for (int i=0; i<strlen(astr); i++)
-    {
-        if (astr[i]>='a' && astr[i]<='z')
-        {
-            astr[i]=astr[i]-32;
-        }
-        else
-        {
-            continue;
-        }
-    }
+    // for (int i=0; i<strlen(astr); i++)
+    // {
+    //     if (astr[i]>='a' && astr[i]<='z')
+    //     {
+    //         astr[i]=astr[i]-32;
+    //     }
+    //     else
+    //     {
+    //         continue;
+    //     }
+    // }
     printf("String with all uppercases: %s\n", astr);
 
     //Converting string to lowercase.
-    for (int i=0; i<strlen(astr); i++)
-    {
-        if ('A'<=astr[i] || astr[i]<='Z')
-        {
-            astr[i]=astr[i]+32;
-        }
-        else
-        {
-            continue;
-        }
-    }
+    // for (int i=0; i<strlen(astr); i++)
+    // {
+    //     if ('A'<=astr[i] || astr[i]<='Z')
+    //     {
+    //         astr[i]=astr[i]+32;
+    //     }
+    //     else
+    //     {
+    //         continue;
+    //     }
+    // }
+    tolower(astr);
     printf("String with all lowercases: %s\n", astr);
     
 
