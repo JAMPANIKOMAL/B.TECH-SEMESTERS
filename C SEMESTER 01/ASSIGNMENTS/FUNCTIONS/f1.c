@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 int print_power(int g, int h);
+int a=3;
 
 int main()
 {
