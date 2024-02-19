@@ -4,6 +4,7 @@ using namespace std;
 int main ()
 {
     int n;
+    cout << endl;
     cout << "Enter the size of square: ";
     cin >> n;
     cout << endl;
@@ -34,6 +35,7 @@ int main ()
             cout << "\n";
         }
     }
-
+    cout << endl;
+    
     return 0;
 }
