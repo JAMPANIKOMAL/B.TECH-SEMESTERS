@@ -19,7 +19,7 @@ int main()
     enrollment_number(en);
     cout << endl << "Length of the name of the student: " << sn.length();
     int loen = 0;
-    int i = 0;
+    //int i = 0;
     while (en > 0)
     {
         en = en / 10;
