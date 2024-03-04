@@ -216,7 +216,7 @@ void display()
        cout << "\nThe elements of Linked List are: \n";
        for(PTR = FIRST; PTR != NULL; PTR = PTR -> NEXT)
        {
-            cout << PTR -> INFO;
+            cout << PTR -> INFO << endl;
        }
        cout << endl;
     }
