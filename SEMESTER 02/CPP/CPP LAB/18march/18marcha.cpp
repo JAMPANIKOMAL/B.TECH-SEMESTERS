@@ -1,13 +1,12 @@
-//CLASS, OBJECT AND ACCESS SPECIFIERS.
+//CLASS AND OBJECT.
 
 #include <iostream>
 using namespace std;
 
 class additionof2
 {
-    private:
-        int a, b, sum;
     public:
+        int a, b, sum;
         void input()
         {
             cout << "\nEnter your first number: ";
@@ -31,7 +30,6 @@ int main()
     s1.input();
     s1.calculate();
     s1.output();
-    //s1.a;
 
     return 0;
 }
