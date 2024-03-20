@@ -1,6 +1,5 @@
 //Write programs to manipulate arrays (sorting, searching, insertion, deletion).
 //Write a c programm to sort elements of 1d array in ascensing order. Array size and elements are user defined.
-//NOT WORKING
 #include <stdio.h>
 int main()
 {
@@ -18,8 +17,8 @@ int main()
         printf("Enter the value of element %d: ", i);
         scanf("%d", &a[i]);
     }
+
     printf("\n");
-    
     printf("Your 1d array is: \n");
     printf("{");
     for(i=0; i<size-1; i++)
@@ -33,28 +32,21 @@ int main()
     printf("}");
     printf("\n");
 
-    for(int j=0, count = 0; j<=size; j++)
+    //SORTING
+    for(int j=0; j<=size; j++)
     {
-        if(count!=0)
+        for(int temp, k=0; k<=size-2; k++)
         {
-            for(int temp, count=0, k=0; k<=size-2; k++)
+            if (a[k] >= a[k+1])
             {
-                if (a[k] >= a[k+1])
-                {
-                    temp=a[k];
-                    a[k]=a[k+1];
-                    a[k+1]=temp;
-                    count=1;
-                }
+                temp=a[k];
+                a[k]=a[k+1];
+                a[k+1]=temp;
             }
         }
-        else
-        {
-            break;
-        }
     }
-    printf("\n");
-            
+
+    printf("\n");        
     printf("Your new 1d array is: \n");
     printf("{");
     for(i=0; i<size-1; i++)
