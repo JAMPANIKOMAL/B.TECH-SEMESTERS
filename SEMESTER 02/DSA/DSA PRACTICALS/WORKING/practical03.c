@@ -7,7 +7,7 @@ int main()
 {
     int *array = NULL;
     int choice;
-    while (1)
+    while(1)
     {
         printf("\nSelect a choice from the following: ");
         printf("\n1 --> To allocate memory using malloc.");

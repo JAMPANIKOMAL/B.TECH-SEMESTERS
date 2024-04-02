@@ -20,7 +20,7 @@ int main()
         cin >> a[i]; 
     }
 
-    //PRINT ARRAY.
+    //PRINTING ARRAY.
     cout << endl << "Your array is: ";
     cout << "{";
     for(int i = 0; i < size-1; i++)

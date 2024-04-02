@@ -13,6 +13,8 @@ int main()
     printf("\nEnter the Size of Array: ");
     scanf("%d", &size);
     int array[size];
+
+    //SCANNING ARRAY.
     printf("\nEnter the Elements of Array are:\n");
     for (int i = 0; i < size; i++)
     {
@@ -21,7 +23,7 @@ int main()
     }
 
     int choice;
-    while (1)
+    while(1)
     {
         printf("\nSelect a choice from the following: ");
         printf("\n1 --> To Search Element using Linear Search.");
@@ -122,10 +124,15 @@ int binary_search(int a[], int x, int low, int high)
 
 void display(int a[], int size)
 {
-    printf("\nElements of Array are: \n");
-    for (int i = 0; i < size; i++)
+    printf("\nArray is: ");
+    printf("{");
+    for (int i = 0; i < size - 1; i++)
     {
-        printf("%d ", a[i]);
+        printf("%d, ", a[i]);
     }
-    printf("\n");
+    for (int i = size - 1; i < size; i++)
+    {
+        printf("%d", a[i]);
+    }
+    printf("}\n");
 }
