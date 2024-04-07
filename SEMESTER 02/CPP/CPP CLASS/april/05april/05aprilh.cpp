@@ -1,0 +1,1 @@
+//copy question from image.
