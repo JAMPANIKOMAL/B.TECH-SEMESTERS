@@ -17,5 +17,17 @@ class demo
         }
         
         demo(demo &x)
+        {
+            m = x.m;
+            n = x.n;
+            cout << "Copy constructor.";
+        }
 };
+
+int main()
+{
+    demo obj1(5, 6);
+    demo obj2(obj1);
+    obj2 = obj1;
+}
 
