@@ -31,10 +31,11 @@ void tranferfunds(BankAccount &from, BankAccount &to, long int amount)    //Shou
     {
         from.balance -= amount;
         to.balance += amount;
+        cout << "Transaction Unsuccesful." << endl;
     }
     else
     {
-        cout << "Insufficient Funds.";
+        cout << "Insufficient Funds. Transaction Unsuccesful." << endl;
     }
     
 }
