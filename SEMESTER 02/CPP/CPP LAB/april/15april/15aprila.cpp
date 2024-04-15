@@ -10,10 +10,12 @@ class Cart
 {
     private:
         int userid;
+        string username;
     public:
         Cart()
         {
-            userid = 0;
+            username = "User 01";
+            userid = 01;
         }
 
         class item
@@ -59,8 +61,15 @@ class Cart
                 cout << endl << "Enter the item number to be deleted: ";
                 cin >> i;
                 i--;
-                ci.erase(ci.begin() + i);
-                cout << "Item deleted successfully!" << endl;
+                if(i <= ci.size())
+                {
+                    ci.erase(ci.begin() + i);
+                    cout << "Item deleted successfully!" << endl;
+                }
+                else
+                {
+                    cout << "Invalid Item Number!" << endl;
+                }
             }
         }
 
