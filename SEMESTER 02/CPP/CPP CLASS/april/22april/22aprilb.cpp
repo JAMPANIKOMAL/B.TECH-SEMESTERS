@@ -24,25 +24,36 @@ You are tasked with developing a stock management system to efficiently handle t
 #include <iostream>
 using namespace std;
 
-class stock1
+class stock
 {
-    private:
-        string item_code;
-        int price;
-        int itmesno;
-    
     public:
-        stock1(string a, int b, int c)
+        class stock1
         {
-            item_code = a;
-            itmesno = b;
-            price = c;
-        }
+            private:
+                string item_code;
+                int price;
+                int itmesno;
+        
+            public:
+                stock1(string a, int b, int c)
+                {
+                    item_code = a;
+                    itmesno = b;
+                    price = c;
+                }
 
-        void displaydata()
+                void displaydata()
+                {
+                    cout << "Item Code: " << item_code << endl;
+                    cout << "Item Price: " << price << endl;
+                    cout << "Total number of items: " << itmesno << endl;
+                }
+        };
+
+        class stock2
         {
-            cout << "Item Code: " << item_code << endl;
-            cout << "Item Price: " << price << endl;
-            cout << "Total number of items: " << itmesno << endl;
-        }
+            public:
+
+        };
+    
 };
