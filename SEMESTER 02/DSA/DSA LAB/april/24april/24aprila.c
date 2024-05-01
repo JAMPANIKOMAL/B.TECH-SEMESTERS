@@ -95,6 +95,7 @@ int main()
 
             case 7:
             {
+                display();
                 break;
             }
             
