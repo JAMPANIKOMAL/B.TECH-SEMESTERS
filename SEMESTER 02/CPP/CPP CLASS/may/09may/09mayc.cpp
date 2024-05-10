@@ -1,4 +1,4 @@
-//MULTILEVEL INHERITANCE
+//2. MULTILEVEL INHERITANCE
 
 #include <iostream>
 using namespace std;
