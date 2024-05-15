@@ -1,7 +1,7 @@
 //Queue Using Linked List.
 
-#include <iostream>
-using namespace std;
+#include <stdio.h>
+#include <stdlib.h>
 
 struct node
 {
