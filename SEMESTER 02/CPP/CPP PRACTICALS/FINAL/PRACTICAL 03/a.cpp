@@ -8,7 +8,17 @@ float ftoc(float f);
 
 int main()
 {
+    cout << endl;
+    float f, c;
 
+    cout << "Enter temperature in Fahrenheit: ";
+    cin >> f;
+    cout << f <<"f = " << ftoc(f) << "c " << endl;
+
+    cout << "Enter temperature in Celcius: ";
+    cin >> c;
+    cout << c <<"c = " << ctof(c) << "f " << endl;
+    cout << endl;
 
     return 0;
 }

@@ -1,48 +1,40 @@
-//Write a Program to illustrate the use of the Friend function.
+//Write a C++ program to Store and Display Employee Information.
 
 #include <iostream>
 using namespace std;
 
-class Addition
+class employee
 {
     private:
-        int a;
-        int b;
+        string name;
+        long long mobileno;
+        long emplyeeid;
+        long salary;
 
     public:
-        void setdata()
+        void getdata(string n, long long m, long e, long s)
         {
-            cout << "Enter Value of a: ";
-            cin >> a;
-            cout << "Enter Value of b: ";
-            cin >> b;
+            name = n;
+            mobileno = m;
+            emplyeeid = e;
+            salary = s;
         }
 
-        void displaydata()
+        void printdata()
         {
-            cout << "a = " << a << endl;
-            cout << "b = " << b << endl; 
+            cout << "Name: " << name << endl;
+            cout << "Mobile Number: " << mobileno << endl;
+            cout << "Employee ID: " << emplyeeid << endl;
+            cout << "Salary: " << salary << endl;
         }
-
-        void friend printsum(Addition A1);
 };
-
-void printsum(Addition A1)
-{
-    cout << "a + b = " << A1.a + A1.b << endl;
-}
 
 int main()
 {
     cout << endl;
-
-    Addition a1;
-
-    a1.setdata();
-    cout << endl;
-    
-    a1.displaydata();
-    printsum(a1);
+    employee e1;
+    e1.getdata("Ram", 912348765, 01, 16000);
+    e1.printdata();
 
     cout << endl;
 
