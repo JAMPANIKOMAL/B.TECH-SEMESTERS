@@ -19,7 +19,7 @@ class derived : public base
         int d;
         void show()
         {
-            cout << "b = " << b << "d = " << d <<  endl;
+            cout << "b = " << b << endl << "d = " << d <<  endl;
         }
 };
 
@@ -31,7 +31,26 @@ int main()
     derived d1;
     base * bptr;
     bptr = &b1;
+    bptr -> b = 100;
+    bptr -> show();
+    cout << endl;
 
+    bptr = &d1;
+    bptr -> b = 200;
+    bptr -> show();
+    cout << endl;
 
+    derived * dptr;
+    dptr = &d1;
+    dptr -> d = 300;
+    dptr -> show();
+
+    // derived * d2;
+    // base b2;
+    // d2 = &b2;
+    // b2 -> s
+    
+    // cout << endl;
+    
     return 0;
 }
