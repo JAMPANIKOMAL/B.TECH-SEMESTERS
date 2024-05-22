@@ -1,4 +1,5 @@
 // Write a C program to implement Linear Search and Binary Search.
+//WORKING
 
 #include <stdio.h>
 #include <stdlib.h>

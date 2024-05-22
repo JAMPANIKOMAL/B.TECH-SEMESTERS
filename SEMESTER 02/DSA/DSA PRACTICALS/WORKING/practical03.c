@@ -1,4 +1,5 @@
 //Write a C program to implement DMA using malloc or calloc function.
+//WORKING
 
 #include <stdio.h>
 #include <stdlib.h>

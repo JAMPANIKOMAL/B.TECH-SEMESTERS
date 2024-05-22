@@ -1,4 +1,5 @@
 // Write a C program to implement Call by Value and Call by Refrence.
+//WORKING
 
 #include <stdio.h>
 

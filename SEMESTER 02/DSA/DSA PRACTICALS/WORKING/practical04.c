@@ -1,4 +1,5 @@
 //Write a C program to implement Stack operations using Array.
+//WORKING
 
 #include <stdio.h>
 #include <stdlib.h>

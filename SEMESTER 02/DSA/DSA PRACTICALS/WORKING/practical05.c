@@ -1,130 +1,141 @@
-//Write a C program for infix to postfix conversion using stack.
+// Write a C program for infix to postfix conversion using stack.
+//WORKING BUT TTU
 
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 struct Stack
 {
-    char * arr;
+    int size;
     int top;
-    int max;
-}typedef Stack;
+    char * array;
+};typedef struct Stack stack;
 
-int isoperator(char a);
-int isempty(Stack S);
-int precedence(char a);
-char * infixtopostfix(char * infix1);
+int precedence(char c);
+int isOperator(char c);
+int isEmpty(stack *ptr);
+int isFull(stack *ptr);
+char stackTop(stack *sp);
+void push(stack *ptr, char val);
+char pop(stack *ptr);
+char *infixToPostfix(char *infix);
 
 int main()
 {
-    char * infix;
-    printf("\nEnter your Infix expression: ");
+    char infix[100];
+    printf("Enter your infix expression: ");
     scanf("%s", infix);
-    char * postfix = infixtopostfix(infix);
-    printf("Infix: %s\n", infix);
-    printf("Postfix: %s\n", postfix);
-
-    printf("\n");
-
+    printf("Postfix expression is %s\n", infixToPostfix(infix));
     return 0;
 }
 
-char * infixtopostfix(char * infix1)
+int precedence(char c)
 {
-    Stack s1;
-    char * postfix = (char *)malloc(strlen(infix1) * sizeof(char));
-
-    s1.arr = (char *)malloc(strlen(infix1) * sizeof(char));
-    s1.top = -1;
-    s1.max = strlen(s1.arr);
-    printf("%s", sizeof(s1.arr));
-
-    int i = 0;
-    int j = 0;
-
-    while(infix1[i] != '\0')
+    if (c == '^')
     {
-        if(isoperator(infix1[i]))
+        return 3;
+    }
+    else if (c == '*' || c == '/')
+    {
+        return 2;
+    }
+    else if (c == '+' || c == '-')
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int isOperator(char c)
+{
+    return (c == '+' || c == '-' || c == '*' || c == '/' || c == '^');
+}
+
+int isEmpty(stack *ptr)
+{
+    return ptr->top == -1;
+}
+
+int isFull(stack *ptr)
+{
+    return ptr->top == ptr->size - 1;
+}
+
+char stackTop(stack *sp)
+{
+    return sp->array[sp->top];
+}
+
+void push(stack *ptr, char val)
+{
+    if (isFull(ptr))
+    {
+        printf("Stack Overflow! Cannot push element to stack\n");
+    }
+    else
+    {
+        ptr->top++;
+        ptr->array[ptr->top] = val;
+    }
+}
+
+char pop(stack *ptr)
+{
+    if (isEmpty(ptr))
+    {
+        printf("Stack is underflow! Cannot pop element in stack\n");
+        return -1;
+    }
+    else
+    {
+        char val = ptr->array[ptr->top];
+        ptr->top--;
+        return val;
+    }
+}
+
+char *infixToPostfix(char *infix)
+{
+    stack *sp = (stack *)malloc(sizeof(stack));
+    sp->size = 100;
+    sp->top = -1;
+    sp->array = (char *)malloc(sp->size * sizeof(char));
+    char *postfix = (char *)malloc((strlen(infix) + 1) * sizeof(char));
+    int i = 0, j = 0;
+    while (infix[i] != '\0')
+    {
+        if (!isOperator(infix[i]))
         {
-            if(isempty(s1))
+            postfix[j] = infix[i];
+            j++;
+            i++;
+        }
+        else
+        {
+            if (precedence(infix[i]) > precedence(stackTop(sp)))
             {
-                s1.arr[s1.top++] = infix1[i];
+                push(sp, infix[i]);
                 i++;
             }
             else
             {
-                if(precedence(infix1[i]) > precedence(s1.arr[s1.top]))
-                {
-                    s1.arr[s1.top++] = infix1[i];
-                    i++;
-                }
-                else
-                {
-                    postfix[j] = infix1[i];
-                    j++;
-                    i++;
-                }
+                postfix[j] = pop(sp);
+                j++;
             }
-            
-        }
-        else
-        {
-            postfix[j] = infix1[i];
-            j++;
-            i++;
         }
     }
-
-    while(isempty(s1))
+    while (!isEmpty(sp))
     {
-        postfix[j] = s1.arr[s1.top];
-        s1.top--;
+        postfix[j] = pop(sp);
         j++;
     }
+    postfix[j] = '\0';
+    free(sp->array);
+    free(sp);
     return postfix;
 }
 
-int isoperator(char a)
-{
-    if(a == '+' || a == '-' || a == '*' || a == '/' || a == '^')
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
-}
-
-int isempty(Stack S)
-{
-    if(S.top == -1)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
-}
-
-int precedence(char a)
-{
-    if(a == '^')
-    {
-        return 3;
-    }
-    else if(a == '*' || a == '/')
-    {
-        return 2;
-    }
-    else if(a == '+' || a == '-')
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
-}
