@@ -30,6 +30,6 @@ void printday()
     int dayInput;
     cout << "Enter a number between 0 and 6 to represent a day of the week (0: Sunday, 6: Saturday): ";
     cin >> dayInput;
-    cout << (DayOfWeek) dayInput;
+    cout << dayInput;
 
 }

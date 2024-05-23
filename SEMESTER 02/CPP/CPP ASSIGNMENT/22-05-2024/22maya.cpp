@@ -4,25 +4,10 @@
 #include <string>
 using namespace std;
 
-enum class DayOfWeek 
-{
-    sunday,
-    monday,
-    tuesday,
-    wednesday,
-    thursday,
-    friday,
-    saturday,
-};
+enum class DayOfWeek { sunday, monday, tuesday, wednesday, thursday, friday, saturday };
 
 void printDay(int dayNumber) 
 {
-    if (dayNumber < 0 || dayNumber > 6) 
-    {
-        cout << "Invalid input. Please enter a number between 0 and 6." << endl;
-        return;
-    }
-
     switch (dayNumber) 
     {
         case static_cast <int> (DayOfWeek :: sunday):
