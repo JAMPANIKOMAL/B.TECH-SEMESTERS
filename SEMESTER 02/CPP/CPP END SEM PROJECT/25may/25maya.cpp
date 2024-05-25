@@ -24,16 +24,18 @@ class patient : public sira
     protected:
         string citizenid;
         string bloodgroup;
+        long long uniquecode;
         
         vector <string> patient_names {"Tejas Prakash Patil", "Aashutosh Thakur", "Jampani Komal"};
         vector <string> patient_usernames {"tejas", "aashutosh", "komal"};
         vector <string> patient_password {"tejas1", "aashutosh1", "komal1"};
         vector <long long> patient_phone1{7720841778, 8102568219, 9182048179};
-        vector <long long> patient_phone2{-1, 9825818717, 9704427177}; //-1 represnts phone number not provided.
-        vector <string> patient_mail {"tppatil397@gmail.com", "thakuraashutosh@gmail.com", "jampanikomal2005@gmail.com"};
+        vector <long long> patient_phone2{0, 9825818717, 9704427177}; //0 represnts phone number not provided.
+        vector <string> patient_mail {"tppatil397@gmail.com", "thakuraashutosh13@gmail.com", "jampanikomal2005@gmail.com"};
         vector <string> patient_address {"Home World Hostel, Bhaijipura, Gandhinagar, Gujarat. - 382421", "Home World Hostel, Bhaijipura, Gandhinagar, Gujarat. - 382421", "Home World Hostel, Bhaijipura, Gandhinagar, Gujarat. - 382421"};
         vector <string> patient_bloodgroups {"B+", "O+", "B+"};
-        vector <string> patient_citizenid{"678677863561", "897765453442", "628122451761"};
+        vector <string> patient_citizenid{"230031101611052", "230031101611057", "230031101611054"};
+        vector <long long> patient_uniquecode {23052, 23057, 23054};
         
     public:
         int index;
@@ -67,7 +69,7 @@ class patient : public sira
         {
             cout << endl <<  "Enter Username: ";
             cin >> username;
-            cout << "Enter Pawword: ";
+            cout << "Enter Password: ";
             cin >> password;
 
             for(int i = 0; i < patient_usernames.size(); i++)
@@ -117,10 +119,12 @@ class patient : public sira
             patient_citizenid.push_back(citizenid);
             patient_usernames.push_back(username);
             patient_password.push_back(password);
+            patient_uniquecode.push_back(rand() % 100);
 
             cout << endl << "Sign Up Succesfull!" << endl << "Visit nearest hospital to complete KYC to acces all features of the app!" << endl;
             index = (patient_usernames.size() - 1);
-            menu();
+            cout << endl << "Login: ";
+            login();
         }
 
         void viewprofile()
@@ -132,6 +136,7 @@ class patient : public sira
             cout << endl << "Address: " << patient_address[index];
             cout << endl << "Blood Group: " << patient_bloodgroups[index];
             cout << endl << "Citizen ID: " << patient_citizenid[index];
+            cout << endl << "Unique Code: " << patient_uniquecode[index];
             cout << endl << "Username: " << patient_usernames[index] << endl;
         }
 
@@ -139,8 +144,6 @@ class patient : public sira
         {
             while(1)
             {
-
-            
                 int a;
                 cout << endl << "1. View Profile";
                 cout << endl << "2. View Nearby Hospitals.";
@@ -255,6 +258,179 @@ class patient : public sira
 
 };
 
+class doctor : public sira
+{
+    protected:
+        string citizenid;
+        string nmcid;
+        string bloodgroup;
+        long long uniquecode;
+        
+        vector <string> doctor_names {"Prasann Barot", "Rabel Guharoy"};
+        vector <string> doctor_usernames {"prasann", "rabel"};
+        vector <string> doctor_password {"prasann1", "rabel1"};
+        vector <long long> doctor_phone1{9924492472, 7980262223};
+        vector <long long> doctor_phone2{0, 0}; //0 represnts phone number not provided.
+        vector <string> doctor_mail {"prasann.barot@rru.ac.in", "rabel.guharoy@rru.ac.in"};
+        vector <string> doctor_address {"Rashtriya Raksha University, Lavad, Gandhinagar, Gujarat. - 382305", "Rashtriya Raksha University, Lavad, Gandhinagar, Gujarat. - 382305"};
+        vector <string> doctor_bloodgroups {"B+", "O+"};
+        vector <string> doctor_citizenid{"678677863561", "897765453442"};
+        vector <string> doctor_nmcid {"2343er", "4534ty"};
+        vector <long long> doctor_uniquecode {33069, 33088};
+        
+    public:
+        int index;
+        
+        doctor()
+        {
+            A: 
+                int a;
+                cout << endl << "Hello!";
+                cout << endl << "1. Login";
+                cout << endl << "2. Signup" << endl;
+                cout << ">";
+                cin >> a;
+
+                if(a == 1)
+                {
+                    login();
+                }
+                else if(a == 2)
+                {
+                    signup();
+                }
+                else
+                {
+                    cout << endl << "Invalid Choic!";
+                    goto A;
+                }
+        }
+
+        void login()
+        {
+            cout << endl <<  "Enter Username: ";
+            cin >> username;
+            cout << "Enter Password: ";
+            cin >> password;
+
+            for(int i = 0; i < doctor_usernames.size(); i++)
+            {
+                if(username == doctor_usernames[i] && password == doctor_password[i])
+                {
+                    cout << endl << "Login Successfull!" <<endl;
+                    index = i;
+                    menu();
+                }
+                else
+                {
+                    cout << "Invalid Credentials!" << endl;
+                }
+            }
+        }
+
+        void signup()
+        {
+            cout << endl << "Enter your Name: ";
+            cin.ignore();
+            getline(cin, name);
+            cout << "Enter your phone number: ";
+            cin >> phone1;
+            cout << "Enter your alternate phone number: ";
+            cin >> phone2;
+            cout << "Enter your mail Id: ";
+            cin >> mail;
+            cout << "Address: ";
+            cin.ignore();
+            getline(cin, address);
+            cout << "Enter blood group: ";
+            cin >> bloodgroup;
+            cout << "Enter citizenship ID: ";
+            cin >> citizenid;
+            cout << "Enter NMC ID: ";
+            cin >>nmcid;
+            cout << "Enter a Username: ";
+            cin >> username;
+            cout << "Enter password: ";
+            cin >> password;
+
+            doctor_names.push_back(name);
+            doctor_phone1.push_back(phone1);
+            doctor_phone2.push_back(phone2);
+            doctor_mail.push_back(mail);
+            doctor_address.push_back(address);
+            doctor_bloodgroups.push_back(bloodgroup);
+            doctor_citizenid.push_back(citizenid);
+            doctor_nmcid.push_back(nmcid);
+            doctor_usernames.push_back(username);
+            doctor_password.push_back(password);
+            doctor_uniquecode.push_back(rand() % 100);
+
+            cout << endl << "Sign Up Succesfull!" << endl << "Visit nearest hospital to complete KYC to acces all features of the app!" << endl;
+            index = (doctor_usernames.size() - 1);
+            menu();
+        }
+
+        void viewprofile()
+        {
+            cout << endl << "Name: " << doctor_names[index];
+            cout << endl << "Phone Number: " << doctor_phone1[index];
+            cout << endl << "Alternate Phone Number: " << doctor_phone2[index];
+            cout << endl << "Mail: " << doctor_mail[index];
+            cout << endl << "Address: " << doctor_address[index];
+            cout << endl << "Blood Group: " << doctor_bloodgroups[index];
+            cout << endl << "Citizen ID: " << doctor_citizenid[index];
+            cout << endl << "NMC ID: " << doctor_nmcid[index];
+            cout << endl << "Username: " << doctor_usernames[index] << endl;
+        }
+
+        void menu()
+        {
+            while(1)
+            {
+                int a;
+                cout << endl << "1. View your Profile";
+                cout << endl << "2. View your Patient's Profiles.";
+                cout << endl << "3. View your Appointments..";
+                cout << endl << "4. Exit" << endl;
+                cout << ">";
+                cin >> a;
+
+                if(a == 1)
+                {
+                    viewprofile();
+                }
+                else if(a == 2)
+                {
+                    viewpatientsprofile();
+                }
+                else if(a == 3)
+                {
+                    viewappointments();
+                }
+                
+                else if(a == 4)
+                {
+                    exit(1);
+                }
+                else
+                {
+                    cout << endl << "Invalid Choice!";
+                }
+            }
+
+        }
+
+        void viewpatientsprofile()
+        {
+            
+        }
+
+        void viewappointments()
+        {
+            
+        }
+
+};
 
 int main()
 {
@@ -272,7 +448,7 @@ int main()
         }
         else if(a == 2)
         {
-            //doctor d1;
+            doctor d1;
         }
         else if(a == 3)
         {

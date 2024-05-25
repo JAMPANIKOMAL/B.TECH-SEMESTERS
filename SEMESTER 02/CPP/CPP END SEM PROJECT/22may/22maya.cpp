@@ -13,6 +13,7 @@ private:
     int count = 0;
     int iD[maxsize];
     string password[maxsize];
+   
     // Doctor
     int size_doc;
     long long phone1[docsize], citizenID1[docsize], unique1[docsize], parentspn1[docsize], _NMC_number1[docsize];
@@ -35,6 +36,7 @@ public:
     void profileDoctor();
     void visitprof();
     void signUpDoctor();
+    
     void loginAdmin();
     void hospitalprofile();
     void docpro();
@@ -75,7 +77,6 @@ start:
         }
     }
 }
-
 void sira::profilepatient()
 {
     int n;
