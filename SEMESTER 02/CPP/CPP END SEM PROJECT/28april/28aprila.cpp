@@ -19,6 +19,37 @@ public:
     virtual void login() = 0;
     virtual void signup() = 0;
     virtual void viewprofile() = 0;
+    void homemenu()
+    {
+        while(1)
+        {
+            int a;
+            cout << endl << "Hello!";
+            cout << endl << "1. Login";
+            cout << endl << "2. Signup";
+            cout << endl << "3. Exit" << endl;
+            cout << ">";
+            cin >> a;
+
+            if(a == 1)
+            {
+                login();
+            }
+            else if(a == 2)
+            {
+                signup();
+            }
+            else if(a == 3)
+            {
+                exit(1);
+            }
+            else
+            {
+                cout << endl << "Invalid Choic!";
+            }
+        }
+        
+    }
 };
 
 class patient : public sira
@@ -44,27 +75,8 @@ class patient : public sira
         
         patient()
         {
-            A: 
-                int a;
-                cout << endl << "Hello!";
-                cout << endl << "1. Login";
-                cout << endl << "2. Signup" << endl;
-                cout << ">";
-                cin >> a;
-
-                if(a == 1)
-                {
-                    login();
-                }
-                else if(a == 2)
-                {
-                    signup();
-                }
-                else
-                {
-                    cout << endl << "Invalid Choic!";
-                    goto A;
-                }
+            homemenu();
+                
         }
 
         void login()
@@ -95,7 +107,12 @@ class patient : public sira
             cin.ignore();
             getline(cin, name);
             cout << "Enter your phone number: ";
-            cin >> phone1;
+            while (!(cin >> phone1)) 
+            {
+                cout << "Invalid input. Please enter a valid phone number: ";
+                cin.clear();
+                cin.ignore();
+            }
             cout << "Enter your alternate [Emergency] phone number: ";
             cin >> phone2;
             cout << "Enter your mail Id: ";
@@ -125,8 +142,7 @@ class patient : public sira
 
             cout << endl << "Sign Up Succesfull!" << endl << "Visit nearest hospital to complete KYC to acces all features of the app!" << endl;
             index = (patient_usernames.size() - 1);
-            cout << endl << "Login: ";
-            login();
+            homemenu();
         }
 
         void viewprofile()
@@ -202,7 +218,7 @@ class patient : public sira
             cin >> choice;
 
             cout << endl << "You can take the following tablet for temporary relief. Consult a Doctor if symptoms persist." << endl;
-            cout << hiarr[choice][1] << endl;
+            cout << hiarr[choice - 1][1] << endl;
         }
 
         void viewnearbyhospitals()
