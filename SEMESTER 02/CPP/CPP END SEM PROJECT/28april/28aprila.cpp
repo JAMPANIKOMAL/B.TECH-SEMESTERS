@@ -1,5 +1,3 @@
-//MEDICAL RELIVER
-
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -19,42 +17,13 @@ public:
     virtual void login() = 0;
     virtual void signup() = 0;
     virtual void viewprofile() = 0;
-    void homemenu()
-    {
-        while(1)
-        {
-            int a;
-            cout << endl << "Hello!";
-            cout << endl << "1. Login";
-            cout << endl << "2. Signup";
-            cout << endl << "3. Exit" << endl;
-            cout << ">";
-            cin >> a;
-
-            if(a == 1)
-            {
-                login();
-            }
-            else if(a == 2)
-            {
-                signup();
-            }
-            else if(a == 3)
-            {
-                exit(1);
-            }
-            else
-            {
-                cout << endl << "Invalid Choic!";
-            }
-        }
-        
-    }
+    virtual void homemenu() = 0;
 };
 
 class patient : public sira
 {
     protected:
+    
         string citizenid;
         string bloodgroup;
         long long uniquecode;
@@ -77,6 +46,38 @@ class patient : public sira
         {
             homemenu();
                 
+        }
+
+        void homemenu()
+        {
+            while(1)
+            {
+                int a;
+                cout << endl << "Hello!";
+                cout << endl << "1. Login";
+                cout << endl << "2. Signup";
+                cout << endl << "3. Exit" << endl;
+                cout << ">";
+                cin >> a;
+
+                if(a == 1)
+                {
+                    login();
+                }
+                else if(a == 2)
+                {
+                    signup();
+                }
+                else if(a == 3)
+                {
+                    exit(1);
+                }
+                else
+                {
+                    cout << endl << "Invalid Choic!";
+                }
+            }
+            
         }
 
         void login()
@@ -107,12 +108,7 @@ class patient : public sira
             cin.ignore();
             getline(cin, name);
             cout << "Enter your phone number: ";
-            while (!(cin >> phone1)) 
-            {
-                cout << "Invalid input. Please enter a valid phone number: ";
-                cin.clear();
-                cin.ignore();
-            }
+            cin >> phone1;
             cout << "Enter your alternate [Emergency] phone number: ";
             cin >> phone2;
             cout << "Enter your mail Id: ";
@@ -276,7 +272,7 @@ class patient : public sira
 
 };
 
-class doctor : public sira
+class doctor : public sira, public patient
 {
     protected:
         string citizenid;
@@ -301,11 +297,18 @@ class doctor : public sira
         
         doctor()
         {
-            A: 
+            homemenu();
+        }
+
+        void homemenu()
+        {
+            while(1)
+            {
                 int a;
                 cout << endl << "Hello!";
                 cout << endl << "1. Login";
-                cout << endl << "2. Signup" << endl;
+                cout << endl << "2. Signup";
+                cout << endl << "3. Exit" << endl;
                 cout << ">";
                 cin >> a;
 
@@ -317,11 +320,16 @@ class doctor : public sira
                 {
                     signup();
                 }
+                else if(a == 3)
+                {
+                    exit(1);
+                }
                 else
                 {
                     cout << endl << "Invalid Choic!";
-                    goto A;
                 }
+            }
+            
         }
 
         void login()
@@ -383,9 +391,9 @@ class doctor : public sira
             doctor_password.push_back(password);
             doctor_uniquecode.push_back(rand() % 100);
 
-            cout << endl << "Sign Up Succesfull!" << endl << "Visit nearest hospital to complete KYC to acces all features of the app!" << endl;
+            cout << endl << "Sign Up Succesfull!" << endl << "Visit your hospital admin to complete KYC to acces all features of the app!" << endl;
             index = (doctor_usernames.size() - 1);
-            menu();
+            homemenu();
         }
 
         void viewprofile()
@@ -440,6 +448,35 @@ class doctor : public sira
 
         void viewpatientsprofile()
         {
+            int choice;
+            while(1)
+            {
+                cout << endl << "Select a patient: ";
+                for(int i = 0; i < patient_names.size(); i++)
+                {
+                    cout << i + 1 << ". " << patient_names[i]; 
+                }
+                cout << "> ";
+                cin >> choice;
+
+                if (choice != patient_names.size() + 1)
+                {
+                    cout << endl << "Name: " << patient_names[choice - 1];
+                    cout << endl << "Phone Number: " << patient_phone1[choice - 1];
+                    cout << endl << "Alternate Phone Number: " << patient_phone2[choice - 1];
+                    cout << endl << "Mail: " << patient_mail[choice - 1];
+                    cout << endl << "Address: " << patient_address[choice - 1];
+                    cout << endl << "Blood Group: " << patient_bloodgroups[choice - 1];
+                    cout << endl << "Citizen ID: " << patient_citizenid[choice - 1];
+                    cout << endl << "Unique Code: " << patient_uniquecode[choice - 1];
+                    cout << endl << "Username: " << patient_usernames[choice - 1] << endl;
+                }
+                else
+                {
+                    menu();
+                }
+                    
+            }
             
         }
 

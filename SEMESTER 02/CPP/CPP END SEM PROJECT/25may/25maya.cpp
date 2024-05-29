@@ -1,12 +1,10 @@
-//MEDICAL RELIVER
-
 #include <iostream>
 #include <vector>
 using namespace std;
 
-class sira
+class patient
 {
-    protected:
+    private:
         string name;
         string username;
         string password;
@@ -14,20 +12,11 @@ class sira
         long long phone2;  //phone2 or emergnecy home contact number
         string mail;
         string address;
-        
-public:
-    virtual void login() = 0;
-    virtual void signup() = 0;
-    virtual void viewprofile() = 0;
-};
-
-class patient : public sira
-{
-    protected:
         string citizenid;
         string bloodgroup;
         long long uniquecode;
         
+    protected:
         vector <string> patient_names {"Tejas Prakash Patil", "Aashutosh Thakur", "Jampani Komal"};
         vector <string> patient_usernames {"tejas", "aashutosh", "komal"};
         vector <string> patient_password {"tejas1", "aashutosh1", "komal1"};
@@ -44,35 +33,48 @@ class patient : public sira
         
         patient()
         {
-            A: 
+            phomemenu();
+        }
+
+        void phomemenu()
+        {
+            while(1)
+            {
                 int a;
                 cout << endl << "Hello!";
                 cout << endl << "1. Login";
-                cout << endl << "2. Signup" << endl;
+                cout << endl << "2. Signup";
+                cout << endl << "3. Exit" << endl;
                 cout << ">";
                 cin >> a;
 
                 if(a == 1)
                 {
-                    login();
+                    plogin();
                 }
                 else if(a == 2)
                 {
-                    signup();
+                    psignup();
+                }
+                else if(a == 3)
+                {
+                    exit(1);
                 }
                 else
                 {
                     cout << endl << "Invalid Choic!";
-                    goto A;
                 }
+            }
+            
         }
-
-        void login()
+        
+        void plogin()
         {
             cout << endl <<  "Enter Username: ";
             cin >> username;
             cout << "Enter Password: ";
             cin >> password;
+            int flag = 0;
 
             for(int i = 0; i < patient_usernames.size(); i++)
             {
@@ -80,16 +82,19 @@ class patient : public sira
                 {
                     cout << endl << "Login Successfull!" <<endl;
                     index = i;
-                    menu();
+                    flag = 1;
+                    pmenu();
                 }
-                else
-                {
-                    cout << "Invalid Credentials!" << endl;
-                }
+            }
+
+            if(flag == 0) 
+            {
+                cout << "Invalid Credentials!" << endl;
+                phomemenu();
             }
         }
 
-        void signup()
+        void psignup()
         {
             cout << endl << "Enter your Name: ";
             cin.ignore();
@@ -126,10 +131,10 @@ class patient : public sira
             cout << endl << "Sign Up Succesfull!" << endl << "Visit nearest hospital to complete KYC to acces all features of the app!" << endl;
             index = (patient_usernames.size() - 1);
             cout << endl << "Login: ";
-            login();
+            plogin();
         }
 
-        void viewprofile()
+        void pviewprofile()
         {
             cout << endl << "Name: " << patient_names[index];
             cout << endl << "Phone Number: " << patient_phone1[index];
@@ -142,7 +147,7 @@ class patient : public sira
             cout << endl << "Username: " << patient_usernames[index] << endl;
         }
 
-        void menu()
+        void pmenu()
         {
             while(1)
             {
@@ -158,23 +163,23 @@ class patient : public sira
 
                 if(a == 1)
                 {
-                    viewprofile();
+                    pviewprofile();
                 }
                 else if(a == 2)
                 {
-                    viewnearbyhospitals();
+                    pviewnearbyhospitals();
                 }
                 else if(a == 3)
                 {
-                    viewnearbypharmacies();
+                    pviewnearbypharmacies();
                 }
                 else if(a == 4)
                 {
-                    medicinesearch();
+                    pmedicinesearch();
                 }
                 else if(a == 5)
                 {
-                    emergency();
+                    pemergency();
                 }
                 else if(a == 6)
                 {
@@ -188,7 +193,7 @@ class patient : public sira
 
         }
 
-        void medicinesearch()
+        void pmedicinesearch()
         {
             string hiarr[6][2] = {{"Fever", "Paracetmol"}, {"Cold", "Ceterizine"}, {"Stomach ache", "Cyclopam"}, {"Headache", "Aspirin"}, {"Back pain", "Hydrocodone"}, {"Nausea", "Domperidone"}}; 
             
@@ -205,7 +210,7 @@ class patient : public sira
             cout << hiarr[choice][1] << endl;
         }
 
-        void viewnearbyhospitals()
+        void pviewnearbyhospitals()
         {
             string a;
             a = patient_address[index];
@@ -229,12 +234,13 @@ class patient : public sira
             }
         }
 
-        void viewnearbypharmacies()
+        void pviewnearbypharmacies()
         {
             string a;
             a = patient_address[index];
             if (a == "Dehgam")
             {
+                
             }
             else if (a == "Gandhinagar")
             {
@@ -253,16 +259,23 @@ class patient : public sira
             }
         }
 
-        void emergency()
+        void pemergency()
         {
             cout << "Not comleted";
         }
 
 };
 
-class doctor : public sira
+class doctor : public patient
 {
-    protected:
+    private:
+        string name;
+        string username;
+        string password;
+        long long phone1;
+        long long phone2;  //phone2 or emergnecy home contact number
+        string mail;
+        string address;
         string citizenid;
         string nmcid;
         string bloodgroup;
@@ -282,38 +295,46 @@ class doctor : public sira
         
     public:
         int index;
-        
-        doctor()
+
+        void dhomemenu()
         {
-            A: 
+            while(1)
+            {
                 int a;
                 cout << endl << "Hello!";
                 cout << endl << "1. Login";
-                cout << endl << "2. Signup" << endl;
+                cout << endl << "2. Signup";
+                cout << endl << "3. Exit" << endl;
                 cout << ">";
                 cin >> a;
 
                 if(a == 1)
                 {
-                    login();
+                    dlogin();
                 }
                 else if(a == 2)
                 {
-                    signup();
+                    dsignup();
+                }
+                else if(a == 3)
+                {
+                    exit(1);
                 }
                 else
                 {
                     cout << endl << "Invalid Choic!";
-                    goto A;
                 }
+            }
+            
         }
 
-        void login()
+        void dlogin()
         {
             cout << endl <<  "Enter Username: ";
             cin >> username;
             cout << "Enter Password: ";
             cin >> password;
+            int flag = 0;
 
             for(int i = 0; i < doctor_usernames.size(); i++)
             {
@@ -321,16 +342,20 @@ class doctor : public sira
                 {
                     cout << endl << "Login Successfull!" <<endl;
                     index = i;
-                    menu();
+                    flag = 1;
+                    dmenu();
                 }
-                else
-                {
-                    cout << "Invalid Credentials!" << endl;
-                }
+            }
+
+            if(flag == 0) 
+            {
+                cout << "Invalid Credentials!" << endl;
+                dhomemenu();
+
             }
         }
 
-        void signup()
+        void dsignup()
         {
             cout << endl << "Enter your Name: ";
             cin.ignore();
@@ -369,10 +394,10 @@ class doctor : public sira
 
             cout << endl << "Sign Up Succesfull!" << endl << "Visit nearest hospital to complete KYC to acces all features of the app!" << endl;
             index = (doctor_usernames.size() - 1);
-            menu();
+            dmenu();
         }
 
-        void viewprofile()
+        void dviewprofile()
         {
             cout << endl << "Name: " << doctor_names[index];
             cout << endl << "Phone Number: " << doctor_phone1[index];
@@ -385,29 +410,29 @@ class doctor : public sira
             cout << endl << "Username: " << doctor_usernames[index] << endl;
         }
 
-        void menu()
+        void dmenu()
         {
             while(1)
             {
                 int a;
                 cout << endl << "1. View your Profile";
                 cout << endl << "2. View your Patient's Profiles.";
-                cout << endl << "3. View your Appointments..";
+                cout << endl << "3. View your Appointments.";
                 cout << endl << "4. Exit" << endl;
                 cout << ">";
                 cin >> a;
 
                 if(a == 1)
                 {
-                    viewprofile();
+                    dviewprofile();
                 }
                 else if(a == 2)
                 {
-                    viewpatientsprofile();
+                    dviewpatientsprofile();
                 }
                 else if(a == 3)
                 {
-                    viewappointments();
+                    dviewappointments();
                 }
                 
                 else if(a == 4)
@@ -422,12 +447,40 @@ class doctor : public sira
 
         }
 
-        void viewpatientsprofile()
+        void dviewpatientsprofile()
         {
-            
+            int choice;
+            while(1)
+            {
+                cout << endl << "Select a patient: ";
+                for(int i = 0; i < patient_names.size(); i++)
+                {
+                    cout << i + 1 << ". " << patient_names[i]; 
+                }
+                cout << "> ";
+                cin >> choice;
+
+                if (choice != patient_names.size() + 1)
+                {
+                    cout << endl << "Name: " << patient_names[choice - 1];
+                    cout << endl << "Phone Number: " << patient_phone1[choice - 1];
+                    cout << endl << "Alternate Phone Number: " << patient_phone2[choice - 1];
+                    cout << endl << "Mail: " << patient_mail[choice - 1];
+                    cout << endl << "Address: " << patient_address[choice - 1];
+                    cout << endl << "Blood Group: " << patient_bloodgroups[choice - 1];
+                    cout << endl << "Citizen ID: " << patient_citizenid[choice - 1];
+                    cout << endl << "Unique Code: " << patient_uniquecode[choice - 1];
+                    cout << endl << "Username: " << patient_usernames[choice - 1] << endl;
+                }
+                else
+                {
+                    dmenu();
+                }
+                    
+            }
         }
 
-        void viewappointments()
+        void dviewappointments()
         {
             
         }
@@ -444,13 +497,16 @@ int main()
         cout << endl << "3. Admin" << endl;
         cout << ">";
         cin >> a;
+        doctor  * dptr;
+        patient * pptr;
+
         if(a == 1)
         {
-            patient p1;
+            pptr -> phomemenu();
         }
         else if(a == 2)
         {
-            doctor d1;
+            dptr -> dhomemenu();
         }
         else if(a == 3)
         {
