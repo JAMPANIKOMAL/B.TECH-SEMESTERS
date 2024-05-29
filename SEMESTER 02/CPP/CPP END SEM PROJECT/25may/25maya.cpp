@@ -266,7 +266,7 @@ class patient
 
 };
 
-class doctor : public patient
+class doctor : protected patient
 {
     private:
         string name;
@@ -281,6 +281,7 @@ class doctor : public patient
         string bloodgroup;
         long long uniquecode;
         
+    protected:
         vector <string> doctor_names {"Prasann Barot", "Rabel Guharoy"};
         vector <string> doctor_usernames {"prasann", "rabel"};
         vector <string> doctor_password {"prasann1", "rabel1"};
@@ -295,6 +296,11 @@ class doctor : public patient
         
     public:
         int index;
+        
+        doctor()
+        {
+            dhomemenu();
+        }
 
         void dhomemenu()
         {
@@ -489,32 +495,37 @@ class doctor : public patient
 
 int main()
 {
-    A:
+    int choice;
+    while(1)
+    {
         int a;
         cout << endl << "Who are you?";
         cout << endl << "1. Pateint";
         cout << endl << "2. Doctor";
-        cout << endl << "3. Admin" << endl;
+        cout << endl << "3. Admin";
+        cout << endl << "4. Exit" << endl;
         cout << ">";
         cin >> a;
-        doctor  * dptr;
-        patient * pptr;
-
         if(a == 1)
         {
-            pptr -> phomemenu();
+            patient p1;
         }
         else if(a == 2)
         {
-            dptr -> dhomemenu();
+            doctor d1;
         }
         else if(a == 3)
         {
             //admin a1;
         }
+        else if(a == 4)
+        {
+            exit(1);
+        }
         else
         {
             cout << "Invalid Choice;";
-            goto A;
         }
+    }
+        
 }

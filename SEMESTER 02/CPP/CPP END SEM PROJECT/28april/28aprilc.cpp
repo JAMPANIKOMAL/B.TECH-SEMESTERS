@@ -1,10 +1,12 @@
+//FINAL DRAFT 01.
+
 #include <iostream>
 #include <vector>
 using namespace std;
 
-class sira
+class patient
 {
-    protected:
+    private:
         string name;
         string username;
         string password;
@@ -12,18 +14,6 @@ class sira
         long long phone2;  //phone2 or emergnecy home contact number
         string mail;
         string address;
-        
-public:
-    virtual void login() = 0;
-    virtual void signup() = 0;
-    virtual void viewprofile() = 0;
-    virtual void homemenu() = 0;
-};
-
-class patient : public sira
-{
-    protected:
-    
         string citizenid;
         string bloodgroup;
         long long uniquecode;
@@ -45,7 +35,6 @@ class patient : public sira
         patient()
         {
             homemenu();
-                
         }
 
         void homemenu()
@@ -79,13 +68,14 @@ class patient : public sira
             }
             
         }
-
+        
         void login()
         {
             cout << endl <<  "Enter Username: ";
             cin >> username;
             cout << "Enter Password: ";
             cin >> password;
+            int flag = 0;
 
             for(int i = 0; i < patient_usernames.size(); i++)
             {
@@ -93,12 +83,14 @@ class patient : public sira
                 {
                     cout << endl << "Login Successfull!" <<endl;
                     index = i;
+                    flag = 1;
                     menu();
                 }
-                else
-                {
-                    cout << "Invalid Credentials!" << endl;
-                }
+            }
+            if(flag == 0) 
+            {
+                cout << "Invalid Credentials!" << endl;
+                homemenu();
             }
         }
 
@@ -138,7 +130,8 @@ class patient : public sira
 
             cout << endl << "Sign Up Succesfull!" << endl << "Visit nearest hospital to complete KYC to acces all features of the app!" << endl;
             index = (patient_usernames.size() - 1);
-            homemenu();
+            cout << endl << "Login: ";
+            login();
         }
 
         void viewprofile()
@@ -219,62 +212,105 @@ class patient : public sira
 
         void viewnearbyhospitals()
         {
-            string a;
-            a = patient_address[index];
-            if (a == "Dehgam")
+            cout << endl << "Where do you live?";
+            int choice;
+            while(1)
             {
-            }
-            else if (a == "Gandhinagar")
-            {
-            }
-            else if (a == "Ahemdabad")
-            {
-            }
-            else if (a == "Surat")
-            {
-            }
-            else if (a == "Chiloda")
-            {
-            }
-            else if (a == "Vadodara")
-            {
+                cout << endl << "1. Dahegam";
+                cout << endl << "2. Gandhinagar";
+                cout << endl << "3. Ahmedabad";
+                cout << endl << "4. Surat";
+                cout << endl << "5. Vadodara";
+                cout << endl << "6. Exit" << endl;
+                cout << "> ";
+                cin >> choice;
+
+                switch(choice)
+                {
+                    case 1:
+                    {
+                        cout << "Life Care Hospital: \"16 Shreenath Arcade Dehgam, Dahegam, Gujarat 382305\"" << endl;
+                        return;
+                    }
+                        
+                    case 2:
+                        cout << "Apollo Hospital: \"Plot no. 1555, GH Rd, near GH 2 Circle, Sector 6, Gandhinagar, Gujarat 382006\"" << endl;
+                        return;
+                    case 3:
+                        cout << "Sterling Hospital: \"Shop No 12 & 13, Ground Floor, Kanam 2, near Reliance Chowkdi, Kudasan, Ahmedabad, Gujarat 382421\"" << endl;
+                        return;
+                    case 4:
+                        cout << "Surat General Hospital: \"Mann Complex, 6, Anand Mahal Rd, Opposite Shree Ram Petrol Pump, Adajan, Surat, Gujarat 395009\"" << endl;
+                        return;
+                    case 5:
+                        cout << "Sunshine Global Hospital: \"Shop No 7, Om Complex, Vasna Rd, near Taksh Complex, Shivashraya Society, Tandalja, Vadodara, Gujarat 390015\"" << endl;
+                        return;
+                    case 6:
+                        exit(1); // Exit the function to exit the menu
+                    default:
+                        cout << "Invalid choice or few places are still left to update. Sorry for the inconvenience!" << endl;
+                        return;
+                }
             }
         }
 
         void viewnearbypharmacies()
         {
-            string a;
-            a = patient_address[index];
-            if (a == "Dehgam")
+            cout << endl << "Where do you live?";
+            int choice;
+            while(1)
             {
-            }
-            else if (a == "Gandhinagar")
-            {
-            }
-            else if (a == "Ahemdabad")
-            {
-            }
-            else if (a == "Surat")
-            {
-            }
-            else if (a == "Chiloda")
-            {
-            }
-            else if (a == "Vadodara")
-            {
+                cout << endl << "1. Dahegam";
+                cout << endl << "2. Gandhinagar";
+                cout << endl << "3. Ahemdabad";
+                cout << endl << "4. Surat";
+                cout << endl << "5. Vadodara";
+                cout << endl << "6. Exit" << endl;
+                cout << "> ";
+                cin >> choice;
+
+                switch(choice)
+                {
+                    case 1:
+                        cout << "PharmEasy Medicine Point: \"16 Shreenath Arcade Dehgam, Dahegam, Gujarat 382305\"" << endl;
+                        return;
+                    case 2:
+                        cout << "Apollo Pharmacy: \"Plot no. 1555, GH Rd, near GH 2 Circle, Sector 6, Gandhinagar, Gujarat 382006\"" << endl;
+                        return;
+                    case 3:
+                        cout << "Apollo Pharmacy: \"Shop No 12 & 13, Ground Floor, Kanam 2, near Reliance Chowkdi, Kudasan, Ahmedabad, Gujarat 382421\"" << endl;
+                        return;
+                    case 4:
+                        cout << "Apollo Pharmacy: \"Mann Complex, 6, Anand Mahal Rd, Opposite Shree Ram Petrol Pump, Adajan, Surat, Gujarat 395009\"" << endl;
+                        return;
+                    case 5:
+                        cout << "Medkart Pharmacy: \"Shop No 7, Om Complex, Vasna Rd, near Taksh Complex, Shivashraya Society, Tandalja, Vadodara, Gujarat 390015\"" << endl;
+                        return;
+                    case 6:
+                        exit(1);
+                    default:
+                        cout << "Invalid choice or few places are still left to update. Sorry for the inconvenience!" << endl;
+                        return;
+                }
             }
         }
 
         void emergency()
         {
-            cout << "Not comleted";
+            cout << "Code Under Progress!" << endl;
         }
-
 };
 
-class doctor : public sira, public patient
+class doctor
 {
     protected:
+        string name;
+        string username;
+        string password;
+        long long phone1;
+        long long phone2;  //phone2 or emergnecy home contact number
+        string mail;
+        string address;
         string citizenid;
         string nmcid;
         string bloodgroup;
@@ -338,6 +374,7 @@ class doctor : public sira, public patient
             cin >> username;
             cout << "Enter Password: ";
             cin >> password;
+            int flag = 0;
 
             for(int i = 0; i < doctor_usernames.size(); i++)
             {
@@ -345,12 +382,15 @@ class doctor : public sira, public patient
                 {
                     cout << endl << "Login Successfull!" <<endl;
                     index = i;
+                    flag = 1;
                     menu();
                 }
-                else
-                {
-                    cout << "Invalid Credentials!" << endl;
-                }
+            }
+
+            if(flag == 0) 
+            {
+                cout << "Invalid Credentials!" << endl;
+                homemenu();
             }
         }
 
@@ -391,9 +431,9 @@ class doctor : public sira, public patient
             doctor_password.push_back(password);
             doctor_uniquecode.push_back(rand() % 100);
 
-            cout << endl << "Sign Up Succesfull!" << endl << "Visit your hospital admin to complete KYC to acces all features of the app!" << endl;
+            cout << endl << "Sign Up Succesfull!" << endl << "Visit nearest hospital to complete KYC to acces all features of the app!" << endl;
             index = (doctor_usernames.size() - 1);
-            homemenu();
+            menu();
         }
 
         void viewprofile()
@@ -448,43 +488,210 @@ class doctor : public sira, public patient
 
         void viewpatientsprofile()
         {
-            int choice;
-            while(1)
-            {
-                cout << endl << "Select a patient: ";
-                for(int i = 0; i < patient_names.size(); i++)
-                {
-                    cout << i + 1 << ". " << patient_names[i]; 
-                }
-                cout << "> ";
-                cin >> choice;
-
-                if (choice != patient_names.size() + 1)
-                {
-                    cout << endl << "Name: " << patient_names[choice - 1];
-                    cout << endl << "Phone Number: " << patient_phone1[choice - 1];
-                    cout << endl << "Alternate Phone Number: " << patient_phone2[choice - 1];
-                    cout << endl << "Mail: " << patient_mail[choice - 1];
-                    cout << endl << "Address: " << patient_address[choice - 1];
-                    cout << endl << "Blood Group: " << patient_bloodgroups[choice - 1];
-                    cout << endl << "Citizen ID: " << patient_citizenid[choice - 1];
-                    cout << endl << "Unique Code: " << patient_uniquecode[choice - 1];
-                    cout << endl << "Username: " << patient_usernames[choice - 1] << endl;
-                }
-                else
-                {
-                    menu();
-                }
-                    
-            }
-            
+            cout << "Code Under Progress!" << endl;
         }
 
         void viewappointments()
         {
+            cout << "Code Under Progress!" << endl;
+        }
+};
+
+class admin
+{
+    protected:
+        string hospitalname;
+        string username;
+        string password;
+        long long phone1;
+        long long phone2;  //phone2 or emergnecy home contact number
+        string mail;
+        string address;
+        string hospitalid;
+        string bloodgroup;
+        long long uniquecode;
+        
+        vector <string> admin_names {"Apollo"};
+        vector <string> admin_usernames {"apollo"};
+        vector <string> admin_password {"apollo1"};
+        vector <long long> admin_phone1{9924492472};
+        vector <long long> admin_phone2{0}; //0 represnts phone number not provided.
+        vector <string> admin_mail {"apollo.lavad@gmail.com"};
+        vector <string> admin_address {"Near Rashtriya Raksha University, Lavad, Gandhinagar, Gujarat. - 382305"};
+        vector <string> admin_hospitalid {"2343er", "4534ty"};
+        vector <long long> admin_uniquecode {33069, 33088};
+        
+    public:
+        int index;
+        
+        admin()
+        {
+            homemenu();
+        }
+
+        void homemenu()
+        {
+            while(1)
+            {
+                int a;
+                cout << endl << "Hello!";
+                cout << endl << "1. Login";
+                cout << endl << "2. Signup";
+                cout << endl << "3. Exit" << endl;
+                cout << ">";
+                cin >> a;
+
+                if(a == 1)
+                {
+                    login();
+                }
+                else if(a == 2)
+                {
+                    signup();
+                }
+                else if(a == 3)
+                {
+                    exit(1);
+                }
+                else
+                {
+                    cout << endl << "Invalid Choic!";
+                }
+            }
             
         }
 
+        void login()
+        {
+            cout << endl <<  "Enter Username: ";
+            cin >> username;
+            cout << "Enter Password: ";
+            cin >> password;
+            int flag = 0;
+
+            for(int i = 0; i < admin_usernames.size(); i++)
+            {
+                if(username == admin_usernames[i] && password ==admin_password[i])
+                {
+                    cout << endl << "Login Successfull!" <<endl;
+                    index = i;
+                    flag = 1;
+                    menu();
+                }
+            }
+
+            if(flag == 0) 
+            {
+                cout << "Invalid Credentials!" << endl;
+                homemenu();
+            }
+        }
+
+        void signup()
+        {
+            cout << endl << "Enter your Hospital Name: ";
+            cin.ignore();
+            getline(cin, hospitalname);
+            cout << "Enter your phone number: ";
+            cin >> phone1;
+            cout << "Enter your alternate phone number: ";
+            cin >> phone2;
+            cout << "Enter your mail Id: ";
+            cin >> mail;
+            cout << "Address: ";
+            cin.ignore();
+            getline(cin, address);
+            cout << "Enter blood group: ";
+            cin >> bloodgroup;
+            cout << "Enter Hospital ID: ";
+            cin >> hospitalid;
+            cout << "Enter a Username: ";
+            cin >> username;
+            cout << "Enter password: ";
+            cin >> password;
+
+            admin_names.push_back(hospitalname);
+            admin_phone1.push_back(phone1);
+            admin_phone2.push_back(phone2);
+            admin_mail.push_back(mail);
+            admin_address.push_back(address);
+            admin_hospitalid.push_back(hospitalid);
+            admin_usernames.push_back(username);
+            admin_password.push_back(password);
+            admin_uniquecode.push_back(rand() % 100);
+
+            cout << endl << "Sign Up Succesfull!" << endl << "Visit nearest hospital to complete KYC to acces all features of the app!" << endl;
+            index = (admin_usernames.size() - 1);
+            menu();
+        }
+
+        void viewprofile()
+        {
+            cout << endl << "Name: " << admin_names[index];
+            cout << endl << "Phone Number: " << admin_phone1[index];
+            cout << endl << "Alternate Phone Number: " << admin_phone2[index];
+            cout << endl << "Mail: " << admin_mail[index];
+            cout << endl << "Address: " << admin_address[index];
+            cout << endl << "NMC ID: " << admin_hospitalid[index];
+            cout << endl << "Username: " << admin_usernames[index] << endl;
+        }
+
+        void menu()
+        {
+            while(1)
+            {
+                int a;
+                cout << endl << "1. View your Profile";
+                cout << endl << "2. View your Patient's Profiles.";
+                cout << endl << "3. View your Doctor's Profiles.";
+                cout << endl << "4. View stock.";
+                cout << endl << "5. Exit" << endl;
+                cout << ">";
+                cin >> a;
+
+                if(a == 1)
+                {
+                    viewprofile();
+                }
+                else if(a == 2)
+                {
+                    viewpatientsprofile();
+                }
+                else if(a == 3)
+                {
+                    viewdoctorsprofile();
+                }
+                
+                else if(a == 4)
+                {
+                    viewstock();
+                }
+                else if(a == 5)
+                {
+                    exit(1);
+                }
+                else
+                {
+                    cout << endl << "Invalid Choice!";
+                }
+            }
+
+        }
+
+        void viewpatientsprofile()
+        {
+            cout << " Code Under Progress!" << endl;
+        }
+
+        void viewdoctorsprofile()
+        {
+            cout << " Code Under Progress!" << endl;
+        }
+
+        void viewstock()
+        {
+            cout << " Code Under Progress!" << endl;
+        }
 };
 
 int main()
@@ -510,7 +717,7 @@ int main()
         }
         else if(a == 3)
         {
-            //admin a1;
+            admin a1;
         }
         else if(a == 4)
         {
