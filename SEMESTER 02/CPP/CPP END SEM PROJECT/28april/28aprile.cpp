@@ -18,19 +18,19 @@ class patient
         string patient_bloodgroup;
         long long patient_uniquecode;
 
-        vector<string> patient_names{"Tejas Prakash Patil", "Aashutosh Thakur", "Jampani Komal"};
-        vector<string> patient_usernames{"tejas", "aashutosh", "komal"};
-        vector<string> patient_passwords{"tejas1", "aashutosh1", "komal1"};
-        vector<long long> patient_phone1s{7720841778, 8102568219, 9182048179};
-        vector<long long> patient_phone2s{0, 9825818717, 9704427177}; // 0 represnts phone number not provided.
-        vector<string> patient_mails{"tppatil397@gmail.com", "thakuraashutosh13@gmail.com", "jampanikomal2005@gmail.com"};
-        vector<string> patient_addresses{"Home World Hostel, Bhaijipura, Gandhinagar, Gujarat. - 382421", "Home World Hostel, Bhaijipura, Gandhinagar, Gujarat. - 382421", "Home World Hostel, Bhaijipura, Gandhinagar, Gujarat. - 382421"};
-        vector<string> patient_bloodgroups{"B+", "O+", "B+"};
-        vector<string> patient_citizenids{"230031101611052", "230031101611057", "230031101611054"};
-        vector<long long> patient_uniquecodes{23052, 23057, 23054};
+        vector<string> patient_names {"Tejas Prakash Patil", "Aashutosh Thakur", "Jampani Komal"};
+        vector<string> patient_usernames {"tejas", "aashutosh", "komal"};
+        vector<string> patient_passwords {"tejas1", "aashutosh1", "komal1"};
+        vector<long long> patient_phone1s {7720841778, 8102568219, 9182048179};
+        vector<long long> patient_phone2s {0, 9825818717, 9704427177}; // 0 represnts phone number not provided.
+        vector<string> patient_mails {"tppatil397@gmail.com", "thakuraashutosh13@gmail.com", "jampanikomal2005@gmail.com"};
+        vector<string> patient_addresses {"Home World Hostel, Bhaijipura, Gandhinagar, Gujarat. - 382421", "Home World Hostel, Bhaijipura, Gandhinagar, Gujarat. - 382421", "Home World Hostel, Bhaijipura, Gandhinagar, Gujarat. - 382421"};
+        vector<string> patient_bloodgroups {"B+", "O+", "B+"};
+        vector<string> patient_citizenids {"230031101611052", "230031101611057", "230031101611054"};
+        vector<long long> patient_uniquecodes {23052, 23057, 23054};
 
     public:
-        int index;
+        int patient_index;
 
         void patient_start()
         {
@@ -138,7 +138,7 @@ class patient
                 if (patient_username == patient_usernames[i] && patient_password == patient_passwords[i])
                 {
                     cout << endl << "Login Successfull!" << endl;
-                    index = i;
+                    patient_index = i;
                     flag = 1;
                     patient_menu();
                 }
@@ -187,22 +187,22 @@ class patient
             patient_uniquecodes.push_back(rand() % 100);
 
             cout << endl << "Sign Up Succesfull!" << endl << "Visit nearest hospital to complete KYC to acces all features of the app!" << endl;
-            index = (patient_usernames.size() - 1);
+            patient_index = (patient_usernames.size() - 1);
 
             patient_homemenu();
         }
 
         void patient_viewprofile()
         {
-            cout << endl << "Name: " << patient_names[index];
-            cout << endl << "Phone Number: " << patient_phone1s[index];
-            cout << endl << "Alternate Phone Number: " << patient_phone2s[index];
-            cout << endl << "Mail: " << patient_mails[index];
-            cout << endl << "Address: " << patient_addresses[index];
-            cout << endl << "Blood Group: " << patient_bloodgroups[index];
-            cout << endl << "Citizen ID: " << patient_citizenids[index];
-            cout << endl << "Unique Code: " << patient_uniquecodes[index];
-            cout << endl << "Username: " << patient_usernames[index] << endl;
+            cout << endl << "Name: " << patient_names[patient_index];
+            cout << endl << "Phone Number: " << patient_phone1s[patient_index];
+            cout << endl << "Alternate Phone Number: " << patient_phone2s[patient_index];
+            cout << endl << "Mail: " << patient_mails[patient_index];
+            cout << endl << "Address: " << patient_addresses[patient_index];
+            cout << endl << "Blood Group: " << patient_bloodgroups[patient_index];
+            cout << endl << "Citizen ID: " << patient_citizenids[patient_index];
+            cout << endl << "Unique Code: " << patient_uniquecodes[patient_index];
+            cout << endl << "Username: " << patient_usernames[patient_index] << endl;
         }
 
        void patient_medicinesearch()
