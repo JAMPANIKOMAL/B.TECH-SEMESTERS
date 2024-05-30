@@ -1,4 +1,5 @@
 //FINAL DRAFT 02.
+//NOT WORKING
 
 #include <iostream>
 #include <vector>
@@ -17,7 +18,6 @@ class patient
         string patient_address;
         string patient_citizenid;
         string patient_bloodgroup;
-        string patient_pastmedicalhistory;
         long long patient_uniquecode;
 
         vector<string> patient_names {"Tejas Prakash Patil", "Aashutosh Thakur", "Jampani Komal"};
@@ -30,7 +30,6 @@ class patient
         vector<string> patient_bloodgroups {"B+", "O+", "B+"};
         vector<string> patient_citizenids {"230031101611052", "230031101611057", "230031101611054"};
         vector<long long> patient_uniquecodes {23052, 23057, 23054};
-        vector <string> patient_pastmedicalhistories {"Cancer", "Sinus", "None"};
 
     public:
         int patient_index;
@@ -44,23 +43,29 @@ class patient
         {
             while (1)
             {
-                string a;
+                int a;
                 cout << endl << "Hello!";
                 cout << endl << "1. Login";
                 cout << endl << "2. Signup";
                 cout << endl << "3. Exit" << endl;
                 cout << "> ";
                 cin >> a;
+                while (!(cin >> a) || cin.peek() != '\n') 
+                {
+                    cout << endl << "Invalid choice!" << endl << "> ";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
 
-                if (a == "1")
+                if (a == 1)
                 {
                     patient_login();
                 }
-                else if (a == "2")
+                else if (a == 2)
                 {
                     patient_signup();
                 }
-                else if (a == "3")
+                else if (a == 3)
                 {
                     cout << endl << "Exiting!" << endl << "Exited Succesfully!" << endl << endl;
                     exit(1);
@@ -76,7 +81,7 @@ class patient
         {
             while (1)
             {
-                string a;
+                int a;
                 cout << endl << "1. View your Profile";
                 cout << endl << "2. View Nearby Hospitals.";
                 cout << endl << "3. View Nearby Pharmacies.";
@@ -84,24 +89,30 @@ class patient
                 cout << endl << "5. Exit" << endl;
                 cout << "> ";
                 cin >> a;
+                while (!(cin >> a) || cin.peek() != '\n') 
+                {
+                    cout << endl << "Invalid choice!" << endl << "> ";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
 
-                if (a == "1")
+                if (a == 1)
                 {
                     patient_viewyourprofile();
                 }
-                else if (a == "2")
+                else if (a == 2)
                 {
                     patient_viewnearbyhospitals();
                 }
-                else if (a == "3")
+                else if (a == 3)
                 {
                     patient_viewnearbypharmacies();
                 }
-                else if (a == "4")
+                else if (a == 4)
                 {
                     patient_medicinesearch();
                 }
-                else if (a == "5")
+                else if (a == 5)
                 {
                     cout << endl << "Exiting!" << endl << "Exited Succesfully!" << endl << endl;
                     exit(1);
@@ -241,6 +252,12 @@ class patient
                 cout << endl << "6. Exit" << endl;
                 cout << "> ";
                 cin >> choice;
+                while (!(cin >> choice) || cin.peek() != '\n') 
+                {
+                    cout << endl << "Invalid choice!" << endl << "> ";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
 
                 switch (choice)
                 {
@@ -300,6 +317,12 @@ class patient
                 cout << endl << "6. Exit" << endl;
                 cout << "> ";
                 cin >> choice;
+                while (!(cin >> choice) || cin.peek() != '\n') 
+                {
+                    cout << endl << "Invalid choice!" << endl << "> ";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
 
                 switch (choice)
                 {
@@ -383,30 +406,36 @@ class doctor : public patient
         {
             while(1)
             {
-                string a;
+                int a;
                 cout << endl << "Hello!";
                 cout << endl << "1. Login";
                 cout << endl << "2. Signup";
                 cout << endl << "3. Exit" << endl;
                 cout << "> ";
                 cin >> a;
+                while (!(cin >> a) || cin.peek() != '\n') 
+                {
+                    cout << endl << "Invalid choice!" << endl << "> ";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
 
-                if(a == "1")
+                if(a == 1)
                 {
                     doctor_login();
                 }
-                else if(a == "2")
+                else if(a == 2)
                 {
                     doctor_signup();
                 }
-                else if(a == "3")
+                else if(a == 3)
                 {
                     cout << endl << "Exiting!" << endl << "Exited Succesfully!" << endl << endl;
                     exit(1);
                 }
                 else
                 {
-                    cout << endl << "Invalid Choice!" << endl;
+                    cout << endl << "Invalid Choic! << endl";
                 }
             }
             
@@ -416,22 +445,29 @@ class doctor : public patient
         {
             while(1)
             {
-                string a;
+                int a;
                 cout << endl << "1. View your Profile";
                 cout << endl << "2. View your Patient's Profiles.";
-                cout << endl << "3. Exit" << endl;
+                cout << endl << "3. View your Appointments.";
+                cout << endl << "4. Exit" << endl;
                 cout << "> ";
                 cin >> a;
+                while (!(cin >> a) || cin.peek() != '\n') 
+                {
+                    cout << endl << "Invalid choice!" << endl << "> ";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
 
-                if(a == "1")
+                if(a == 1)
                 {
                     doctor_viewprofile();
                 }
-                else if(a == "2")
+                else if(a == 2)
                 {
                     doctor_viewpatientsprofile();
                 }
-                else if(a == "3")
+                else if(a == 3)
                 {
                     cout << endl << "Exiting!" << endl << "Exited Succesfully!" << endl << endl;
                     exit(1);
@@ -549,6 +585,12 @@ class doctor : public patient
                 cout << patient_names.size() + 1 << ". Exit" << endl;
                 cout << "> ";
                 cin >> choice;
+                while (!(cin >> choice) || cin.peek() != '\n') 
+                {
+                    cout << endl << "Invalid choice!" << endl << "> ";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
 
                 if(choice == patient_names.size() + 1)
                 {
@@ -557,25 +599,14 @@ class doctor : public patient
                 
                 else if (choice != patient_names.size() + 1)
                 {
-                    long long a;
-                    cout << endl << "Enter Patient's Unique Code to view profile: ";
-                    cin >> a;
-                    if (a == patient_uniquecodes[choice - 1])
-                    {
-                        cout << endl << "Name: " << patient_names[choice - 1];
-                        cout << endl << "Phone Number: " << patient_phone1s[choice - 1];
-                        cout << endl << "Alternate Phone Number: " << patient_phone2s[choice - 1];
-                        cout << endl << "Mail: " << patient_mails[choice - 1];
-                        cout << endl << "Address: " << patient_addresses[choice - 1];
-                        cout << endl << "Blood Group: " << patient_bloodgroups[choice - 1];
-                        cout << endl << "Citizen ID: " << patient_citizenids[choice - 1];
-                        cout << endl << "Past Medical History: " << patient_pastmedicalhistories[choice - 1] << endl;
-                    }
-                    else
-                    {
-                        cout << endl << "You cannot view this profile." << endl;
-                    }
-                        
+                    cout << endl << "Name: " << patient_names[choice - 1];
+                    cout << endl << "Phone Number: " << patient_phone1s[choice - 1];
+                    cout << endl << "Alternate Phone Number: " << patient_phone2s[choice - 1];
+                    cout << endl << "Mail: " << patient_mails[choice - 1];
+                    cout << endl << "Address: " << patient_addresses[choice - 1];
+                    cout << endl << "Blood Group: " << patient_bloodgroups[choice - 1];
+                    cout << endl << "Citizen ID: " << patient_citizenids[choice - 1];
+                    cout << endl << "Unique Code: " << patient_uniquecodes[choice - 1];
                 }
                 else
                 {
@@ -620,30 +651,36 @@ class admin : public doctor
         {
             while(1)
             {
-                string a;
+                int a;
                 cout << endl << "Hello!";
                 cout << endl << "1. Login";
                 cout << endl << "2. Signup";
                 cout << endl << "3. Exit" << endl;
                 cout << "> ";
                 cin >> a;
+                while (!(cin >> a) || cin.peek() != '\n') 
+                {
+                    cout << endl << "Invalid choice!" << endl << "> ";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
 
-                if(a == "1")
+                if(a == 1)
                 {
                     admin_login();
                 }
-                else if(a == "2")
+                else if(a == 2)
                 {
                     admin_signup();
                 }
-                else if(a == "3")
+                else if(a == 3)
                 {
                     cout << endl << "Exiting!" << endl << "Exited Succesfully!" << endl << endl;
                     exit(1);
                 }
                 else
                 {
-                    cout << endl << "Invalid Choice!" << endl;
+                    cout << endl << "Invalid Choic!" << endl;
                 }
             }
             
@@ -653,7 +690,7 @@ class admin : public doctor
             {
                 while(1)
                 {
-                    string a;
+                    int a;
                     cout << endl << "1. View your Profile";
                     cout << endl << "2. View your Patient's Profiles.";
                     cout << endl << "3. View your Doctor's Profiles.";
@@ -661,25 +698,31 @@ class admin : public doctor
                     cout << endl << "5. Exit" << endl;
                     cout << "> ";
                     cin >> a;
+                    while (!(cin >> a) || cin.peek() != '\n') 
+                    {
+                        cout << endl << "Invalid choice!" << endl << "> ";
+                        cin.clear();
+                        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    }
 
-                    if(a == "1")
+                    if(a == 1)
                     {
                         admin_viewprofile();
                     }
-                    else if(a == "2")
+                    else if(a == 2)
                     {
                         admin_viewpatientsprofile();
                     }
-                    else if(a == "3")
+                    else if(a == 3)
                     {
                         admin_viewdoctorsprofile();
                     }
                     
-                    else if(a == "4")
+                    else if(a == 4)
                     {
                         admin_viewstock();
                     }
-                    else if(a == "5")
+                    else if(a == 5)
                     {
                         cout << endl << "Exiting!" << endl << "Exited Succesfully!" << endl << endl;
                         exit(1);
@@ -723,7 +766,7 @@ class admin : public doctor
             cout << endl << "Enter your Hospital Name: ";
             cin.ignore();
             getline(cin, admin_hospitalname);
-            cout << "Enter your phone number: ";
+           cout << "Enter your phone number: ";
             while (!(cin >> admin_phone1) || cin.peek() != '\n') 
             {
                 cout << "Please enter a valid mobile number: ";
@@ -779,6 +822,12 @@ class admin : public doctor
                 cout << patient_names.size() + 1 << ". Exit" << endl;
                 cout << "> ";
                 cin >> choice;
+                while (!(cin >> choice) || cin.peek() != '\n') 
+                {
+                    cout << endl << "Invalid choice!" << endl << "> ";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
 
                 if(choice == patient_names.size() + 1)
                 {
@@ -794,7 +843,7 @@ class admin : public doctor
                     cout << endl << "Address: " << patient_addresses[choice - 1];
                     cout << endl << "Blood Group: " << patient_bloodgroups[choice - 1];
                     cout << endl << "Citizen ID: " << patient_citizenids[choice - 1];
-                    cout << endl << "Unique Code: " << patient_uniquecodes[choice - 1] << endl;
+                    cout << endl << "Unique Code: " << patient_uniquecodes[choice - 1];
                 }
                 else
                 {
@@ -816,6 +865,12 @@ class admin : public doctor
                 cout << doctor_names.size() + 1 << ". Exit" << endl;
                 cout << "> ";
                 cin >> choice;
+                while (!(cin >> choice) || cin.peek() != '\n') 
+                {
+                    cout << endl << "Invalid choice!" << endl << "> ";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
 
                 if(choice == doctor_names.size() + 1)
                 {
@@ -868,7 +923,7 @@ int main()
     int choice;
     while (1)
     {
-        string a;
+        int a;
         cout << endl << "Who are you?";
         cout << endl << "1. Pateint";
         cout << endl << "2. Doctor";
@@ -876,23 +931,29 @@ int main()
         cout << endl << "4. Exit" << endl;
         cout << "> ";
         cin >> a;
+        while (!(cin >> a) || cin.peek() != '\n') 
+        {
+            cout << endl << "Invalid choice!" << endl << "> ";
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
 
-        if (a == "1")
+        if (a == 1)
         {
             patient p1;
             p1.patient_start();
         }
-        else if (a == "2")
+        else if (a == 2)
         {
             doctor d1;
             d1.doctor_homemenu();
         }
-        else if (a == "3")
+        else if (a == 3)
         {
             admin a1;
             a1.admin_homemenu();
         }
-        else if (a == "4")
+        else if (a == 4)
         {
             cout << endl << "Exiting!" << endl << "Exited Succesfully!" << endl << endl;
             exit(1);
