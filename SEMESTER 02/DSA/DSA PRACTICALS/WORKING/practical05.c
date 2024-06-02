@@ -105,7 +105,9 @@ char *infixToPostfix(char *infix)
     sp->top = -1;
     sp->array = (char *)malloc(sp->size * sizeof(char));
     char *postfix = (char *)malloc((strlen(infix) + 1) * sizeof(char));
+    
     int i = 0, j = 0;
+
     while (infix[i] != '\0')
     {
         if (!isOperator(infix[i]))
