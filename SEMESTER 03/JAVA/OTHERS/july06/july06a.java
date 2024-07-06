@@ -6,5 +6,7 @@ class july06a
         long lon = 3456l;
         System.out.println(lon);
         float f = 4.5f;
+        char c = '9';
+        System.out.println(c);
     }
 }
