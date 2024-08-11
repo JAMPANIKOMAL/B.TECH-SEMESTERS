@@ -1,8 +1,8 @@
-class a31
+class a34
 {
     public static void main (String [] args)
     {
-        short s = 32767;
+        short s = true;
         System.out.println(s);
     }
 }
