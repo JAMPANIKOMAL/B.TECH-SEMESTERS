@@ -1,7 +1,7 @@
-class a87
+class a89
 {
     public static void main (String [] args)
     {
-        int[] a = new int[];  
+        int[] a = new int[0];  
     }
 }
