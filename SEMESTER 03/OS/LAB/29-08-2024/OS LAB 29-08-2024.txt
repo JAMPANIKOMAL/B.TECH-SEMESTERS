@@ -1,0 +1,16 @@
+OS LAB 29-08-2024
+
+1. sed
+2. wildcard      COMPLETE THESE 2 IN LAB OTHER AT HOME
+
+TASK:
+1. Create 2 files.
+file1 ---> name, address, salary, company
+file2 ---> name, class, percentage, grade
+
+2. Use file manipulation commands such as sed commands.
+   a. concatenation of files store in new
+
+3. Implement 20 network commands
+   a. Change ip
+   b. change mac
