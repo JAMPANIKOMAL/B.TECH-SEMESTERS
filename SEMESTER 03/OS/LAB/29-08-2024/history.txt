@@ -1,0 +1,81 @@
+    1  sudo
+    2  sudo apt autoremove
+    3  sudo su
+    4  ip a
+    5  ping http://10.10.245.65:8087/
+    6  ping 10.10.245.65:8087
+    7  ping http://10.10.10.10/
+    8  ping 10.10.10.10
+    9  openvpn
+   10  ip a
+   11  reboot
+   12  ls
+   13  cd Downloads
+   14  mkdir OS
+   15  ls
+   16  cd OS
+   17  mkdir 29-08-2024
+   18  ls
+   19  cd 29-08-2024
+   20  ls
+   21  touch file1
+   22  ls
+   23  nano file1
+   24  cat file1
+   25  coulumn -t file1
+   26  column -t file1
+   27  column -N name, address, salary, company
+   28  column -t -N name, address, salary, company
+   29  column -t -N name, address, salary, company file1
+   30  column -t -N name,address,salary,company file1
+   31  touch file2
+   32  cat file2
+   33  emcas file2
+   34  emacs file2
+   35  nano file2
+   36  cat file2
+   37  nano file2
+   38  cat file2
+   39  coulumn -t -N name,class,percentage,grade file2
+   40  column -t -N name,class,percentage,grade file2
+   41  sed -n '1p' file1
+   42  nano file2
+   43  sed -n '1,5p' file2
+   44  sed -n '$p' file1
+   45  sudo apt install code-oss
+   46  cat file1
+   47  cat file2
+   48  cat file1 file2
+   49  cat file*
+   50  cat -n file*
+   51  cat file* | file3
+   52  cat file1 file2 > file3
+   53  ls
+   54  cat file3
+   55  history
+   56  history > history.txt
+   57  ls
+   58  cat history.txt
+   59  ip a
+   60  rm history.txt
+   61  ls
+   62  ifconfig eth0 10.0.3.14
+   63  ip a
+   64  sudo ifconfig eth0 10.0.3.14
+   65  ip a
+   66  sudo ifconfig eth0 10.0.3.15
+   67  ping www.google.com
+   68  macchanger -s
+   69  macchanger --show
+   70  macchanger -h
+   71  sudo macchanger -s
+   72  pico /etc/networks/interfaces
+   73  pico /etc/network/interfaces
+   74  macchanger -s eth0
+   75  ifconfig eth0 down
+   76  sudo ifconfig eth0 down
+   77  macchanger -r eth0
+   78  sudo macchanger -r eth0
+   79  sudo ifconfig eth0 up
+   80  macchanger -s eth0
+   81  history
