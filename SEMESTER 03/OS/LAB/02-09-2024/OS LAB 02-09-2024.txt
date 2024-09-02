@@ -1,0 +1,14 @@
+grep
+egrep
+fgrep
+
+pipe
+
+
+system info commands
+memory mangement commands
+wildcards
+automation curnotto 
+
+
+process management related commands

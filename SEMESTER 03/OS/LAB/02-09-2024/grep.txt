@@ -1,0 +1,50 @@
+grep ---> Find lines in a file that match a regular expression
+
+  108  grep grep "OS LAB 02-09-2024.txt"
+  109  grep memory "OS LAB 02-09-2024.txt"
+  110  grep pipe "OS LAB 02-09-2024.txt"
+  111  grep pipe OS LAB 02-09-2024.txt
+  112  grep pipe "OS LAB 02-09-2024.txt"
+  113  grep -i pipe "OS LAB 02-09-2024.txt"
+  114  grep -v pipe "OS LAB 02-09-2024.txt"
+  115  grep -c pipe "OS LAB 02-09-2024.txt"
+  116  grep grep "OS LAB 02-09-2024.txt"
+  117  grep -c grep "OS LAB 02-09-2024.txt"
+  118  grep -v grep "OS LAB 02-09-2024.txt"
+  119  grep -w grep "OS LAB 02-09-2024.txt"
+  120  grep -wc grep "OS LAB 02-09-2024.txt"
+  121  grep -w -c grep "OS LAB 02-09-2024.txt"
+  122  grep -n grep "OS LAB 02-09-2024.txt"
+  123  touch test1.txt
+  124  nano test1
+  125  nano test1.txt
+  126  nano test1
+  127  nano test1.txt
+  128  grep grep "OS LAB 02-09-2024.txt" test1.txt
+  129  grep -h  grep "OS LAB 02-09-2024.txt" test1.txt
+  130  grep -e grep -e pipe "OS LAB 02-09-2024.txt"
+  131  grep -e grep -e pipe "OS LAB 02-09-2024.txt" test1.txt
+  132  grep -l grep "OS LAB 02-09-2024.txt" test1.txt
+  133  touch test2.txt
+  134  nano test2.txt
+  135  grep -l grep "OS LAB 02-09-2024.txt" test1.txt test2.txt
+  136  grep -f "OS LAB 02-09-2024.txt" test1.txt
+  137  grep -f test1.txt "OS LAB 02-09-2024.txt"
+  138  grep -f test2.txt "OS LAB 02-09-2024.txt"
+  139  grep -f "OS LAB 02-09-2024.txt" test2.txt
+  140  grep "^grep" "OS LAB 02-09-2024.txt"
+  141  grep "^system" "OS LAB 02-09-2024.txt"
+  142  grep "commands$" "OS LAB 02-09-2024.txt"
+  143  grep "com$" "OS LAB 02-09-2024.txt"
+  144  grep "command$" "OS LAB 02-09-2024.txt"
+  145  grep command "OS LAB 02-09-2024.txt"
+  146  grep -R pip dirA/
+  147  grep -R pip 02-09-2024/
+  148  grep -R pip 02-09-2024
+  149  grep -R pip 
+  150  egrep "pip|com|grep" "OS LAB 02-09-2024.txt"
+  151  grep -q pip test2.txt
+  152  grep -q pipe test2.txt
+  153  grep -q pipesss test2.txt
+  154  grep pipesss test2.txt
+  155  grep -s pipesss test2.txt

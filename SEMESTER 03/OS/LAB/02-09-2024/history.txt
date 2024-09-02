@@ -1,0 +1,157 @@
+    1  sudo
+    2  sudo apt autoremove
+    3  sudo su
+    4  ip a
+    5  ping http://10.10.245.65:8087/
+    6  ping 10.10.245.65:8087
+    7  ping http://10.10.10.10/
+    8  ping 10.10.10.10
+    9  openvpn
+   10  ip a
+   11  reboot
+   12  sudo apt install git
+   13  sudo apt update sudo apt update --allow-releaseinfo-change
+   14  exit
+   15  sudo apt update sudo apt update --allow-releaseinfo-change
+   16  sudo apt update
+   17  ip a
+   18  speedtest
+   19  sudo apt update
+   20  sudo apt install code-oss
+   21  cd Downloads
+   22  cd OS
+   23  cd 29-08-2024
+   24  tar file1 file2
+   25  git
+   26  git config --global user.email "jampanikomal2005@gmail.com"
+   27  git config --global user.name "JAMPANI KOMAL"
+   28  exit
+   29  ls
+   30  cd Downloads
+   31  mkdir OS
+   32  ls
+   33  cd OS
+   34  mkdir 29-08-2024
+   35  ls
+   36  cd 29-08-2024
+   37  ls
+   38  touch file1
+   39  ls
+   40  nano file1
+   41  cat file1
+   42  coulumn -t file1
+   43  column -t file1
+   44  column -N name, address, salary, company
+   45  column -t -N name, address, salary, company
+   46  column -t -N name, address, salary, company file1
+   47  column -t -N name,address,salary,company file1
+   48  touch file2
+   49  cat file2
+   50  emcas file2
+   51  emacs file2
+   52  nano file2
+   53  cat file2
+   54  nano file2
+   55  cat file2
+   56  coulumn -t -N name,class,percentage,grade file2
+   57  column -t -N name,class,percentage,grade file2
+   58  sed -n '1p' file1
+   59  nano file2
+   60  sed -n '1,5p' file2
+   61  sed -n '$p' file1
+   62  sudo apt install code-oss
+   63  cat file1
+   64  cat file2
+   65  cat file1 file2
+   66  cat file*
+   67  cat -n file*
+   68  cat file* | file3
+   69  cat file1 file2 > file3
+   70  ls
+   71  cat file3
+   72  history
+   73  history > history.txt
+   74  ls
+   75  cat history.txt
+   76  ip a
+   77  rm history.txt
+   78  ls
+   79  ifconfig eth0 10.0.3.14
+   80  ip a
+   81  sudo ifconfig eth0 10.0.3.14
+   82  ip a
+   83  sudo ifconfig eth0 10.0.3.15
+   84  ping www.google.com
+   85  macchanger -s
+   86  macchanger --show
+   87  macchanger -h
+   88  sudo macchanger -s
+   89  pico /etc/networks/interfaces
+   90  pico /etc/network/interfaces
+   91  macchanger -s eth0
+   92  ifconfig eth0 down
+   93  sudo ifconfig eth0 down
+   94  macchanger -r eth0
+   95  sudo macchanger -r eth0
+   96  sudo ifconfig eth0 up
+   97  macchanger -s eth0
+   98  history
+   99  history > history.txt
+  100  ls
+  101  exit
+  102  reboot
+  103  history
+  104  cd Downloads
+  105  cd B.TECH-SEMESTERS
+  106  cd SEMESTER 03
+  107  exit
+  108  grep grep "OS LAB 02-09-2024.txt"
+  109  grep memory "OS LAB 02-09-2024.txt"
+  110  grep pipe "OS LAB 02-09-2024.txt"
+  111  grep pipe OS LAB 02-09-2024.txt
+  112  grep pipe "OS LAB 02-09-2024.txt"
+  113  grep -i pipe "OS LAB 02-09-2024.txt"
+  114  grep -v pipe "OS LAB 02-09-2024.txt"
+  115  grep -c pipe "OS LAB 02-09-2024.txt"
+  116  grep grep "OS LAB 02-09-2024.txt"
+  117  grep -c grep "OS LAB 02-09-2024.txt"
+  118  grep -v grep "OS LAB 02-09-2024.txt"
+  119  grep -w grep "OS LAB 02-09-2024.txt"
+  120  grep -wc grep "OS LAB 02-09-2024.txt"
+  121  grep -w -c grep "OS LAB 02-09-2024.txt"
+  122  grep -n grep "OS LAB 02-09-2024.txt"
+  123  touch test1.txt
+  124  nano test1
+  125  nano test1.txt
+  126  nano test1
+  127  nano test1.txt
+  128  grep grep "OS LAB 02-09-2024.txt" test1.txt
+  129  grep -h  grep "OS LAB 02-09-2024.txt" test1.txt
+  130  grep -e grep -e pipe "OS LAB 02-09-2024.txt"
+  131  grep -e grep -e pipe "OS LAB 02-09-2024.txt" test1.txt
+  132  grep -l grep "OS LAB 02-09-2024.txt" test1.txt
+  133  touch test2.txt
+  134  nano test2.txt
+  135  grep -l grep "OS LAB 02-09-2024.txt" test1.txt test2.txt
+  136  grep -f "OS LAB 02-09-2024.txt" test1.txt
+  137  grep -f test1.txt "OS LAB 02-09-2024.txt"
+  138  grep -f test2.txt "OS LAB 02-09-2024.txt"
+  139  grep -f "OS LAB 02-09-2024.txt" test2.txt
+  140  grep "^grep" "OS LAB 02-09-2024.txt"
+  141  grep "^system" "OS LAB 02-09-2024.txt"
+  142  grep "commands$" "OS LAB 02-09-2024.txt"
+  143  grep "com$" "OS LAB 02-09-2024.txt"
+  144  grep "command$" "OS LAB 02-09-2024.txt"
+  145  grep command "OS LAB 02-09-2024.txt"
+  146  grep -R pip dirA/
+  147  grep -R pip 02-09-2024/
+  148  grep -R pip 02-09-2024
+  149  grep -R pip 
+  150  egrep "pip|com|grep" "OS LAB 02-09-2024.txt"
+  151  grep -q pip test2.txt
+  152  grep -q pipe test2.txt
+  153  grep -q pipesss test2.txt
+  154  grep pipesss test2.txt
+  155  grep -s pipesss test2.txt
+  156  history > grep.txt
+  157  cat history >> grep.txt
