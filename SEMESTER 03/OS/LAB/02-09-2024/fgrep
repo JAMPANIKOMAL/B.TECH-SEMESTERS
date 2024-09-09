@@ -1,0 +1,85 @@
+Script started on 2024-09-02 02:45:34-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="115" LINES="55"]
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/LAB/02-09-2024[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/LAB/02-09-2024[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36ml[39m[36ml[39m[38;2;153;153;153ms[39m[36ml[36ms[39m[?1l>[?2004l
+ grep.txt   history.txt  'OS LAB 02-09-2024.txt'   test1.txt   test2.txt   typescript
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/LAB/02-09-2024
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/LAB/02-09-2024[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mc[24m[4mc[24m[38;2;153;153;153mat history.txt >> grep.txt[39m[26D[4mc[39m[4ma[24m[24m[36mc[24m[36ma[36mt[39m[39m [39m[1mt[0m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [22D[1mt[1my[0m[1my[1mp[0m[1mp[1me[0m[1me[1ms[0m[1ms[1mc[0m[1mc[1mr[0m[1mr[1mi[0m[1mi[1mp[0m[1mp[1mt[0m[?1l>[?2004l
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/LAB/02-09-2024
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/LAB/02-09-2024[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[7m[36mcat[39m[7m my_dictionary_file[27m[22D[27m[36mc[27m[36ma[27m[36mt[39m[27m [27mm[27my[27m_[27md[27mi[27mc[27mt[27mi[27mo[27mn[27ma[27mr[27my[27m_[27mf[27mi[27ml[27me[?1l>[?2004l
+cat: my_dictionary_file: No such file or directory
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/LAB/02-09-2024
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/LAB/02-09-2024[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mc[24m[4mc[24m[38;2;153;153;153mat my_dictionary_file[39m[21D[24m[36mc[36md[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [20D[38;2;153;153;153m SEMESTER 03[39m[12D[39m [39m[1m.[0m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [10D[1m.[1m.[0m[?1l>[?2004l
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/LAB
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/B.TECH-SEMESTERS/SEMESTER 03/OS/LAB[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mc[24m[4mc[24m[38;2;153;153;153md ..[39m[24m[36mc[36md[39m[39m [39m[1m.[0m[1m.[39m[1m.[0m[?1l>[?2004l
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mc[24m[4mc[24m[38;2;153;153;153md ..[39m[24m[36mc[36md[39m[39m [39m[1m.[0m[1m.[39m[1m.[0m[1m.[0m[0m [38;2;153;153;153m.[39m[0m [39m [38;2;153;153;153m..[39m[39m [39m [38;2;153;153;153m ..[39m[39m[4mc[24m[39m [39m [39m [39m [4mc[24m[38;2;153;153;153md ..[39m[24m [39m [39m [39m [39m [36ml[39m[36ml[39m[38;2;153;153;153ms[39m[36ml[36ms[39m[?1l>[?2004l
+[0m[01;34mLAB[0m  [01;34mlinuxpocketguide[0m  [01;34mOTHERS[0m
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mc[24m[4mc[24m[38;2;153;153;153md ..[39m[4mc[24m[39m [39m [39m [39m [4mc[24m[38;2;153;153;153md ..[39m[24m[36mc[36md[39m[39m [39m[1ml[0m[39m [1ml[1mi[0m[1mi[1mnuxpocketguide/[0m[1me[0m[0m [?1l>[?2004l
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/linuxpocketguide
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/B.TECH-SEMESTERS/SEMESTER 03/OS/linuxpocketguide[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[7m[36mcat[39m[7m [1m[7mmy_dictionary_file[0m[27m[22D[27m[36mc[27m[36ma[27m[36mt[39m[27m [27m[1mm[27m[1my[27m[1m_[27m[1md[27m[1mi[27m[1mc[27m[1mt[27m[1mi[27m[1mo[27m[1mn[27m[1ma[27m[1mr[27m[1my[27m[1m_[27m[1mf[27m[1mi[27m[1ml[27m[1me[0m[?1l>[?2004l
+aardvark
+aback
+abandon
+abandoned
+abandoning
+abash
+abate
+abattoir
+abbey
+abbot
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/linuxpocketguide
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/B.TECH-SEMESTERS/SEMESTER 03/OS/linuxpocketguide[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[7m[36mfgrep[39m[7m [7m[32m-f[39m[7m [1m[7mmy_dictionary_file[0m [1m[7mstory[0m[27m[33D[27m[36mf[27m[36mg[27m[36mr[27m[36me[27m[36mp[39m[27m [27m[32m-[27m[32mf[39m[27m [27m[1mm[27m[1my[27m[1m_[27m[1md[27m[1mi[27m[1mc[27m[1mt[27m[1mi[27m[1mo[27m[1mn[27m[1ma[27m[1mr[27m[1my[27m[1m_[27m[1mf[27m[1mi[27m[1ml[27m[1me[0m[27m [27m[1ms[27m[1mt[27m[1mo[27m[1mr[27m[1my[0m[?1l>[?2004l
+a little [01;31m[Kaardvark[m[K who went to
+visit the [01;31m[Kabbot[m[K at the [01;31m[Kabbey[m[K.
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/linuxpocketguide
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/B.TECH-SEMESTERS/SEMESTER 03/OS/linuxpocketguide[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[1mc[0m[1mc[0m[38;2;153;153;153mat my_dictionary_file[39m[21D[0m[4mc[39m[4ma[24m[24m[36mc[24m[36ma[36mt[39m[39m [39m[1ms[0m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [17D[1ms[1mt[0m[1mt[1mo[0m[1mo[1mr[0m[1mr[1my[0m[?1l>[?2004l
+Once upon a time, there was
+a little aardvark who went to
+visit the abbot at the abbey.
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/linuxpocketguide
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/B.TECH-SEMESTERS/SEMESTER 03/OS/linuxpocketguide[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mcat[39m [1mstory[0m[9D[36mf[36mg[36mr[36me[0m[36mp[39m[0m [0m[32m-[0m[32mf[39m[0m [1mmy_dictionary_file[0m [1mstory[0m[P[32C [33D[?1l>[?2004l
+a little [01;31m[Kaardvark[m[K who went to
+visit the [01;31m[Kabbot[m[K at the [01;31m[Kabbey[m[K.
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/linuxpocketguide
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/B.TECH-SEMESTERS/SEMESTER 03/OS/linuxpocketguide[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mgrep[39m [32m-f[39m [1mmy_dictionary_file[0m [1mstory[0m[32D[36mc[36ma[36mt[39m[39m [1ms[39m[1mt[39m[1mo[1mr[1my[0m[0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m  [0m [0m [0m [0m [0m [23D[9D[36mf[36mg[36mr[36me[0m[36mp[39m[0m [0m[32m-[0m[32mf[39m[0m [1mmy_dictionary_file[0m [1mstory[0m[1mr[0m[0m [38;2;153;153;153my[39m[1mo[0m[0m [39m [38;2;153;153;153mry[39m[1mt[0m[0m [39m [39m [38;2;153;153;153mory[39m[1ms[0m[0m [39m [39m [39m [38;2;153;153;153mtory[39m[0m [39m [39m [39m [39m [38;2;153;153;153mstory[39m[39m [39m [39m [39m [39m [38;2;153;153;153m story[39m[1ml[0m[0m [39m [39m [39m [39m [39m [39m [38;2;153;153;153me story[39m[1mi[0m[0m [39m [39m [39m [39m [39m [39m [39m [8D[38;2;153;153;153mle story[39m[8D[1mf[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [9D[38;2;153;153;153mile story[39m[9D[1m_[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [10D[38;2;153;153;153mfile story[39m[10D[1my[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [11D[38;2;153;153;153m_file story[39m[11D[1mr[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [12D[38;2;153;153;153my_file story[39m[12D[1ma[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [13D[38;2;153;153;153mry_file story[39m[13D[1mn[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [14D[38;2;153;153;153mary_file story[39m[14D[1mo[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [15D[38;2;153;153;153mnary_file story[39m[15D[1mi[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [16D[38;2;153;153;153monary_file story[39m[16D[1mt[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [17D[38;2;153;153;153mionary_file story[39m[17D[1mc[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [18D[38;2;153;153;153mtionary_file story[39m[18D[1mi[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [19D[38;2;153;153;153mctionary_file story[39m[19D[1md[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [20D[38;2;153;153;153mictionary_file story[39m[20D[1m_[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [21D[38;2;153;153;153mdictionary_file story[39m[21D[1my[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [22D[38;2;153;153;153m_dictionary_file story[39m[22D[1mm[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [23D[38;2;153;153;153my_dictionary_file story[39m[23D[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [24D[38;2;153;153;153mmy_dictionary_file story[39m[24D[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [25D[38;2;153;153;153m my_dictionary_file story[39m[25D[32m-[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [26D[38;2;153;153;153mf my_dictionary_file story[39m[26D[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [27D[38;2;153;153;153m-f my_dictionary_file story[39m[27D[33m'[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [26D[33m'[33mo[39m[33mo[33mn[39m[33mn[33me[39m[?1l>[?2004l
+[0m[27m[24m[Jquote> [K[?1h=[?2004h[33mt[39m[33mt[39m[38;2;153;153;153mouch test2.txt[39m[14D[33mt[33mw[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [13D[33mt[33mw[33mo[39m[?1l>[?2004l
+[0m[27m[24m[Jquote> [K[?1h=[?2004h[33mt[39m[33mt[39m[38;2;153;153;153mouch test2.txt[39m[14D[33mt[33mh[39m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [13D[33mt[33mh[33mr[39m[33mr[33me[39m[33me[33me[39m[33me[33m'[39m [1mm[0m[1mm[1my[0m[1my[1mf[0m[1mf[1mi[0m[1mi[1ml[0m[1ml[1me[0m[?1l>[?2004l
+having little or no m[01;31m[Kone[m[Ky in my purse, and nothing particular to
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/linuxpocketguide
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/B.TECH-SEMESTERS/SEMESTER 03/OS/linuxpocketguide[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[1mc[0m[1mc[0m[38;2;153;153;153mat story[39m[8D[0m[4mc[39m[4ma[24m[24m[36mc[24m[36ma[36mt[39m[39m [39m[1mm[0m[39m [39m [39m [39m [38;2;153;153;153my_dictionary_file[39m[17D[1mm[39m[1my[0m[1my[39m[1mf[0m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [15D[1mf[1mi[0m[1mi[1ml[0m[1ml[1me[0m[?1l>[?2004l
+Call me Ishmael. Some years ago -- never mind how long precisely --
+having little or no money in my purse, and nothing particular to
+interest me on shore, I thought I would sail about a little and see
+the watery part of the world. It is a way I have of driving off the
+spleen, and regulating the circulation. Whenever I find myself growing
+grim about the mouth; whenever it is a damp, drizzly November in my
+soul; whenever I find myself involuntarily pausing before coffin
+warehouses, and bringing up the rear of every funeral I meet; and
+especially whenever my hypos get such an upper hand of me, that it
+requires a strong moral principle to prevent me from deliberately
+stepping into the street, and methodically knocking people's hats off
+-- then, I account it high time to get to sea as soon as I can. This
+is my substitute for pistol and ball. With a philosophical flourish
+Cato throws himself upon his sword; I quietly take to the ship. There
+is nothing surprising in this. If they but knew it, almost all men in
+their degree, some time or other, cherish very nearly the same
+feelings towards the ocean with me.
+(Opening paragraph, MOBY DICK by Herman Melville)
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/linuxpocketguide
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/B.TECH-SEMESTERS/SEMESTER 03/OS/linuxpocketguide[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[?2004l
+
+Script done on 2024-09-02 02:48:35-04:00 [COMMAND_EXIT_CODE="0"]

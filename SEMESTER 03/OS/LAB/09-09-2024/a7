@@ -1,0 +1,9 @@
+#For comparison, ‘-lt’ is used here. For comparison, you can also use ‘-eq’ for equality, ‘-ne’ for not equality and ‘-gt’ for greater than in bash script.
+
+n=10
+if [ $n -lt 10 ];
+then
+echo "It is a one digit number"
+else
+echo 'It is a two digit number'
+fi

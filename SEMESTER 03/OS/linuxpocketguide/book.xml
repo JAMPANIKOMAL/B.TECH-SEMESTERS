@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<book>
+  <title>Linux Pocket Guide</title>
+  <author>Daniel J. Barrett</author>
+  <pub>
+    <name>O'Reilly Media</name>
+    <url>https://oreilly.com</url>
+  </pub>
+  <eds>
+    <ed id="1">First edition</ed>
+    <ed id="2">Second edition</ed>
+    <ed id="3">Third edition</ed>
+    <ed id="4">Fourth edition</ed>
+  </eds>
+</book>
