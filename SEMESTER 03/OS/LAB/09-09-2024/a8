@@ -1,11 +1,10 @@
-echo "Enter Username" 
+echo "Enter Username"
 read username
-
-echo "Enter password"
+echo "Enter Password"
 read password
 
-if [[ ( $username == "admin" && $password == 'secret' ) ]]; then
-echo 'valid user'
+if [[ ( $username == "admin" && $password == "secret" ) ]]; then
+echo "Valid User"
 else
-echo 'invalid user'
+echo "Invalid User"
 fi
