@@ -1,18 +1,16 @@
 #Write A Shell Script To Find Sum & Average Of N Numbers.
 
 
-
-echo "Enter the number of numbers:"
-read n
+read -p "Enter the number of numbers: " n
+echo ""
 
 sum=0
-echo "Enter $n numbers:"
 for ((i=1; i<=n; i++)); do
-  read num
+  read -p "Enter number $i: " num
   sum=$((sum + num))
 done
 
 avg=$((sum / n))
 
-echo "Sum of the numbers: $sum"
+echo -e "\nSum of the numbers: $sum"
 echo "Average of the numbers: $avg"

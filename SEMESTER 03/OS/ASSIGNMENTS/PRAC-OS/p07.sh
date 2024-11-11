@@ -1,7 +1,6 @@
 #Write A Shell Script To Find Factorial Of Given Number N.
 
 
-
 echo "Enter a non-negative integer:"
 read n
 
