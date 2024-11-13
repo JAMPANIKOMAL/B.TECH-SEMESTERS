@@ -1,0 +1,46 @@
+Script started on 2024-11-13 12:53:58-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="115" LINES="17"]
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[1mt[0m[0m[4mt[4mo[24m[4mt[4mo[4mu[24m[4mu[4mc[24m[24m[36mt[24m[36mo[24m[36mu[24m[36mc[36mh[39m [1mp[0m[1mp[1m1[0m[0mp[0m11.sh[?1l>[?2004l
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mb[24m[4mb[24m[38;2;153;153;153mash p01[39m[4mb[39m[4ma[24m[4mb[4ma[39m[4ms[24m[24m[36mb[24m[36ma[24m[36ms[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[39m [1m1[1m1[0m[1m1[1m.[0m[1m.[1ms[0m[1ms[1mh[0m[?1l>[?2004l
+Enter the number of rows: 4
+
+   *
+  ***
+ *****
+*******
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[1mt[0m[1mt[0m[38;2;153;153;153mouch p11.sh[39m[11D[0m[4mt[39m[4mo[24m[4mt[4mo[39m[4mu[24m[4mu[39m[4mc[24m[24m[36mt[24m[36mo[24m[36mu[24m[36mc[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[0mp[0m1[39m2[39m [39m [39m .sh[?1l>[?2004l
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mb[24m[4mb[24m[38;2;153;153;153mash p11.sh[39m[10D[4mb[39m[4ma[24m[4mb[4ma[39m[4ms[24m[24m[36mb[24m[36ma[24m[36ms[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[1m1[39m[1m2[0m[39m [39m [39m [1m2[1m.[0m[1m.[1ms[0m[1ms[1mh[0m[?1l>[?2004l
+Enter a string: komal
+
+komal is not a palindrome
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp12.sh[0m[?1l>[?2004l
+Enter a string: race cae r
+
+race car is not a palindrome
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp12.sh[0m[?1l>[?2004l
+Enter a string: sis
+
+sis is a palindrome
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[1mt[0m[1mt[0m[38;2;153;153;153mouch p12.sh[39m[11D[0m[4mt[39m[4mo[24m[4mt[4mo[39m[4mu[24m[4mu[39m[4mc[24m[24m[36mt[24m[36mo[24m[36mu[24m[36mc[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[0mp[0m1[39m3[39m [39m [39m .sh[?1l>[?2004l
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mb[24m[4mb[24m[38;2;153;153;153mash p12.sh[39m[10D[4mb[39m[4ma[24m[4mb[4ma[39m[4ms[24m[24m[36mb[24m[36ma[24m[36ms[36mh[39m[39m [39ma[39m [39m [39m [39m [39m [38;2;153;153;153m01[39m [39m [39m [38;2;153;153;153mp12.sh[39m[39m[1mp[0m[1mp[39m[1m1[0m[1m1[39m[1m3[0m[39m [39m [39m [1m3[1m.[0m[1m.[1ms[0m[1ms[1mh[0m[?1l>[?2004l
+Enter the number of Fibonacci numbers to generate: 6
+0 1 1 2 3 5 
+                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4me[24m[4me[24m[38;2;153;153;153mxit[39m[24m[36me[36mx[39m[39m[4me[39m[4mx[39m[4mi[24m[24m[36me[24m[36mx[24m[36mi[36mt[39m[?1l>[?2004l
+
+Script done on 2024-11-13 13:00:38-05:00 [COMMAND_EXIT_CODE="0"]

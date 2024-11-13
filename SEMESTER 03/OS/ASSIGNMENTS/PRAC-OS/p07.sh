@@ -1,8 +1,8 @@
 #Write A Shell Script To Find Factorial Of Given Number N.
 
 
-echo "Enter a non-negative integer:"
-read n
+read -p "Enter a non-negative integer: " n
+echo ""
 
 if [[ $n -lt 0 ]]; then
   echo "Factorial is not defined for negative numbers."

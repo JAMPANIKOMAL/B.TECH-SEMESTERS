@@ -1,10 +1,8 @@
-#Write A Shell Script To Check Whether A Given Number Is Palindrome
-Or Not.
+#Write A Shell Script To Check Whether A Given Number Is Palindrome Or Not.
 
 
-
-echo "Enter a number:"
-read num
+read -p "Enter a number: " num
+echo ""
 
 original_num=$num
 reverse=0
