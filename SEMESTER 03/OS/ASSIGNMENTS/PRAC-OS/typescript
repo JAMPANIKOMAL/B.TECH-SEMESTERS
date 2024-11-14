@@ -1,46 +1,717 @@
-Script started on 2024-11-13 12:53:58-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="115" LINES="17"]
-                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
-└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[1mt[0m[0m[4mt[4mo[24m[4mt[4mo[4mu[24m[4mu[4mc[24m[24m[36mt[24m[36mo[24m[36mu[24m[36mc[36mh[39m [1mp[0m[1mp[1m1[0m[0mp[0m11.sh[?1l>[?2004l
-                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+Script started on 2024-11-14 00:52:16-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="116" LINES="55"]
+                                                                                                                    ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004hexitscriptbash p10.sh[11Dtouch p10.sh[12Dbash p09.sh [11D[36mb[36ma[36ms[36mh[39m [1mp[1m0[1m8[1m.[1ms[1mh[0m[1m7[3C[11D[0m[36ml[36ms[39m[39m [39m  [0m [0m [0m [0m [0m [0m [9D[36mc[36md[39m PRAC-OS[10D[36ml[36ms[39m        [8D[36mc[36md[39m ASSIGNMENTS[14D[36ml[36ms[39m            [12D[36mc[36md[39m ASSIGNMENTS[14D[36ml[36ms[39m            [12D[36mc[36md[39m PRAC-OS[10D[36ml[36ms[39m        [8D[36mb[36ma[39msh p07.sh[11D[36mb[36ma[36ms[36mh[39m [1mp[1m0[1m8[1m.[1ms[1mh[0m[1m9[3C[11D[0m[36mt[36mo[36mu[36mc[39mh[1m [1mp[1m1[1m0[1m.[1ms[0mh[12D[36mb[36ma[36ms[36mh[39m [1mp[1m1[1m0[1m.[1ms[1mh[0m [11D[36ms[36mc[36mr[36mi[39mp[1mt[0m[0m [0m [0m [0m [0m [36me[36mx[36mi[36mt[39m [0m [39m [39m [39m [39m [1mt[0m[1mt[0m[38;2;153;153;153mouch p10.sh[39m[11D[0m[4mt[39m[4mo[24m[4mt[4mo[39m[4mu[24m[4mu[39m[4mc[24m[24m[36mt[24m[36mo[24m[36mu[24m[36mc[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[0mp[0m1[39m4[39m [39m [39m .sh[?1l>[?2004l
+                                                                                                                    ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
 [0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
-└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mb[24m[4mb[24m[38;2;153;153;153mash p01[39m[4mb[39m[4ma[24m[4mb[4ma[39m[4ms[24m[24m[36mb[24m[36ma[24m[36ms[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[39m [1m1[1m1[0m[1m1[1m.[0m[1m.[1ms[0m[1ms[1mh[0m[?1l>[?2004l
-Enter the number of rows: 4
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[A[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [A[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [A[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [4mb[24m[4mb[24m[38;2;153;153;153mash p10.sh[39m[10D[4mb[39m[4ma[24m[4mb[4ma[39m[4ms[24m[24m[36mb[24m[36ma[24m[36ms[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[1m1[39m[1m4[0m[39m [39m [39m [1m4[1m.[0m[1m.[1ms[0m[1ms[1mh[0m[?1l>[?2004l
 
-   *
-  ***
- *****
-*******
-                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
-[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
-└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[1mt[0m[1mt[0m[38;2;153;153;153mouch p11.sh[39m[11D[0m[4mt[39m[4mo[24m[4mt[4mo[39m[4mu[24m[4mu[39m[4mc[24m[24m[36mt[24m[36mo[24m[36mu[24m[36mc[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[0mp[0m1[39m2[39m [39m [39m .sh[?1l>[?2004l
-                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
-[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
-└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mb[24m[4mb[24m[38;2;153;153;153mash p11.sh[39m[10D[4mb[39m[4ma[24m[4mb[4ma[39m[4ms[24m[24m[36mb[24m[36ma[24m[36ms[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[1m1[39m[1m2[0m[39m [39m [39m [1m2[1m.[0m[1m.[1ms[0m[1ms[1mh[0m[?1l>[?2004l
-Enter a string: komal
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+Enter your choice: 1
+p14.sh: line 22: cal: command not found
 
-komal is not a palindrome
-                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+Enter your choice: 5
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
 [0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
-└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp12.sh[0m[?1l>[?2004l
-Enter a string: race cae r
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp14.sh[0m[?1l>[?2004l
 
-race car is not a palindrome
-                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
-[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
-└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp12.sh[0m[?1l>[?2004l
-Enter a string: sis
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
 
-sis is a palindrome
-                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+Enter your choice: 1
+cal
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 5
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
 [0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
-└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[1mt[0m[1mt[0m[38;2;153;153;153mouch p12.sh[39m[11D[0m[4mt[39m[4mo[24m[4mt[4mo[39m[4mu[24m[4mu[39m[4mc[24m[24m[36mt[24m[36mo[24m[36mu[24m[36mc[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[0mp[0m1[39m3[39m [39m [39m .sh[?1l>[?2004l
-                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp14.sh[0m[?1l>[?2004l
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 1
+p14.sh: line 22: cal: command not found
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 5
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
 [0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
-└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mb[24m[4mb[24m[38;2;153;153;153mash p12.sh[39m[10D[4mb[39m[4ma[24m[4mb[4ma[39m[4ms[24m[24m[36mb[24m[36ma[24m[36ms[36mh[39m[39m [39ma[39m [39m [39m [39m [39m [38;2;153;153;153m01[39m [39m [39m [38;2;153;153;153mp12.sh[39m[39m[1mp[0m[1mp[39m[1m1[0m[1m1[39m[1m3[0m[39m [39m [39m [1m3[1m.[0m[1m.[1ms[0m[1ms[1mh[0m[?1l>[?2004l
-Enter the number of Fibonacci numbers to generate: 6
-0 1 1 2 3 5 
-                                                                                                                   ]0;kali@kali: ~/Downloads/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp14.sh[0m[?1l>[?2004l
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 1
+p14.sh: line 22: Calendar: command not found
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 5
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp14.sh[0m[?1l>[?2004l
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 1
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 5
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp14.sh[0m[?1l>[?2004l
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 1
+
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 5
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp14.sh[0m[?1l>[?2004l
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 1
+
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 5
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp14.sh[0m[?1l>[?2004l
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 1
+p14.sh: line 22: cal: command not found
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 5
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mm[24m[4mm[24m[38;2;153;153;153mkdir PRAC-OS[39m[12D[4mm[39m[4ma[24m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [11D[24m[36mm[24m[36ma[36mn[39m cal[?1l>[?2004l
+No manual entry for cal
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mc[24m[4mc[24m[38;2;153;153;153md PRAC-OS[39m[9D[4mc[39m[4ma[24m[39m [39m [39m [39m [39m [39m [39m [39m [8D[4mc[4ma[4ml[24m[?1l>[?2004l
+Command 'cal' not found, but can be installed with:
+sudo apt install ncal
+Do you want to install it? (N/y)y
+sudo apt install ncal
+[sudo] password for kali: 
+Reading package lists... 0%Reading package lists... 100%                              Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%                                Reading state information... 0%Reading state information... 0%                                The following packages were automatically installed and are no longer required:
+  fonts-liberation2         libgspell-1-2          libusbmuxd6
+  freerdp2-x11              libgtk2.0-0t64         libwinpr2-2t64
+  hydra-gtk                 libgtk2.0-bin          libzip4t64
+  ibverbs-providers         libgtk2.0-common       openjdk-17-jre
+  libarmadillo12            libibverbs1            openjdk-17-jre-headless
+  libassuan0                libimobiledevice6      perl-modules-5.38
+  libavfilter9              libiniparser1          python3-hatch-vcs
+  libblosc2-3               libjim0.82t64          python3-hatchling
+  libboost-iostreams1.83.0  libjsoncpp25           python3-jose
+  libboost-thread1.83.0     libmfx1                python3-lib2to3
+  libcephfs2                libperl5.38t64         python3-pathspec
+  libfreerdp-client2-2t64   libplacebo338          python3-pluggy
+  libfreerdp2-2t64          libplist3              python3-rsa
+  libgail-common            libpoppler134          python3-setuptools-scm
+  libgail18t64              libpostproc57          python3-trove-classifiers
+  libgdal34t64              libpython3.11-dev      python3.11
+  libgeos3.12.2             libpython3.11-minimal  python3.11-dev
+  libgfapi0                 libpython3.11-stdlib   python3.11-minimal
+  libgfrpc0                 libpython3.11t64       rwho
+  libgfxdr0                 librados2              rwhod
+  libglusterfs0             librdmacm1t64          samba-vfs-modules
+Use 'sudo apt autoremove' to remove them.
+
+Installing:
+[32m  ncal
+[0m
+Summary:
+  Upgrading: 0, Installing: 1, Removing: 0, Not Upgrading: 33
+  Download size: 19.7 kB
+  Space needed: 59.4 kB / 58.6 GB available
+
+[33m0% [Working][0m[33m0% [Waiting for headers][0m[33m                        0% [Working][0m            Get:1 http://kali.download/kali kali-rolling/main amd64 ncal amd64 12.1.8 [19.7 kB]
+[33m67% [1 ncal 16.4 kB/19.7 kB 83%][0m[33m                                100% [Working][0m              Fetched 19.7 kB in 1s (25.0 kB/s)
+
+7[0;54r8[1ASelecting previously unselected package ncal.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 414846 files and directories currently installed.)
+Preparing to unpack .../archives/ncal_12.1.8_amd64.deb ...
+7[55;0f[42m[30mProgress: [  0%][49m[39m [                                                                   ] 87[55;0f[42m[30mProgress: [ 20%][49m[39m [█████████████▍                                                     ] 8Unpacking ncal (12.1.8) ...
+7[55;0f[42m[30mProgress: [ 40%][49m[39m [██████████████████████████▊                                        ] 8Setting up ncal (12.1.8) ...
+7[55;0f[42m[30mProgress: [ 60%][49m[39m [████████████████████████████████████████▏                          ] 87[55;0f[42m[30mProgress: [ 80%][49m[39m [█████████████████████████████████████████████████████▌             ] 8Processing triggers for kali-menu (2024.3.1) ...
+Processing triggers for man-db (2.13.0-1) ...
+
+7[0;55r8[1A[J                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mcal[39m[36mm[36ma[36mn[39m cal[36mb[36ma[36ms[36mh[39m [1mp[1m1[1m4.sh[0m[?1l>[?2004l
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 1
+   November 2024      
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30  
+                      
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 4
+Enter first number: 5
+Enter second number 5
+Quotient = 1
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 5
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4md[24m[4md[4ma[24m[4md[4ma[4mt[24m[24m[36md[24m[36ma[24m[36mt[36me[39m[?1l>[?2004l
+Thu Nov 14 01:05:56 AM EST 2024
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mw[39m[36mw[39m[38;2;153;153;153mget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg –dearmor > packages[38;2;153;153;153m.[38;2;153;153;153mmicrosoft.gpg[39m[K[A[9D[39m[4mw[39m[4mh[24m[K[1B[K[A[6C[24m[36mw[24m[36mh[36mo[39m[?1l>[?2004l[1Bkali     tty7         2024-11-14 00:50 (:0)
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mu[24m[24m[36mu[36ms[39m[39m[4mu[39m[4ms[4me[24m[4me[4mr[24m[?1l>[?2004l
+Command 'user' not found, did you mean:
+  command 'userv' from deb userv
+  command 'users' from deb coreutils
+  command 'fuser' from deb psmisc
+  command 'iuser' from deb ipmiutil
+Try: sudo apt install <deb name>
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mw[39m[36mw[39m[38;2;153;153;153mho[39m[39m[4mw[39m[4mh[24m[24m[36mw[24m[36mh[36mo[39m[39m[4mw[39m[4mh[39m[4mo[4ma[24m[4ma[4mm[24m[24m[36mw[24m[36mh[24m[36mo[24m[36ma[24m[36mm[36mi[39m[?1l>[?2004l
+kali
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mwhoami[39m[39m[4mu[39m[4ms[39m[4me[39m[4mr[24m[39m [39m [24m[36mw[24m[36mh[24m[36mo[24m[36ma[36mmi[39m[39m [39m [39m [39m [39m [39m [4m$[24m[4m$[4m$[24m[?1l>[?2004l
+2493: command not found
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4m$$[24m[24m[36mw[24m[36mh[36moami[39m[39m[4mu[39m[4ms[39m[4me[39m[4mr[24m[39m [39m [24m[36mw[24m[36mh[24m[36mo[39m[24m [36md[36ma[36mt[36me[39m[36mb[36ma[36ms[36mh[39m [1mp14.sh[0m[11D[36mc[36ma[36ml[39m[39m  [0m [0m [0m [0m [0m [0m [8D[36mb[36ma[36ms[36mh[39m [1mp14.sh[0m[?1l>[?2004l
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 6
+
+                                                                                         ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp14.sh[0m[?1l>[?2004l
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 1
+
+   November 2024      
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30  
+                      
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 2
+
+Thu Nov 14 01:14:02 AM EST 2024
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 3
+
+kali     tty7         2024-11-14 00:50 (:0)
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 4
+
+Enter x coordinate: 0
+Enter y coordinate 0
+[1;1Hkali
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: ^C
+                                                                                                                    ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp14.sh[0m[11D[39m[4m$[39m[4m$[24m[39m [39m  [0m [0m [0m [0m [0m [0m [9D[24m[36mb[24m[36ma[36msh[39m [1mp14.sh[0m[?1l>[?2004l
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 4
+
+Enter x coordinate: 3
+Enter y coordinate 4
+[5;4Hkali
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: ^C
+                                                                                                                    ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mc[24m[4mc[24m[38;2;153;153;153mal[39m[4mc[39m[4ml[24m[39m [4mc[4ml[4me[24m[4me[4ma[24m[24m[36mc[24m[36ml[24m[36me[24m[36ma[36mr[39m[?1l>[?2004l
+[H[2J[3J                                                                                                                    ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mclear[39m[36mb[36ma[36ms[36mh[39m[39m [1mp14.sh[0m[?1l>[?2004l
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 4
+
+Enter x coordinate: 1
+Enter y coordinate 1
+[2;2Hkali
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 5
+
+Your terminal number is: 14401
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 5
+
+Your terminal number is: 14401
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 5
+
+Your terminal number is: 14401
+
+Slect Operation:
+1. Display Calendar Of Current Month
+2. Display Today’s Date And Time
+3. Display Usernames That Are Currently Logged In The System
+4. Display Your Name At Given X, Y Position
+5. Display Your Terminal Number
+6. Exit
+
+Enter your choice: 6
+
+                                                                                                                    ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[A[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [1mt[0m[1mt[0m[38;2;153;153;153mouch p14.sh[39m[11D[0m[4mt[39m[4mo[24m[4mt[4mo[39m[4mu[24m[4mu[39m[4mc[24m[24m[36mt[24m[36mo[24m[36mu[24m[36mc[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[0mp[0m1[39m5[39m [39m [39m .sh[?1l>[?2004l
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[1mt[0m[1mt[0m[38;2;153;153;153mouch p15.sh[39m[11D[0m[4mt[39m[4mo[24m[4mt[4mo[39m[4mu[24m[4mu[39m[4mc[24m[24m[36mt[24m[36mo[24m[36mu[24m[36mc[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[0mp[0m1[39m6[39m [39m [39m .sh[?1l>[?2004l
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[7m[4mind[24m [1m[7m.[0m [7m[32m-executable[27m[39m[17D[27m[4mi[27m[4mn[27m[4md[24m[27m [27m[1m.[0m[27m [27m[32m-[27m[32me[27m[32mx[27m[32me[27m[32mc[27m[32mu[27m[32mt[27m[32ma[27m[32mb[27m[32ml[27m[32me[39m[?1l>[?2004l
+Command 'ind' not found, did you mean:
+  command 'inb' from deb ioport
+  command 'inc' from deb nmh
+  command 'inc' from deb mailutils-mh
+  command 'inv' from deb python3-invoke
+  command 'inw' from deb ioport
+  command 'find' from deb findutils
+  command 'kind' from deb kind
+  command 'inl' from deb ioport
+  command 'ink' from deb ink
+  command 'nd' from deb nd
+  command 'idn' from deb idn
+  command 'innd' from deb inn
+  command 'id' from deb coreutils
+  command 'and' from deb and
+  command 'bnd' from deb bnd
+Try: sudo apt install <deb name>
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mind[24m [1m.[0m [32m-executable[39m[24m[36mf[24m[36mi[24m[36mn[36md[39m[0m [1m.[0m[39m [32m-[32me[32mx[32me[32mc[32mu[32mt[32ma[32mb[32ml[32me[39m[17D[?1l>[?2004l
+.
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mfind[39m [1m.[0m [32m-executable[39m[0m.-[39me[39mx[39me[39mc[39mu[39mt[39ma[39mb[39ml[39me[39m [12D[32m-[32me[32mx[32me[32mc[32mu[32mt[32ma[32mb[32ml[32me[39m [12D[39m [32m-[32me[32mx[32me[32mc[32mu[32mt[32ma[32mb[32ml[32me[39m[11D[P[11C [12D[?1l>[?2004l
+.
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[1mt[0m[1mt[0m[38;2;153;153;153mouch p16.sh[39m[11D[0m[4mt[39m[4mo[24m[4mt[4mo[39m[4mu[24m[4mu[39m[4mc[24m[24m[36mt[24m[36mo[24m[36mu[24m[36mc[36mh[39m[39m [39m[1mt[0m[39m [39m [39m [39m [39m [0mtest.exe[?1l>[?2004l
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mtouch[39m [1mtest.exe[0m[14D[36mf[36mi[36mn[36md[39m[39m [32m-[0m[32me[0m[32mx[0m[32me[0m[32mc[0m[32mu[0m[32mt[0m[32ma[0m[32mb[32mle[39m[?1l>[?2004l
+.
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mfind[39m [32m-executable[39m[16D[36mt[36mo[36mu[36mc[36mh[39m[39m [39m[1mt[39m[1me[39m[1ms[39m[1mt[39m[1m.[39m[1me[39m[1mx[39m[1me[0m[39m [39m [14D[36mf[36mi[36mn[36md[39m[39m [32m-[0m[32me[0m[32mx[0m[32me[0m[32mc[0m[32mu[0m[32mt[0m[32ma[0m[32mb[32mle[39m[11D[39m[1m.[0m[39m [32m-[32me[32mx[32me[32mc[32mu[32mt[32ma[32mb[32mle[39m[?1l>[?2004l
+.
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[7m[36mdir[39m[7m /s /b [1m[7m[34m*[0m[39m[7m.exe.[27m[16D[27m[36md[27m[36mi[27m[36mr[39m[27m [27m/[27ms[27m [27m/[27mb[27m [27m[1m[34m*[0m[39m[27m.[27me[27mx[27me[27m.[?1l>[?2004l
+dir: cannot access '/s': No such file or directory
+dir: cannot access '/b': No such file or directory
+dir: cannot access '*.exe.': No such file or directory
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mdir[39m /s /b [1m[34m*[0m[39m.exe.[1m[34m*[0m[39m[0m[39m.exe. [1m[34m*[0m[39m[0m[39m.exe. [1m[34m*[0m[39m[0m[39m.exe. [1m[34m*[0m[39m[0m[39m.exe. [1m[34m*[0m[39m[0m[39m.exe. [1m[34m*[0m[39m[0m[39m.exe. [?1l>[?2004l
+dir: cannot access '*.exe.': No such file or directory
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mdir[39m [1m[34m*[0m[39m.exe.[39m[4md[39m[4mi[39m[4mr[4m*[0m[39m[4m.[4me[4mx[4me[4m.[24m [4m*[4m.[4me[4mx[4me[4m.[24m[24m [4md[4m*[4m.[4me[4mx[4me[4m.[24m[24m [4m*[4m.[4me[4mx[4me[4m.[24m[24m [4mf[4m*[4m.[4me[4mx[4me[4m.[24m[4mf[4mi[4m*[4m.[4me[4mx[4me[4m.[24m[4mn[4m*[4m.[4me[4mx[4me[4m.[24m[4md[4m*[4m.[4me[4mx[4me[4m.[24m[24m[36mf[24m[36mi[24m[36mn[24m[36md[39m[24m [24m[1m[34m*[0m[39m[24m.[24me[24mx[24me.[?1l>[?2004l
+find: ‘*.exe.’: No such file or directory
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[7m[36mfind[39m[7m [1m[7m.[0m [7m[32m-type[39m[7m f [7m[32m-executable[39m[7m [7m[32m-print[27m[39m[33D[27m[36mf[27m[36mi[27m[36mn[27m[36md[39m[27m [27m[1m.[0m[27m [27m[32m-[27m[32mt[27m[32my[27m[32mp[27m[32me[39m[27m [27mf[27m [27m[32m-[27m[32me[27m[32mx[27m[32me[27m[32mc[27m[32mu[27m[32mt[27m[32ma[27m[32mb[27m[32ml[27m[32me[39m[27m [27m[32m-[27m[32mp[27m[32mr[27m[32mi[27m[32mn[27m[32mt[39m[?1l>[?2004l
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36ml[39m[36ml[39m[38;2;153;153;153ms[39m[36ml[36ms[39m[?1l>[?2004l
+p01.sh  p03.sh  p05.sh  p07.sh  p09.sh  p11.sh  p13.sh  p15.sh  test.exe
+p02.sh  p04.sh  p06.sh  p08.sh  p10.sh  p12.sh  p14.sh  p16.sh  typescript
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mls[39m[36mf[36mi[36mnd[39m [1m.[0m [32m-type[39m f [32m-executable[39m [32m-print[39m[?1l>[?2004l
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mb[24m[4mb[24m[38;2;153;153;153mash p14.sh[39m[10D[4mb[39m[4ma[24m[4mb[4ma[39m[4ms[24m[24m[36mb[24m[36ma[24m[36ms[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[1m1[39m[1m6[0m[39m [39m [39m [1m6[1m.[0m[1m.[1ms[0m[1ms[1mh[0m[?1l>[?2004l
+.
+./test.exe
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp16.sh[0m[?1l>[?2004l
+Executable files: 
+Directories: 
+.
+Zero-sized files: 
+./test.exe
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mm[24m[4mm[24m[38;2;153;153;153man cal[39m[4mm[39m[4ma[24m[24m[36mm[24m[36ma[36mn[39m[39m [39me[39m [39m cho[?1l>[?2004l
+[?1049h[22;0;0t[55;1H[?1h=[4mECHO[24m(1)                              User Commands                              [4mECHO[24m(1)[m
+[m
+[1mNAME[0m[m
+       echo - display a line of text[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mecho [22m[[4mSHORT-OPTION[24m]... [[4mSTRING[24m]...[m
+       [1mecho [4m[22mLONG-OPTION[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       Echo the STRING(s) to standard output.[m
+[m
+       [1m-n     [22mdo not output the trailing newline[m
+[m
+       [1m-e     [22menable interpretation of backslash escapes[m
+[m
+       [1m-E     [22mdisable interpretation of backslash escapes (default)[m
+[m
+       [1m--help [22mdisplay this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[m
+       If [1m-e [22mis in effect, the following sequences are recognized:[m
+[m
+       \\     backslash[m
+[m
+       \a     alert (BEL)[m
+[m
+       \b     backspace[m
+[m
+       \c     produce no further output[m
+[m
+       \e     escape[m
+[m
+       \f     form feed[m
+[m
+       \n     new line[m
+[m
+       \r     carriage return[m
+[m
+       \t     horizontal tab[m
+[m
+       \v     vertical tab[m
+[m
+       \0NNN  byte with octal value NNN (1 to 3 digits)[m
+[m
+       \xHH   byte with hexadecimal value HH (1 to 2 digits)[m
+[m
+       Your  shell  may have its own version of echo, which usually supersedes the ver‐[m
+       sion described here.  Please refer to your  shell's  documentation  for  details[m
+       about the options it supports.[m
+[m
+       Consider  using  the  'printf'  command instead, as it avoids problems when out‐[m
+[01;33m Manual page echo(1) line 1 (press h for help or q to quit)[0m[K[K[?1l>[?1049l[23;0;0t                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mman[39m echo[8D[36mb[36ma[36ms[36mh[39m [1mp[1m1[1m6[1m.sh[0m[?1l>[?2004l
+
+Executable files: 
+
+Directories: 
+.
+
+Zero-sized files: 
+./test.exe
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mm[24m[4mm[24m[38;2;153;153;153man echo[39m[4mm[39m[4ma[24m[4mm[24m[24m [39m [39m [39m [39m [39m [39m [4mm[24m[38;2;153;153;153man echo[39m[4mm[39m[4mk[24m[39m [39m [39m [39m [39m [39m [38;2;153;153;153mdir PRAC-OS[39m[11D[4mm[4mk[39m[4ms[24m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [10D[4mm[4mk[24m[24m [38;2;153;153;153mdir PRAC-OS[39m[11D[4mm[4mk[39m[4md[24m[4md[39m[4mi[24m[24m[36mm[24m[36mk[24m[36md[24m[36mi[36mr[39m[39m [39m[1mt[0m[39m [39m [39m [39m [39m [39m [1mt[1me[0m[1me[1ms[0m[1ms[1mt[0m[?1l>[?2004l[0mt[0me[0ms[0mt
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mmkdir[39m [1mtest[0m[10D[36mb[36ma[36ms[36mh[39m[39m [1mp[1m1[1m6[1m.[1ms[1mh[0m[?1l>[?2004l
+
+Executable files: 
+
+Directories: 
+.
+./test
+
+Zero-sized files: 
+./test.exe
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[7m[36mchmod[39m[7m +x filename.sh[27m[20D[27m[36mb[27m[36ma[27m[36ms[27m[36mh[39m[27m[39m [27m[1mp[27m[1m1[27m[1m6[27m[1m.[27m[1ms[27m[1mh[0m[27m [27m [27m [27m [27m [27m [27m [27m [27m [9D[11D[36mc[36mh[36mm[36mo[36md[39m[0m [0m+[0mx[0m [0mf[0milename.sh           [1mt[0m[1mt[1me[0m[1me[1ms[0m[1ms[1mt[0m[0mt[0me[0ms[0mt1.exe[?1l>[?2004l
+chmod: cannot access 'test1.exe': No such file or directory
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[1mt[0m[1mt[0m[38;2;153;153;153mouch test.exe[39m[13D[0m[4mt[39m[4mo[24m[4mt[4mo[39m[4mu[24m[4mu[39m[4mc[24m[24m[36mt[24m[36mo[24m[36mu[24m[36mc[36mh[39m[39m [39m[1mt[0m[1mt[39m[1me[0m[1me[39m[1ms[0m[1ms[39m[1mt[0m[0mt[0me[0ms[0mt[39m1[39m [39m [39m [?1l>[?2004l
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mtouch[39m [1mtest1[0m[11D[36mc[36mh[36mm[36mo[36md[39m [0m+[0mx[0m [0mt[0mest1.exe [38;2;153;153;153me[39m [39m [38;2;153;153;153mxe[39m [39m [39m [38;2;153;153;153mexe[39m[1mt[1me[1ms[1mt[1m1[0m [39m [39m [39m [38;2;153;153;153m.exe[39m[39m [39m [39m [39m [?1l>[?2004l
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mchmod[39m +x [1mtest1[0m[14D[36mt[36mo[36mu[36mc[36mh[39m [1mt[1me[1ms[1mt[1m1[0m[0m [0m [0m [11D[36mc[36mh[36mm[36mo[36md[39m [0m+[0mx[0m [0mt[0mest1.exe[18D[36mb[36ma[36ms[36mh[39m[39m [1mp[1m1[1m6[1m.[1ms[1mh[0m       [?1l>[?2004l
+
+Executable files: 
+./test1
+
+Directories: 
+.
+./test
+
+Zero-sized files: 
+./test1
+./test.exe
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[1mt[0m[1mt[0m[38;2;153;153;153mouch test1[39m[10D[0m[4mt[39m[4mo[24m[4mt[4mo[39m[4mu[24m[4mu[39m[4mc[24m[24m[36mt[24m[36mo[24m[36mu[24m[36mc[36mh[39m[39m [39m[1mp[0m[39m [39m [39m [39m [38;2;153;153;153m16.sh[39m[1mp[39m[1m1[0m[0mp[0m1[39m7[39m [39m [39m .e sh[?1l>[?2004l
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4mb[24m[4mb[24m[38;2;153;153;153mash p16.sh[39m[10D[4mb[39m[4ma[24m[4mb[4ma[39m[4ms[24m[24m[36mb[24m[36ma[24m[36ms[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[1m1[39m[1m5[0m[39m [39m [39m [1m5[1m.[0m[1m.[1ms[0m[1ms[1mh[0m[?1l>[?2004l
+Please provide at least one number as an argument.
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp15.sh[0m 1 2 3 1 5[?1l>[?2004l
+Numbers in descending order:
+5
+3
+2
+1
+1
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[36mbash[39m [1mp15.sh[0m 1 2 3 1 5 [38;2;153;153;153m5[39m[39m [38;2;153;153;153m 5[39m [39m [39m [38;2;153;153;153m1 5[39m[39m [39m [39m [38;2;153;153;153m 1 5[39m [39m [39m [39m [39m [38;2;153;153;153m3 1 5[39m[39m [39m [39m [39m [39m [38;2;153;153;153m 3 1 5[39m [39m [39m [39m [39m [39m [39m [38;2;153;153;153m2 3 1 5[39m[39m [39m [39m [39m [39m [39m [39m [8D[38;2;153;153;153m 2 3 1 5[39m[8D [39m [39m [39m [39m [39m [39m [39m [39m [9D[38;2;153;153;153m1 2 3 1 5[39m[9D[39m [39m [39m [39m [39m [39m [39m [39m [39m [10D[38;2;153;153;153m 1 2 3 1 5[39m[10D[1ms[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [11D[38;2;153;153;153mh 1 2 3 1 5[39m[11D[1m.[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [12D[38;2;153;153;153msh 1 2 3 1 5[39m[12D[1m5[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [13D[38;2;153;153;153m.sh 1 2 3 1 5[39m[13D[1m1[0m[0m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [14D[38;2;153;153;153m5.sh 1 2 3 1 5[39m[14D[1m1[39m[1m7[0m[39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [39m [13D[1m7[1m.[0m[1m.[1ms[0m[1ms[1mh[0m[?1l>[?2004l
+Good Morning!
+Thursday, November 14, 2024
+01:33:40 AM
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
+[0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
+└─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[1mt[0m[1mt[0m[38;2;153;153;153mouch p17.sh[39m[11D[0m[4mt[39m[4mo[24m[4mt[4mo[39m[4mu[24m[4mu[39m[4mc[24m[24m[36mt[24m[36mo[24m[36mu[24m[36mc[36mh[39m[39m [39m[1mp[0m[1mp[39m[1m1[0m[0mp[0m1[39m8[39m [39m [39m .sh[?1l>[?2004l
+                                                                                        ]0;kali@kali: ~/Documents/B.TECH-SEMESTERS/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS
 [0m[27m[24m[J[32m┌──([1m[32m[34mkali㉿kali[0m[34m[32m)-[[1m[32m[39m~/…/SEMESTER 03/OS/ASSIGNMENTS/PRAC-OS[0m[32m]
 └─[1m[32m[34m$[0m[34m[39m [K[?1h=[?2004h[4me[24m[4me[24m[38;2;153;153;153mxit[39m[24m[36me[36mx[39m[39m[4me[39m[4mx[39m[4mi[24m[24m[36me[24m[36mx[24m[36mi[36mt[39m[?1l>[?2004l
 
-Script done on 2024-11-13 13:00:38-05:00 [COMMAND_EXIT_CODE="0"]
+Script done on 2024-11-14 01:36:13-05:00 [COMMAND_EXIT_CODE="0"]
