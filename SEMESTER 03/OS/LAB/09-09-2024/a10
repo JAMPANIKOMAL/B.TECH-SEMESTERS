@@ -1,15 +1,8 @@
-echo "Enter your lucky number"
+echo "Enter any number"
 read n
-
-if [ $n -eq 101 ];
+if [[ ( $n -eq 15 || $n -eq 45 ) ]]
 then
-echo "You got 1st prize"
-elif [ $n -eq 510 ];
-then
-echo "You got 2nd prize"
-elif [ $n -eq 999 ];
-then
-echo "You got 3rd prize"
+echo "You won the game"
 else
-echo "Sorry, try for the next time"
+echo "You lost the game"
 fi

@@ -1,8 +1,6 @@
 filename=$1
 if [ -f "$filename" ]; then
-echo 'File Exists"
+echo "File exists"
 else
-echo "File does not exist."
+echo "File does not exist"
 fi
-
-

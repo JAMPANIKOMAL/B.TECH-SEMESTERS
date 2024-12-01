@@ -1,0 +1,7 @@
+Hello World
+This is a test file
+Error in line 3
+Python is awesome
+Another error message
+Linux is great
+Error handling is important

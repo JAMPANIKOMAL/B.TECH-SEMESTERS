@@ -2,7 +2,7 @@
 
 
 read -p "Enter a number: " num
-echo ""
+# echo ""
 
 original_num=$num
 reverse=0
