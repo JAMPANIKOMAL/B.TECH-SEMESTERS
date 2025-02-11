@@ -1,0 +1,46 @@
+su root
+
+systemctl status docker
+
+systemctl start docker
+
+systemctl status docker
+
+docker ps -a
+
+docker pull nginx
+
+lsof -i :80  //to check what is running on port 80
+
+docker run --name docker-nginx -p 80:80 nginx
+
+docker rm $(docker ps -a -q)  // to remove all containers
+
+docker run --name docker-nginx -p 80:80 -d nginx
+
+docker stop docker-nginx
+
+docker rm docker-nginx
+
+mkdir -p ~/docker-nginx/html
+
+cd ~/docker-nginx/html
+
+nano index.html
+
+docker run --name docker-nginx -p 80:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
+
+
+
+
+
+systemctl stop nginx
+
+
+
+
+
+
+CONNECT AMONG UNIVERSITY
+BECOME LINUX NETWORK ADMIN
+WRITE A SCRIPT TO SHOW ALL LOG FILES, THEN USE GREP 
