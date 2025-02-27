@@ -1,52 +1,65 @@
-shopping_cart = []
-product_names = ["Pen", "Pencil", "Eraser", "Pencil Box", "Sharpener", "Compass", "Divider", "Small Scale", "Large Scale"]
+def todo_manager(todo_list, command, item=None):
+    """
+    Manages a todo list based on the provided command.
 
-choice = 0
-while True:
-    print("\nSlect your choice:")
-    print("1. View Available Products")
-    print("2. View your cart")
-    print("3. Add products to your cart")
-    print("4. Delete products from your cart")
-    print("5. Exit")
-    choice = int(input("Enter your choice:"))
+    Args:
+        todo_list: A list of to-do items.
+        command: The command to execute ('add', 'remove', 'complete').
+        item: The item to add, remove, or complete (optional).
 
-    if choice == 1:
-        print("")
-        for i in range(len(product_names)):
-            print(f"{i + 1}. {product_names[i]}", end ="  ")
-        print("")
+    Returns:
+        The modified todo list.
+        Returns error message when invalid command is given or item is not found in remove or complete.
+    """
 
-    elif choice == 2:
-        print("")
-        if len(shopping_cart) != 0:
-            for i in range(len(shopping_cart)):
-                print(f"{i + 1}. {shopping_cart[i]}", end ="  ")
+    if command == 'add':
+        if item is not None:
+            todo_list.append(item)
         else:
-            print("Your Cart is Empty...")
-        print("")
-    
-    elif choice == 3:
-        print("")
-        i = 0
-        for i in range(len(product_names)):
-            print(f"{i + 1}. {product_names[i]}", end ="  ")
-        pid = int(input("Enter the index of product from above to add to your cart:"))
-        shopping_cart.append(product_names[pid - 1])
-        print("Product added to your cart...")
-    
-    elif choice == 4:
-        print("")
-        i = 0
-        for i in range(len(shopping_cart)):
-            print(f"{i + 1}. {shopping_cart[i]}", end ="  ")
-        pid = int(input("Enter the index of product from above to delete from your cart:"))
-        shopping_cart.remove(shopping_cart[pid - 1])
-        print("Product removed from your cart...")
+            return "Error: Item must be provided for 'add' command."
+    elif command == 'remove':
+        if item is not None:
+            if item in todo_list:
+                todo_list.remove(item)
+            else:
+                return f"Error: Item '{item}' not found in the todo list."
+        else:
+            return "Error: Item must be provided for 'remove' command."
 
-    elif choice == 5:
-        print("Exiting...")
-        break
+    elif command == 'complete':
+        if item is not None:
+            if item in todo_list:
+                todo_list.remove(item)
+                todo_list.append(f"[Completed] {item}")
+            else:
+                return f"Error: Item '{item}' not found in the todo list."
+        else:
+            return "Error: Item must be provided for 'complete' command."
 
     else:
-        print("Enter a valid choice!")
+        return "Error: Invalid command. Use 'add', 'remove', or 'complete'."
+
+    return todo_list
+
+# Example usage:
+my_todo_list = ["Buy groceries", "Pay bills", "Write report"]
+
+print("Initial list:", my_todo_list)
+
+result = todo_manager(my_todo_list, "add", "Call dentist")
+print("After adding:", result)
+
+result = todo_manager(my_todo_list, "remove", "Pay bills")
+print("After removing:", result)
+
+result = todo_manager(my_todo_list, "complete", "Write report")
+print("After completing:", result)
+
+result = todo_manager(my_todo_list, "invalid", "anything")
+print("After invalid command:", result)
+
+result = todo_manager(my_todo_list, "remove")
+print("after remove without specifying item:", result)
+
+result = todo_manager(my_todo_list, "complete", "nonexistent item")
+print("after completing non existent item:", result)
