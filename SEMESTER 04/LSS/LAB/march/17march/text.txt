@@ -1,0 +1,9 @@
+Use commands
+
+1. File Management ---> Files, Directories
+2. Network  ---> Nmap, DNS lookup
+3. SED
+4. AWK
+5. Process management and other
+
+All included minimum 200 commands

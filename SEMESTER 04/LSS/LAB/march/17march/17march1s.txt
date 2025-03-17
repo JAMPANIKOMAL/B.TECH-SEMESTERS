@@ -1,0 +1,907 @@
+Script started on 2025-03-17 10:17:05+05:30 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="96" LINES="50"]
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# mv test.txt t2.txt
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# la[Ks
+[?2004l
+c1.txt  t1.txt  t2.txt  [0m[01;34mtest[0m  typescript
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# mv t2.txt test
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls
+[?2004l
+c1.txt  t1.txt  [0m[01;34mtest[0m  typescript
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls test
+[?2004l
+t1.txt  t2.txt  test.txt
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# mv t1.txt t[Ktest
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls
+[?2004l
+c1.txt  [0m[01;34mtest[0m  typescript
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls test
+[?2004l
+t1.txt  t2.txt  test.txt
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cd test
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17march/testroot@u15:/home/u15/Downloads/LSS/17march/test# l[Kmv t1[K[K[K[K[Kcd ..
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# touch t1.txt
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls
+[?2004l
+c1.txt  t1.txt  [0m[01;34mtest[0m  typescript
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# mv -i t1.txt test
+[?2004l
+mv: overwrite 'test/t1.txt'? n
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls
+[?2004l
+c1.txt  t1.txt  [0m[01;34mtest[0m  typescript
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# rm t1.txt
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# touch t1,=[K[K.txt
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls
+[?2004l
+c1.txt  t1.txt  [0m[01;34mtest[0m  typescript
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# rm -i t1.txt
+[?2004l
+rm: remove regular empty file 't1.txt'? n
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# rm -ri test
+[?2004l
+rm: descend into directory 'test'? y
+rm: remove regular file 'test/t1.txt'? n
+rm: remove regular file 'test/test.txt'? n
+rm: remove regular file 'test/t2.txt'? n
+rm: remove directory 'test'? n
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# pwd
+[?2004l
+/home/u15/Downloads/LSS/17march
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cd test
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17march/testroot@u15:/home/u15/Downloads/LSS/17march/test# ls
+[?2004l
+t1.txt  t2.txt  test.txt
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17march/testroot@u15:/home/u15/Downloads/LSS/17march/test# cd ..
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cd -
+[?2004l
+/home/u15/Downloads/LSS/17march/test
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17march/testroot@u15:/home/u15/Downloads/LSS/17march/test# ls
+[?2004l
+t1.txt  t2.txt  test.txt
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17march/testroot@u15:/home/u15/Downloads/LSS/17march/test# cd t[K..
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# basename /hello/world
+[?2004l
+world
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# basename hello/world.txt
+[?2004l
+world.txt
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# basename hello/world.txt txt
+[?2004l
+world.
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# basename hello/world.txt txt.txt
+[?2004l
+world
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# dirname hello/world/hi
+[?2004l
+hello/world
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# mkdir test2
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# mkdir test3/t1/t2
+[?2004l
+mkdir: cannot create directory ‘test3/t1/t2’: No such file or directory
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# mkdir test3/t1/t2[C[C test3/t1/t2- test3/t1/t2p test3/t1/t2
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls
+[?2004l
+c1.txt  t1.txt  [0m[01;34mtest[0m  [01;34mtest2[0m  [01;34mtest3[0m  typescript
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls -r test3
+[?2004l
+[0m[01;34mt1[0m
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls -r test3[1P test3R test3
+[?2004l
+test3:
+[0m[01;34mt1[0m
+
+test3/t1:
+[01;34mt2[0m
+
+test3/t1/t2:
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# mkdir -m 0755 tets[K[Kst4
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls -d test4
+[?2004l
+[0m[01;34mtest4[0m
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls -d test4[K[K[K[K[K[K
+[?2004l
+[0m[01;34m.[0m
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls -d[Cld
+[?2004l
+drwxrwxr-x 6 u15 u15 4096 Mar 17 10:29 [0m[01;34m.[0m
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls -ld tetst[K[K[Kst4
+[?2004l
+drwxr-xr-x 2 root root 4096 Mar 17 10:29 [0m[01;34mtest4[0m
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# rmdir test2
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# rmdir t3[Kest3
+[?2004l
+rmdir: failed to remove 'test3': Directory not empty
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# rmdir -p yt[K[Ktest3
+[?2004l
+rmdir: failed to remove 'test3': Directory not empty
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# rmdir -p test3[K[Kt3/t1/t2
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# ls
+[?2004l
+c1.txt  t1.txt  [0m[01;34mtest[0m  [01;34mtest4[0m  typescript
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# rm -rf test4
+[?2004l
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# nano t1.txt
+[?2004l
+[?2004h[?1049h[22;0;0t[1;50r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[48;42H(B[0;7m[ Reading... ](B[m[48;41H(B[0;7m[ Read 0 lines ](B[m[H(B[0;7m  GNU nano 6.2                                 t1.txt                                           [1;95H(B[m
+[49d(B[0;7m^G(B[m Help[49;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[49;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location
+[50d(B[0;7m^X(B[m Exit[50;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[50;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line
+[2d[?12l[?25h[?25l[1;55H(B[0;7m*[95G(B[m[?12l[?25h
+[2dH[?25l[?12l[?25he[?25l[?12l[?25hl[?25l[?12l[?25hl[?25l[?12l[?25ho[?25l
+[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d[?12l[?25h[?25l[8d[?12l[?25h[?25l[9d[?12l[?25h[?25l[10d[?12l[?25h[?25l[11d[?12l[?25h[?25l[12d[?12l[?25h[?25l[13d[?12l[?25h[?25l[14d[?12l[?25h[?25l[15d[?12l[?25h[?25l[16d[?12l[?25h[?25l[48d[K[17d[?12l[?25h[?25l[18d[?12l[?25h[?25l[19d[?12l[?25h[?25l[20d[?12l[?25h[?25l[21d[?12l[?25h[?25l[22d[?12l[?25h[?25l[23d[?12l[?25h[?25l[24d[?12l[?25h[?25l[25d[?12l[?25h[?25l[26d[?12l[?25h[?25l[27d[?12l[?25h[?25l[28d[?12l[?25h[?25l[29d[?12l[?25h[?25l[30d[?12l[?25h[?25l[31d[?12l[?25h[?25l[32d[?12l[?25h[?25l[?12l[?25hM[?25l[?12l[?25hy[?25l[?12l[?25h [?25l[?12l[?25hn[?25l[?12l[?25ha[?25l[?12l[?25hm[?25l[?12l[?25he[?25l[?12l[?25h [?25l[?12l[?25hi[?25l[?12l[?25hs[?25l[?12l[?25h [?25l[?12l[?25hJ[?25l[?12l[?25ha[?25l[?12l[?25hm[?25l[?12l[?25hp[?25l[?12l[?25ha[?25l[?12l[?25hn[?25l[?12l[?25hi[?25l[?12l[?25h [?25l[?12l[?25hK[?25l[?12l[?25hO[?25l[?12l[?25hm[?25l[?12l[?25ha[?25l[?12l[?25hl[?25l[?12l[?25h [?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25ho[?25l[?12l[?25hm[?25l[?12l[?25ha[?25l[?12l[?25hl[?25l[?12l[?25h [?25l[?12l[?25hC[?25l[?12l[?25hj[?25l[?12l[?25h [?25l[?12l[?25hh[?25l[?12l[?25ho[?25l[?12l[?25hw[?25l[?12l[?25hd[?25l[?12l[?25ha[?25l[?12l[?25hr[?25l[?12l[?25hy[?25l
+[33d[?12l[?25h[?25l[48;42H(B[0;7m[ Writing... ](B[m[1;55H(B[0;7m [95G(B[m[48;40H(B[0;7m[ Wrote 32 lines ](B[m[?12l[?25h
+[33d[?25l[48d[J[50d[?12l[?25h[50;1H[?1049l[23;0;0t
+[?1l>[?2004l[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat t1.txt
+[?2004l
+Hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+My name is Jampani Komal Chowdary
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -I t1.txt
+[?2004l
+cat: invalid option -- 'I'
+Try 'cat --help' for more information.
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -I t1.txt[1P t1.txtT t1.txt
+[?2004l
+Hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+My name is Jampani Komal Chowdary
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -T t1.txt[1P t1.txtE t1.txt
+[?2004l
+Hello$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+My name is Jampani Komal Chowdary$
+$
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -E t1.txt[1P t1.txtv t1.txt
+[?2004l
+Hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+My name is Jampani Komal Chowdary
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -v t1.txt[1P t1.txtn t1.txt
+[?2004l
+     1	Hello
+     2	
+     3	
+     4	
+     5	
+     6	
+     7	
+     8	
+     9	
+    10	
+    11	
+    12	
+    13	
+    14	
+    15	
+    16	
+    17	
+    18	
+    19	
+    20	
+    21	
+    22	
+    23	
+    24	
+    25	
+    26	
+    27	
+    28	
+    29	
+    30	
+    31	My name is Jampani Komal Chowdary
+    32	
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -n t1.txtl t1.txt
+[?2004l
+cat: invalid option -- 'l'
+Try 'cat --help' for more information.
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# nl t1.txt
+[?2004l
+     1	Hello
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+     2	My name is Jampani Komal Chowdary
+       
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -b t1.txtr[K
+[?2004l
+     1	Hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     2	My name is Jampani Komal Chowdary
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -s t1.txt
+[?2004l
+Hello
+
+My name is Jampani Komal Chowdary
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# less t1.txt
+[?2004l
+[?1049h[22;0;0t[?1h=
+Hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+My name is Jampani Komal Chowdary
+
+[7mt1.txt (END)[27m[K
+[K[?1l>[?1049l[23;0;0t[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# b[Knl -b [a|t|n|pR] t1.txt
+[?2004l
+nl: invalid body numbering style: ‘[a’
+Try 'nl --help' for more information.
+n: command not found
+t: command not found
+pR]: command not found
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# head t1.txt
+[?2004l
+Hello
+
+
+
+
+
+
+
+
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# head -n 3 t1.xtx[K[K[Ktxt
+[?2004l
+Hello
+
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# head -n 3 t1.txt[1P[1P
+[?2004l
+Hello
+
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# head -3 t1.txt[1@c[1@ 
+[?2004l
+Hel[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# tail t1.txt
+[?2004l
+
+
+
+
+
+
+
+
+My name is Jampani Komal Chowdary
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# od -w8 t1.txt
+[?2004l
+0000000 062510 066154 005157 005012
+0000010 005012 005012 005012 005012
+*
+0000040 005012 046412 020171 060556
+0000050 062555 064440 020163 060512
+0000060 070155 067141 020151 067513
+0000070 060555 020154 064103 073557
+0000100 060544 074562 005012
+0000106
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# emacs t1.txt
+[?2004l
+Command 'emacs' not found, but can be installed with:
+snap install emacs        # version 29.4, or
+apt  install emacs-gtk    # version 1:27.1+1-3ubuntu5.2
+apt  install emacs-lucid  # version 1:27.1+1-3ubuntu5.2
+apt  install emacs-nox    # version 1:27.1+1-3ubuntu5.2
+apt  install e3           # version 1:2.82+dfsg-2
+apt  install jove         # version 4.17.3.6-2
+See 'snap info emacs' for additional versions.
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# vim t1.txt
+[?2004l
+Command 'vim' not found, but can be installed with:
+apt install vim         # version 2:8.2.3995-1ubuntu2.19, or
+apt install vim-tiny    # version 2:8.2.3995-1ubuntu2.19
+apt install vim-athena  # version 2:8.2.3995-1ubuntu2.19
+apt install vim-gtk3    # version 2:8.2.3995-1ubuntu2.19
+apt install vim-nox     # version 2:8.2.3995-1ubuntu2.19
+apt install neovim      # version 0.6.1-3
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# stat t1.txt
+[?2004l
+  File: t1.txt
+  Size: 70        	Blocks: 8          IO Block: 4096   regular file
+Device: 803h/2051d	Inode: 7736459     Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2025-03-17 10:32:28.347996998 +0530
+Modify: 2025-03-17 10:32:20.806769500 +0530
+Change: 2025-03-17 10:32:20.806769500 +0530
+ Birth: 2025-03-17 10:20:51.429648615 +0530
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# stat -f t1.txt
+[?2004l
+  File: "t1.txt"
+    ID: 277beda7080bbafa Namelen: 255     Type: ext2/ext3
+Block size: 4096       Fundamental block size: 4096
+Blocks: Total: 64099961   Free: 60999800   Available: 57725509
+Inodes: Total: 16351232   Free: 16126734
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# wc t1.txt
+[?2004l
+32  7 70 t1.txt
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# du
+[?2004l
+16	./test
+56	.
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# file t1.txt
+[?2004l
+t1.txt: ASCII text
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# mimetype t1.txt
+[?2004l
+t1.txt: text/plain
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# chown t1.txt
+[?2004l
+chown: missing operand after ‘t1.txt’
+Try 'chown --help' for more information.
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# script[K[K[K[K[K[Kexit
+[?2004l
+exit
+
+Script done on 2025-03-17 10:41:43+05:30 [COMMAND_EXIT_CODE="1"]
+12l[?25ho[?25l
+[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[5d[?12l[?25h[?25l[6d[?12l[?25h[?25l[7d[?12l[?25h[?25l[8d[?12l[?25h[?25l[9d[?12l[?25h[?25l[10d[?12l[?25h[?25l[11d[?12l[?25h[?25l[12d[?12l[?25h[?25l[13d[?12l[?25h[?25l[14d[?12l[?25h[?25l[15d[?12l[?25h[?25l[16d[?12l[?25h[?25l[48d[K[17d[?12l[?25h[?25l[18d[?12l[?25h[?25l[19d[?12l[?25h[?25l[20d[?12l[?25h[?25l[21d[?12l[?25h[?25l[22d[?12l[?25h[?25l[23d[?12l[?25h[?25l[24d[?12l[?25h[?25l[25d[?12l[?25h[?25l[26d[?12l[?25h[?25l[27d[?12l[?25h[?25l[28d[?12l[?25h[?25l[29d[?12l[?25h[?25l[30d[?12l[?25h[?25l[31d[?12l[?25h[?25l[32d[?12l[?25h[?25l[?12l[?25hM[?25l[?12l[?25hy[?25l[?12l[?25h [?25l[?12l[?25hn[?25l[?12l[?25ha[?25l[?12l[?25hm[?25l[?12l[?25he[?25l[?12l[?25h [?25l[?12l[?25hi[?25l[?12l[?25hs[?25l[?12l[?25h [?25l[?12l[?25hJ[?25l[?12l[?25ha[?25l[?12l[?25hm[?25l[?12l[?25hp[?25l[?12l[?25ha[?25l[?12l[?25hn[?25l[?12l[?25hi[?25l[?12l[?25h [?25l[?12l[?25hK[?25l[?12l[?25hO[?25l[?12l[?25hm[?25l[?12l[?25ha[?25l[?12l[?25hl[?25l[?12l[?25h [?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25ho[?25l[?12l[?25hm[?25l[?12l[?25ha[?25l[?12l[?25hl[?25l[?12l[?25h [?25l[?12l[?25hC[?25l[?12l[?25hj[?25l[?12l[?25h [?25l[?12l[?25hh[?25l[?12l[?25ho[?25l[?12l[?25hw[?25l[?12l[?25hd[?25l[?12l[?25ha[?25l[?12l[?25hr[?25l[?12l[?25hy[?25l
+[33d[?12l[?25h[?25l[48;42H(B[0;7m[ Writing... ](B[m[1;55H(B[0;7m [95G(B[m[48;40H(B[0;7m[ Wrote 32 lines ](B[m[?12l[?25h
+[33d[?25l[48d[J[50d[?12l[?25h[50;1H[?1049l[23;0;0t
+[?1l>[?2004l[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat t1.txt
+[?2004l
+Hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+My name is Jampani Komal Chowdary
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -I t1.txt
+[?2004l
+cat: invalid option -- 'I'
+Try 'cat --help' for more information.
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -I t1.txt[1P t1.txtT t1.txt
+[?2004l
+Hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+My name is Jampani Komal Chowdary
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -T t1.txt[1P t1.txtE t1.txt
+[?2004l
+Hello$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
+My name is Jampani Komal Chowdary$
+$
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -E t1.txt[1P t1.txtv t1.txt
+[?2004l
+Hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+My name is Jampani Komal Chowdary
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -v t1.txt[1P t1.txtn t1.txt
+[?2004l
+     1	Hello
+     2	
+     3	
+     4	
+     5	
+     6	
+     7	
+     8	
+     9	
+    10	
+    11	
+    12	
+    13	
+    14	
+    15	
+    16	
+    17	
+    18	
+    19	
+    20	
+    21	
+    22	
+    23	
+    24	
+    25	
+    26	
+    27	
+    28	
+    29	
+    30	
+    31	My name is Jampani Komal Chowdary
+    32	
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -n t1.txtl t1.txt
+[?2004l
+cat: invalid option -- 'l'
+Try 'cat --help' for more information.
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# nl t1.txt
+[?2004l
+     1	Hello
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+     2	My name is Jampani Komal Chowdary
+       
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -b t1.txtr[K
+[?2004l
+     1	Hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     2	My name is Jampani Komal Chowdary
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# cat -s t1.txt
+[?2004l
+Hello
+
+My name is Jampani Komal Chowdary
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# less t1.txt
+[?2004l
+[?1049h[22;0;0t[?1h=
+Hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+My name is Jampani Komal Chowdary
+
+[7mt1.txt (END)[27m[K
+[K[?1l>[?1049l[23;0;0t[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# b[Knl -b [a|t|n|pR] t1.txt
+[?2004l
+nl: invalid body numbering style: ‘[a’
+Try 'nl --help' for more information.
+n: command not found
+t: command not found
+pR]: command not found
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# head t1.txt
+[?2004l
+Hello
+
+
+
+
+
+
+
+
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# head -n 3 t1.xtx[K[K[Ktxt
+[?2004l
+Hello
+
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# head -n 3 t1.txt[1P[1P
+[?2004l
+Hello
+
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# head -3 t1.txt[1@c[1@ 
+[?2004l
+Hel[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# tail t1.txt
+[?2004l
+
+
+
+
+
+
+
+
+My name is Jampani Komal Chowdary
+
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# od -w8 t1.txt
+[?2004l
+0000000 062510 066154 005157 005012
+0000010 005012 005012 005012 005012
+*
+0000040 005012 046412 020171 060556
+0000050 062555 064440 020163 060512
+0000060 070155 067141 020151 067513
+0000070 060555 020154 064103 073557
+0000100 060544 074562 005012
+0000106
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# emacs t1.txt
+[?2004l
+Command 'emacs' not found, but can be installed with:
+snap install emacs        # version 29.4, or
+apt  install emacs-gtk    # version 1:27.1+1-3ubuntu5.2
+apt  install emacs-lucid  # version 1:27.1+1-3ubuntu5.2
+apt  install emacs-nox    # version 1:27.1+1-3ubuntu5.2
+apt  install e3           # version 1:2.82+dfsg-2
+apt  install jove         # version 4.17.3.6-2
+See 'snap info emacs' for additional versions.
+[?2004h]0;root@u15: /home/u15/Downloads/LSS/17marchroot@u15:/home/u15/Downloads/LSS/17march# vim t1.txt
+[?2004l
+Command 'vim' not found, but can be i
