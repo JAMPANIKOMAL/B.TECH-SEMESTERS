@@ -1,0 +1,44 @@
+name: rrugfld06
+description: "Draft 06"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.7.2 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_map: ^8.1.1
+  latlong2: ^0.9.1
+  location: ^8.0.0
+  geolocator: ^14.0.0
+  permission_handler: ^12.0.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.10
+
+flutter:
+  uses-material-design: true
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/RRU-Logo.png"
+
+
+flutter_native_splash:
+  color: "#ffffff" # or dark color if your splash is dark
+  image: assets/RRU-Logo.png
+  android: true
+  ios: true
+  web: false
+  branding: null
+
+
