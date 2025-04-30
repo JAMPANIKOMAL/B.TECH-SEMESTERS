@@ -355,29 +355,36 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 0,
-        title: Padding(
-          padding: const EdgeInsets.only(right: 8.0),
+        title: Container(
+          height: 44,
+          margin: const EdgeInsets.only(right: 8.0),
           child: TextField(
             controller: _searchController,
             decoration: InputDecoration(
               hintText: 'Search facilities...',
-              prefixIcon: const Icon(Icons.search),
-              border: InputBorder.none,
-              hintStyle: TextStyle(color: Colors.grey[400]),
+              hintStyle: TextStyle(color: Theme.of(context).hintColor),
+              prefixIcon: const Icon(Icons.search, color: Colors.grey),
+              contentPadding: const EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+              filled: true,
+              fillColor: Theme.of(context).cardColor.withOpacity(0.9),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(30),
+                borderSide: BorderSide.none,
+              ),
             ),
+            style: const TextStyle(fontSize: 15),
             onChanged: (query) {
               setState(() {
                 _searchQuery = query.toLowerCase();
                 final match = facilities.firstWhere(
-                  (f) => f.name.toLowerCase().contains(_searchQuery),
-                  orElse:
-                      () => Facility(
-                        name: '',
-                        description: '',
-                        location: _rruCenter,
-                        icon: Icons.help,
-                        color: Colors.transparent,
-                      ),
+                      (f) => f.name.toLowerCase().contains(_searchQuery),
+                  orElse: () => Facility(
+                    name: '',
+                    description: '',
+                    location: _rruCenter,
+                    icon: Icons.help,
+                    color: Colors.transparent,
+                  ),
                 );
                 if (match.name.isNotEmpty) {
                   _animatedMapMove(match.location, 19);
@@ -386,7 +393,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
             },
           ),
         ),
-        //title: const Text('RRUG Facility Locator'),
+//title: const Text('RRUG Facility Locator'),
         actions: [
           IconButton(
             onPressed: ThemeManager.toggleTheme,
