@@ -4,11 +4,16 @@ import 'package:flutter/material.dart';
 import '../data/markers.dart';
 
 class FacilityCard extends StatelessWidget {
-  final List<Widget>? actions;
   final Facility facility;
   final VoidCallback onClose;
+  final List<Widget>? actions;
 
-  const FacilityCard({super.key, required this.facility, required this.onClose, this.actions});
+  const FacilityCard({
+    super.key,
+    required this.facility,
+    required this.onClose,
+    this.actions,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -34,14 +39,27 @@ class FacilityCard extends StatelessWidget {
                   children: [
                     Text(
                       facility.name,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
                     ),
                     const SizedBox(height: 4),
-                    Text(facility.description, style: const TextStyle(fontSize: 14)),
+                    Text(
+                      facility.description,
+                      style: const TextStyle(fontSize: 14),
+                    ),
+                    if (actions != null) ...[
+                      const SizedBox(height: 8),
+                      Wrap(spacing: 8, children: actions!),
+                    ]
                   ],
                 ),
               ),
-              IconButton(icon: const Icon(Icons.close), onPressed: onClose),
+              IconButton(
+                icon: const Icon(Icons.close),
+                onPressed: onClose,
+              ),
             ],
           ),
         ),

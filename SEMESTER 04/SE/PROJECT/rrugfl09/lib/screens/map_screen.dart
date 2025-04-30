@@ -153,7 +153,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
     }
   }
 
-  
+
   Future<void> _openInGoogleMaps(LatLng dest) async {
     final url = Uri.parse("https://www.google.com/maps/dir/?api=1&destination=${dest.latitude},${dest.longitude}&travelmode=walking");
     if (await canLaunchUrl(url)) {
@@ -182,7 +182,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
   }
 
 
-void _animatedMapMove(LatLng destLocation, double destZoom) {
+  void _animatedMapMove(LatLng destLocation, double destZoom) {
     final latTween = Tween<double>(begin: _mapController.camera.center.latitude, end: destLocation.latitude);
     final lngTween = Tween<double>(begin: _mapController.camera.center.longitude, end: destLocation.longitude);
     final zoomTween = Tween<double>(begin: _mapController.camera.zoom, end: destZoom);
@@ -226,7 +226,7 @@ void _animatedMapMove(LatLng destLocation, double destZoom) {
               setState(() {
                 _searchQuery = query.toLowerCase();
                 final match = facilities.firstWhere(
-                  (f) => f.name.toLowerCase().contains(_searchQuery),
+                      (f) => f.name.toLowerCase().contains(_searchQuery),
                   orElse: () => Facility(
                     name: '',
                     description: '',
@@ -320,10 +320,10 @@ void _animatedMapMove(LatLng destLocation, double destZoom) {
               builder: (context, visible, _) => visible
                   ? LegendCard(onClose: () => _legendVisible.value = false)
                   : IconButton(
-                      icon: const Icon(Icons.push_pin_outlined),
-                      tooltip: 'Show Legend',
-                      onPressed: () => _legendVisible.value = true,
-                    ),
+                icon: const Icon(Icons.push_pin_outlined),
+                tooltip: 'Show Legend',
+                onPressed: () => _legendVisible.value = true,
+              ),
             ),
           ),
         ],
