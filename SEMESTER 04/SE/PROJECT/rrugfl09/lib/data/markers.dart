@@ -63,9 +63,16 @@ final List<Facility> facilities = [
 
 // Generate markers from facilities
 List<Marker> buildFacilityMarkers(Function(Facility) onTap, Map<String, bool> categoryFilter) {
-  return facilities.map((facility) {
+  return facilities.where((facility) {
+    if (facility.icon == Icons.restaurant && !(categoryFilter['Food Stalls'] ?? true)) return false;
+    if (facility.icon == Icons.wc && !(categoryFilter['Restrooms'] ?? true)) return false;
+    if (facility.icon == Icons.school && !(categoryFilter['Academic Buildings'] ?? true)) return false;
+    if (facility.icon == Icons.water_drop && !(categoryFilter['Water Sources'] ?? true)) return false;
+    if (facility.icon == Icons.place && !(categoryFilter['Miscellaneous'] ?? true)) return false;
+    return true;
+  }).map((facility) {
     return Marker(
-      width: 160.0, // Increased width to avoid overflow
+      width: 160.0,
       height: 50.0,
       point: facility.location,
       child: GestureDetector(

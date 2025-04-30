@@ -265,7 +265,11 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
               minZoom: 14.0,
               maxZoom: 21.0,
               cameraConstraint: CameraConstraint.contain(bounds: bounds),
+              interactionOptions: const InteractionOptions(
+                flags: InteractiveFlag.pinchZoom | InteractiveFlag.drag | InteractiveFlag.doubleTapZoom,
+              ),
             ),
+
             children: [
               TileLayer(
                 urlTemplate: Theme.of(context).brightness == Brightness.dark
