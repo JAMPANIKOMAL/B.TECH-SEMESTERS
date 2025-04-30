@@ -84,6 +84,10 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
     setState(() => _isLocating = true);
     try {
       final loc.LocationData locationData = await location.getLocation();
+      if (locationData.latitude == null || locationData.longitude == null) {
+        throw Exception("Location data is null");
+      }
+
       setState(() {
         _currentLocation = locationData;
         _currentLocationMarker = Marker(
@@ -103,9 +107,12 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
       });
     } catch (e) {
       setState(() => _isLocating = false);
-      debugPrint('Error fetching location: $e');
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Failed to get location: $e')),
+      );
     }
   }
+
 
   void _animatedRotateToNorth() {
     final rotationTween = Tween<double>(
@@ -156,9 +163,12 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
 
   Future<void> _openInGoogleMaps(LatLng dest) async {
     final url = Uri.parse("https://www.google.com/maps/dir/?api=1&destination=${dest.latitude},${dest.longitude}&travelmode=walking");
-    if (await canLaunchUrl(url)) {
-      await launchUrl(url, mode: LaunchMode.externalApplication);
-    } else {
+    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Could not open Google Maps")),
+      );
+    }
+ else {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Could not open Google Maps")),
       );
@@ -294,10 +304,15 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
               onClose: () => setState(() => _selectedFacility = null),
               actions: [
                 ElevatedButton.icon(
-                  onPressed: () {
-                    _getCurrentLocation().then((_) {
+                  onPressed: () async {
+                    await _getCurrentLocation();
+                    if (_currentLocation != null) {
                       _startInAppNavigation(_selectedFacility!.location);
-                    });
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text("Location not available. Grant permission or enable GPS.")),
+                      );
+                    }
                   },
                   icon: const Icon(Icons.navigation),
                   label: const Text("Navigate"),
@@ -305,10 +320,15 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                 ),
                 const SizedBox(width: 8),
                 ElevatedButton.icon(
-                  onPressed: () {
-                    _getCurrentLocation().then((_) {
+                  onPressed: () async {
+                    await _getCurrentLocation();
+                    if (_currentLocation != null) {
                       _openInGoogleMaps(_selectedFacility!.location);
-                    });
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text("Cannot open Google Maps without location.")),
+                      );
+                    }
                   },
                   icon: const Icon(Icons.map_outlined),
                   label: const Text("Google Maps"),
@@ -316,6 +336,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                 ),
               ],
             ),
+
           Positioned(
             top: 16,
             right: 16,

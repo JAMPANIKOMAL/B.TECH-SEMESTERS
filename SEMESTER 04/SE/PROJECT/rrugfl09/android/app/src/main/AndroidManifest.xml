@@ -40,12 +40,20 @@
 
     </application>
 
-    <!-- Queries for processing text -->
     <queries>
+        <!-- Intent filter for processing text -->
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:scheme="https" />
             <data android:mimeType="text/plain"/>
         </intent>
+
+        <!-- Intent filter for viewing URLs -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
     </queries>
+
 
 </manifest>
