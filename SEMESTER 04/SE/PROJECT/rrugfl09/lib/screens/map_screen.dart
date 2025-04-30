@@ -63,6 +63,7 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
   final LatLng _rruCenter = LatLng(23.1535, 72.8850);
   final double _initialZoom = 17.0;
   final double _currentLocationZoom = 19.0;
+  double _currentZoomLevel = 17.0;
   bool _locationPermissionGranted = false;
   bool _isLocating = false;
   final Map<String, bool> _categoryFilter = {
@@ -141,9 +142,11 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
       if (event is MapEventMove || event is MapEventRotate) {
         setState(() {
           _mapRotation = _mapController.camera.rotation;
+          _currentZoomLevel = _mapController.camera.zoom; // 👈 track zoom here
         });
       }
     });
+
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _mapController.moveAndRotate(_rruCenter, _initialZoom, 0);
     });
@@ -440,11 +443,14 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
               MarkerLayer(
                 markers: [
                   if (_currentLocationMarker != null) _currentLocationMarker!,
-                  ...buildFacilityMarkers((facility) {
-                    setState(() => _selectedFacility = facility);
-                  }, _categoryFilter),
+                  ...buildFacilityMarkers(
+                        (facility) => setState(() => _selectedFacility = facility),
+                    _categoryFilter,
+                    _currentZoomLevel,
+                  ),
                 ],
               ),
+
               PolylineLayer(
                 polylines: [
                   if (_routePoints.isNotEmpty)

@@ -51,6 +51,73 @@ final List<Facility> facilities = [
     icon: Icons.school,
     showLabel: true,
   ),
+
+  Facility(
+    name: 'SISPP',
+    description: 'School of Internal Security and Police Practices',
+    location: LatLng(23.15325, 72.88511),
+    color: Colors.red,
+    icon: Icons.school,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'SBSFI',
+    description: 'School of Behavioural Sciences and Forensic Investigations',
+    location: LatLng(23.15350, 72.88511),
+    color: Colors.red,
+    icon: Icons.school,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'SASET',
+    description: 'School of Applied Sciences and Engineering Technology',
+    location: LatLng(23.15350, 72.88547),
+    color: Colors.red,
+    icon: Icons.school,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'SBSFI',
+    description: 'School of Behavioural Sciences and Forensic Investigations',
+    location: LatLng(23.15353, 72.88581),
+    color: Colors.red,
+    icon: Icons.school,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'SCLML',
+    description: 'School of Criminal Law and Military Law',
+    location: LatLng(23.15353, 72.88625),
+    color: Colors.red,
+    icon: Icons.school,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'SITAICS',
+    description: 'School of Information Technology, Artificial Intelligence, and Cyber Security',
+    location: LatLng(23.15356, 72.88669),
+    color: Colors.red,
+    icon: Icons.school,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'BCORE',
+    description: 'Bharat Centre for Operational Research and Engineering',
+    location: LatLng(23.15367, 72.88764),
+    color: Colors.red,
+    icon: Icons.school,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'SISDSS',
+    description: 'School of Internal Security, Defence, and Strategic Studies',
+    location: LatLng(23.15181, 72.88386),
+    color: Colors.red,
+    icon: Icons.school,
+    showLabel: true,
+  ),
+
+
   Facility(
     name: 'Miscellaneous Point',
     description: 'Other facility or landmark.',
@@ -62,21 +129,30 @@ final List<Facility> facilities = [
 ];
 
 // Generate markers from facilities
-List<Marker> buildFacilityMarkers(Function(Facility) onTap, Map<String, bool> categoryFilter) {
+List<Marker> buildFacilityMarkers(
+    Function(Facility) onTap,
+    Map<String, bool> categoryFilter,
+    double zoomLevel,
+    ) {
   return facilities.where((facility) {
+    // Category filtering
     if (facility.icon == Icons.restaurant && !(categoryFilter['Food Stalls'] ?? true)) return false;
     if (facility.icon == Icons.wc && !(categoryFilter['Restrooms'] ?? true)) return false;
     if (facility.icon == Icons.school && !(categoryFilter['Academic Buildings'] ?? true)) return false;
     if (facility.icon == Icons.water_drop && !(categoryFilter['Water Sources'] ?? true)) return false;
     if (facility.icon == Icons.place && !(categoryFilter['Miscellaneous'] ?? true)) return false;
+
+    // 👇 Zoom-based visibility logic:
+    if (facility.icon == Icons.school && zoomLevel < 17.0) return false;
+
     return true;
   }).map((facility) {
     return Marker(
-      width: 160.0,
-      height: 50.0,
-      point: facility.location,
-      child: GestureDetector(
-        onTap: () => onTap(facility),
+        width: 160.0,
+        height: 50.0,
+        point: facility.location,
+        child: GestureDetector(
+            onTap: () => onTap(facility),
         child: Container(
           constraints: const BoxConstraints(maxWidth: 160),
           child: Row(
