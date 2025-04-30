@@ -1,4 +1,4 @@
-// ignore_for_file: use_build_context_synchronously, curly_braces_in_flow_control_structures
+// ignore_for_file: use_build_context_synchronously, curly_braces_in_flow_control_structures, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
@@ -25,6 +25,7 @@ class MapScreen extends StatefulWidget {
 
 class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
   final MapController _mapController = MapController();
+
 
   // Future<LatLng?> _getNearestRoutablePoint(LatLng point) async {
   //   const String apiKey =
@@ -139,13 +140,16 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
     super.initState();
     _requestLocationPermission();
     _mapController.mapEventStream.listen((event) {
+      print('Zoom updated: ${_mapController.camera.zoom}');
       if (event is MapEventMove || event is MapEventRotate) {
         setState(() {
           _mapRotation = _mapController.camera.rotation;
-          _currentZoomLevel = _mapController.camera.zoom; // 👈 track zoom here
+          _currentZoomLevel = _mapController.camera.zoom;
         });
       }
     });
+
+
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _mapController.moveAndRotate(_rruCenter, _initialZoom, 0);
@@ -446,10 +450,11 @@ class _MapScreenState extends State<MapScreen> with TickerProviderStateMixin {
                   ...buildFacilityMarkers(
                         (facility) => setState(() => _selectedFacility = facility),
                     _categoryFilter,
-                    _currentZoomLevel,
+                    _currentZoomLevel, // 👈 zoom passed here
                   ),
                 ],
               ),
+
 
               PolylineLayer(
                 polylines: [

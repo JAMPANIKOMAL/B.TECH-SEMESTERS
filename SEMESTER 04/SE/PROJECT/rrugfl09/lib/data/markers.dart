@@ -1,6 +1,9 @@
+// ignore_for_file: unused_import, avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
+import 'dart:math';
 
 class Facility {
   final String name;
@@ -43,14 +46,14 @@ final List<Facility> facilities = [
     color: Colors.green,
     icon: Icons.restaurant,
   ),
-  Facility(
-    name: 'Academic Block A',
-    description: 'Engineering department building.',
-    location: LatLng(23.1535, 72.8855),
-    color: Colors.red,
-    icon: Icons.school,
-    showLabel: true,
-  ),
+  // Facility(
+  //   name: 'Academic Block A',
+  //   description: 'Engineering department building.',
+  //   location: LatLng(23.1535, 72.8855),
+  //   color: Colors.red,
+  //   icon: Icons.school,
+  //   showLabel: true,
+  // ),
 
   Facility(
     name: 'SISPP',
@@ -60,6 +63,143 @@ final List<Facility> facilities = [
     icon: Icons.school,
     showLabel: true,
   ),
+  Facility(
+    name: 'Parking Lot',
+    description: 'Parking Lot',
+    location: LatLng(23.15414, 72.88328),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Main Gate',
+    description: 'Main Gate',
+    location: LatLng(23.15500, 72.88458),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Footbal Ground',
+    description: 'Footbal Ground',
+    location: LatLng(23.15561, 72.88592),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Helipad',
+    description: 'Helipad',
+    location: LatLng(23.15217, 72.88211),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Lake view point',
+    description: 'Lake view point',
+    location: LatLng(23.15300, 72.88492),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Handball court',
+    description: 'Handball court',
+    location: LatLng(23.15406, 72.88561),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Vollyball court',
+    description: 'Vollyball court',
+    location: LatLng(23.15420, 72.88683),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Gym',
+    description: 'Gym',
+    location: LatLng(23.15181, 72.88356),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Open Gym',
+    description: 'Open Gym',
+    location: LatLng(23.15458, 72.88689),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Cricket Ground',
+    description: 'Cricket Ground',
+    location: LatLng(23.15542, 72.88403),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Water Tank',
+    description: 'Water Tank',
+    location: LatLng(23.15150, 72.88317),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Open air theater',
+    description: 'Open air theater',
+    location: LatLng(23.15150, 72.88317),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Microwave Tower',
+    description: 'Microwave Tower',
+    location: LatLng(23.15150, 72.88497),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Guest Room-1',
+    description: 'Guest Room-1',
+    location: LatLng(23.15253, 72.88431),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Guest Room-2',
+    description: 'Guest Room-2',
+    location: LatLng(23.15122, 72.88131),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Auditorium',
+    description: 'Auditorium',
+    location: LatLng(23.15428, 72.88472),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+  Facility(
+    name: 'Admin',
+    description: 'Admin',
+    location: LatLng(23.15397, 72.88511),
+    color: Colors.deepPurple,
+    icon: Icons.place,
+    showLabel: true,
+  ),
+
   Facility(
     name: 'SBSFI',
     description: 'School of Behavioural Sciences and Forensic Investigations',
@@ -94,7 +234,8 @@ final List<Facility> facilities = [
   ),
   Facility(
     name: 'SITAICS',
-    description: 'School of Information Technology, Artificial Intelligence, and Cyber Security',
+    description:
+        'School of Information Technology, Artificial Intelligence, and Cyber Security',
     location: LatLng(23.15356, 72.88669),
     color: Colors.red,
     icon: Icons.school,
@@ -117,7 +258,6 @@ final List<Facility> facilities = [
     showLabel: true,
   ),
 
-
   Facility(
     name: 'Miscellaneous Point',
     description: 'Other facility or landmark.',
@@ -134,7 +274,7 @@ List<Marker> buildFacilityMarkers(
     Map<String, bool> categoryFilter,
     double zoomLevel,
     ) {
-  return facilities.where((facility) {
+  final filtered = facilities.where((facility) {
     // Category filtering
     if (facility.icon == Icons.restaurant && !(categoryFilter['Food Stalls'] ?? true)) return false;
     if (facility.icon == Icons.wc && !(categoryFilter['Restrooms'] ?? true)) return false;
@@ -142,65 +282,74 @@ List<Marker> buildFacilityMarkers(
     if (facility.icon == Icons.water_drop && !(categoryFilter['Water Sources'] ?? true)) return false;
     if (facility.icon == Icons.place && !(categoryFilter['Miscellaneous'] ?? true)) return false;
 
-    // 👇 Zoom-based visibility logic:
-    if (facility.icon == Icons.school && zoomLevel < 17.0) return false;
+    // Dynamic hash-based zoom filtering
+    final hash = facility.name.hashCode.abs() % 10;
+    if (zoomLevel >= 18.0) {
+      // show all markers
+      return true;
+    }
+
+// Zoomed out — filter some markers
+    return hash <= 4; // show only ~50% when zoomed out
+
 
     return true;
-  }).map((facility) {
+  }).toList();
+
+  print('Zoom level: $zoomLevel, displaying ${filtered.length} markers');
+
+  return filtered.map((facility) {
     return Marker(
-        width: 160.0,
-        height: 50.0,
-        point: facility.location,
-        child: GestureDetector(
-            onTap: () => onTap(facility),
-        child: Container(
-          constraints: const BoxConstraints(maxWidth: 160),
-          child: Row(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: facility.color,
-                  shape: BoxShape.circle,
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black26,
-                      spreadRadius: 2,
-                      blurRadius: 5,
-                    ),
-                  ],
-                ),
-                padding: const EdgeInsets.all(6),
-                child: Icon(
-                  facility.icon,
-                  color: Colors.white,
-                  size: 20,
-                ),
+      width: 160.0,
+      height: 50.0,
+      point: facility.location,
+      child: GestureDetector(
+        onTap: () => onTap(facility),
+        child: Row(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: facility.color,
+                shape: BoxShape.circle,
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black26,
+                    spreadRadius: 2,
+                    blurRadius: 5,
+                  ),
+                ],
               ),
-              if (facility.showLabel)
-                Flexible(
-                  child: Container(
-                    margin: const EdgeInsets.only(left: 6),
-                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(6),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.black26,
-                          blurRadius: 4,
-                        ),
-                      ],
-                    ),
-                    child: Text(
-                      facility.name,
-                      overflow: TextOverflow.ellipsis,
-                      softWrap: false,
-                      style: const TextStyle(fontSize: 12, color: Colors.black),
-                    ),
+              padding: const EdgeInsets.all(6),
+              child: Icon(
+                facility.icon,
+                color: Colors.white,
+                size: 20,
+              ),
+            ),
+            if (facility.showLabel)
+              Flexible(
+                child: Container(
+                  margin: const EdgeInsets.only(left: 6),
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(6),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 4,
+                      ),
+                    ],
+                  ),
+                  child: Text(
+                    facility.name,
+                    overflow: TextOverflow.ellipsis,
+                    softWrap: false,
+                    style: const TextStyle(fontSize: 12, color: Colors.black),
                   ),
                 ),
-            ],
-          ),
+              ),
+          ],
         ),
       ),
     );
