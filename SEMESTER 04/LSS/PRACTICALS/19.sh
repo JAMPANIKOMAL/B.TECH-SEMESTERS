@@ -2,7 +2,7 @@
 
 failed_login_count()
 {
-    grep "Failed password" /var/log/auth.log | wc -l
+    journalctl | grep "Failed password" | wc -l
 }
 
 failed_login_count
