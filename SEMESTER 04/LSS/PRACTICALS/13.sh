@@ -2,7 +2,7 @@
 
 extract_errors()
 {
-    grep -i "error" /var/log/syslog
+    journalctl -p err -b
 }
 
 extract_errors

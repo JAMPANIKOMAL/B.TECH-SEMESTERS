@@ -7,7 +7,7 @@ log_uptime_users()
         uptime >> uptime_log.txt
         who | wc -l >> uptime_log.txt
         echo "---" >> uptime_log.txt
-        sleep 300
+        sleep 3
     done
 }
 
