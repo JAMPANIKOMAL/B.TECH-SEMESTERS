@@ -1,0 +1,19 @@
+CPU:
+%Cpu(s):  8.7 us,  7.6 sy,  0.0 ni, 83.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+
+Memory:
+               total        used        free      shared  buff/cache   available
+Mem:           7.7Gi       1.9Gi       4.9Gi        71Mi       1.4Gi       5.9Gi
+Swap:          8.0Gi          0B       8.0Gi
+
+Disk:
+Filesystem      Size  Used Avail Use% Mounted on
+udev            3.9G     0  3.9G   0% /dev
+tmpfs           791M  1.3M  790M   1% /run
+/dev/sda1       188G   17G  162G  10% /
+tmpfs           3.9G   50M  3.9G   2% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           3.9G   32K  3.9G   1% /tmp
+tmpfs           1.0M     0  1.0M   0% /run/credentials/getty@tty1.service
+tmpfs           791M  124K  791M   1% /run/user/1000

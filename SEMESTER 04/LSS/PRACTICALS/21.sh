@@ -1,17 +1,19 @@
 #!/bin/bash
 
-resource_report()
+report_file="/tmp/sys_report.txt"
+
 {
-    {
-        echo "CPU:"
-        top -bn1 | grep "Cpu(s)"
-        echo -e "\nMemory:"
-        free -h
-        echo -e "\nDisk:"
-        df -h
-    } > report.txt
+    echo "System Report - $(date)"
+    echo "=============================="
+    echo -e "\nCPU Usage:"
+    top -bn1 | grep "Cpu(s)"
+    echo -e "\nMemory Usage:"
+    free -h
+    echo -e "\nDisk Usage:"
+    df -h
+} > "$report_file"
 
-    echo "Report generated and saved to report.txt"
-}
+# Send the report via email
+cat "$report_file" | mail -s "System Report" admin@example.com
 
-resource_report
+echo "Report sent to admin@example.com"
