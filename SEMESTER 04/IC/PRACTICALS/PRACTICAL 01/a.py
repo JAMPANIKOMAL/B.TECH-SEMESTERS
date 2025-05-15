@@ -8,7 +8,6 @@ key = int(input("Enter your key: "))
 ct = ""
 
 for x in mt:
-    ct = ct+chr((ord(x) + key))
+    ct = ct+chr((ord(x) + key % 26))
 
-print("Your cipher text is: ", ct)
-
+print("Your cipher text is:", ct)
