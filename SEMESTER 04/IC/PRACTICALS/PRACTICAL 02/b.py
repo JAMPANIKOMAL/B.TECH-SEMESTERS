@@ -9,3 +9,5 @@ okey = key
 pt = pt.lower().replace(" ", "").replace("j", "i")
 key = key.lower().replace(" ", "").replace("j", "i")
 
+matrix = [[], [], [], [], []]
+
