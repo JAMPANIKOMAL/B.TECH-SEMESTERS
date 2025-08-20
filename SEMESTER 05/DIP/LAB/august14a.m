@@ -1,4 +1,4 @@
-% Aim: Histogram equilisation without using built-in function like
+% Aim: Histogram equilisation without using built-in function like 10a
 
 clc;
 clear;

@@ -1,4 +1,4 @@
-% Aim: To apply distance measure 3 (Euclidean, City Block, Chess Board Distance)
+% Aim: To apply distance measure 3 (Euclidean, City Block, Chess Board Distance) 10b
 
 clc;
 clear;
