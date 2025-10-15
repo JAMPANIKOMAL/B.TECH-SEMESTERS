@@ -11,12 +11,11 @@ end
 figure;
 imshow(img);
 title('Grayscale Image');
-disp(img);
 
-id = im2double(img);
-disp(id);
+img_double = im2double(img);
+
 r = 60;
 c = 105;
-intensity = id(r, c);
+intensity = img_double(r, c);
 
-fprintf("Pixel value at row position %d, col position %d is %.4f\n", r, c, intensity);
+fprintf('Pixel value at row %d, column %d is %.4f\n', r, c, intensity);
