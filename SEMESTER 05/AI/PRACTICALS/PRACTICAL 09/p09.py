@@ -12,20 +12,30 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 IMG_SIZE = (128, 128) # Resize all images to this
 BATCH_SIZE = 32
 
-def preprocess(img, label):
-    """Resize and normalize images."""
-    img = tf.image.resize(img, IMG_SIZE)
+def preprocess(features):
+    """Resize, normalize images, and set label."""
+    # This dataset has 'species' (1=Cat, 2=Dog)
+    # We convert this to 0 (Cat) and 1 (Dog)
+    img = tf.image.resize(features['image'], IMG_SIZE)
     img = tf.cast(img, tf.float32) / 255.0
+    label = features['species'] - 1
     return img, label
 
 # --- 2. Load and Prepare Dataset ---
 def load_dataset():
-    """Loads a small subset of cats_vs_dogs dataset."""
-    print("Loading dataset from TensorFlow Datasets...")
-    # Load 1000 for training, 200 for validation
-    # This dataset labels: 0=cat, 1=dog
-    ds_train = tfds.load('cats_vs_dogs', split='train[:1000]', as_supervised=True)
-    ds_val = tfds.load('cats_vs_dogs', split='train[1000:1200]', as_supervised=True)
+    """Loads the 'oxford_iiit_pet' dataset and filters for cats/dogs."""
+    print("Loading 'oxford_iiit_pet' dataset from TensorFlow Datasets...")
+    
+    # Load the dataset. 'as_supervised=False' gives us the feature dictionary.
+    ds_train, ds_val = tfds.load(
+        'oxford_iiit_pet',
+        split=['train[:80%]', 'train[80%:]'],
+        as_supervised=False # We need the 'species' feature
+    )
+
+    # Filter for cats (1) and dogs (2) only.
+    ds_train = ds_train.filter(lambda x: x['species'] != 3)
+    ds_val = ds_val.filter(lambda x: x['species'] != 3)
 
     print(f"Loaded {len(ds_train)} training images and {len(ds_val)} validation images.")
     
