@@ -1,12 +1,16 @@
+# Practical 09: Build, Train, and Apply a CNN for Cat/Dog Classification
+# Save this file as p09.py
+
 import tensorflow as tf
 import tensorflow_datasets as tfds
-from tensorflow.keras import layers, models
-from tensorflow.keras.preprocessing import image
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 import os
+import warnings
 
-# Suppress TensorFlow logging (optional, for cleaner output)
+# Suppress TensorFlow C++ level warnings and general warnings
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+warnings.filterwarnings('ignore')
 
 # --- 1. Define Image Size and Preprocessing ---
 IMG_SIZE = (128, 128) # Resize all images to this
@@ -26,10 +30,12 @@ def load_dataset():
     """Loads the 'oxford_iiit_pet' dataset and filters for cats/dogs."""
     print("Loading 'oxford_iiit_pet' dataset from TensorFlow Datasets...")
     
-    # Load the dataset. 'as_supervised=False' gives us the feature dictionary.
+    # We use a fixed split based on the dataset's actual size (3680 images)
+    # to avoid the 'incompatible slice' error.
+    # 80% for train (2944), 20% for validation (736).
     ds_train, ds_val = tfds.load(
         'oxford_iiit_pet',
-        split=['train[:80%]', 'train[80%:]'],
+        split=['train[:2944]', 'train[2944:]'], # 2944 for train, 736 for val
         as_supervised=False # We need the 'species' feature
     )
 
@@ -37,7 +43,7 @@ def load_dataset():
     ds_train = ds_train.filter(lambda x: x['species'] != 3)
     ds_val = ds_val.filter(lambda x: x['species'] != 3)
 
-    print(f"Loaded {len(ds_train)} training images and {len(ds_val)} validation images.")
+    print(f"Loaded training and validation images.")
     
     # Apply preprocessing and batching
     ds_train = ds_train.map(preprocess).batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
@@ -46,62 +52,56 @@ def load_dataset():
 
 # --- 3. Build the 3-Layer CNN Model ---
 def build_model():
-    """Builds a simple 3-layer CNN."""
+    """Builds a 3-layer CNN model."""
     print("Building 3-layer CNN model...")
-    model = models.Sequential([
-        # Input layer (shape matches our resized images)
-        layers.Input(shape=(IMG_SIZE[0], IMG_SIZE[1], 3)),
+    model = tf.keras.models.Sequential([
+        # Input Layer
+        tf.keras.layers.Input(shape=(IMG_SIZE[0], IMG_SIZE[1], 3)),
         
-        # Layer 1
-        layers.Conv2D(32, (3, 3), activation='relu'),
-        layers.MaxPooling2D((2, 2)),
+        # 1st Conv Layer
+        tf.keras.layers.Conv2D(32, (3, 3), activation='relu'),
+        tf.keras.layers.MaxPooling2D(2, 2),
         
-        # Layer 2
-        layers.Conv2D(64, (3, 3), activation='relu'),
-        layers.MaxPooling2D((2, 2)),
+        # 2nd Conv Layer
+        tf.keras.layers.Conv2D(64, (3, 3), activation='relu'),
+        tf.keras.layers.MaxPooling2D(2, 2),
         
-        # Layer 3
-        layers.Conv2D(128, (3, 3), activation='relu'),
-        layers.MaxPooling2D((2, 2)),
+        # 3rd Conv Layer
+        tf.keras.layers.Conv2D(128, (3, 3), activation='relu'),
+        tf.keras.layers.MaxPooling2D(2, 2),
         
-        # Classifier layers
-        layers.Flatten(),
-        layers.Dense(128, activation='relu'),
-        layers.Dense(1, activation='sigmoid') # Sigmoid for binary (cat/dog)
+        # Flatten and Dense Layers
+        tf.keras.layers.Flatten(),
+        tf.keras.layers.Dense(512, activation='relu'),
+        tf.keras.layers.Dense(1, activation='sigmoid') # 1 output: 0 for Cat, 1 for Dog
     ])
     
     model.compile(
         optimizer='adam',
-        loss='binary_crossentropy',
+        loss='binary_crossentropy', # Use binary_crossentropy for 2 classes
         metrics=['accuracy']
     )
     return model
 
-# --- 4. Function to Classify a Local Image ---
-def classify_local_image(image_path, model):
-    """Loads, preprocesses, and classifies a single local image."""
+# --- 4. Classify a Local Image ---
+def classify_local_image(model, image_path):
+    """Loads a local image, preprocesses it, and predicts."""
     try:
-        if not os.path.exists(image_path):
-            print(f"Error: Image path not found: {image_path}")
-            return
-
-        print(f"\nClassifying image: {image_path}")
-        
-        img = image.load_img(image_path, target_size=IMG_SIZE)
-        img_array = image.img_to_array(img)
+        img = load_img(image_path, target_size=IMG_SIZE)
+        img_array = img_to_array(img)
+        img_array = tf.expand_dims(img_array, 0) # Create a batch
         img_array = img_array / 255.0 # Normalize
-        img_batch = np.expand_dims(img_array, axis=0) # Create batch
-        
-        prediction = model.predict(img_batch, verbose=0)[0][0]
+
+        prediction = model.predict(img_array)
         
         print("\n--- Prediction Result ---")
-        if prediction < 0.5:
-            print(f"Result: CAT ({100*(1-prediction):.2f}%)")
+        if prediction[0] > 0.5:
+            print(f"Prediction: DOG ({prediction[0][0]*100:.2f}%)")
         else:
-            print(f"Result: DOG ({100*prediction:.2f}%)")
+            print(f"Prediction: CAT ({(1-prediction[0][0])*100:.2f}%)")
             
     except Exception as e:
-        print(f"Error processing {image_path}: {e}")
+        print(f"Error classifying image: {e}")
 
 # --- Main Execution ---
 print("--- Practical 09: Build & Train a CNN ---")
@@ -111,27 +111,27 @@ try:
     
     # 2. Build Model
     model = build_model()
-    model.summary() # Print model structure
+    model.summary()
     
     # 3. Train Model
     print("\n--- Starting Model Training ---")
-    # We train for only 3 epochs so it finishes quickly
-    model.fit(
+    EPOCHS = 5
+    history = model.fit(
         ds_train,
-        validation_data=ds_val,
-        epochs=3
+        epochs=EPOCHS,
+        validation_data=ds_val
     )
-    print("--- Model Training Finished ---")
+    print("--- Model Training Complete ---")
 
-    # 4. Get User Image and Classify
-    print("\nPlease provide the full path to a cat or dog image to test.")
-    user_image_path = input("Enter image path: ")
-    classify_local_image(user_image_path, model)
+    # 4. Classify User Image
+    print("\nPlease provide the full path to a cat or dog image.")
+    image_path = input("Enter image path: ")
+    
+    if os.path.exists(image_path):
+        classify_local_image(model, image_path)
+    else:
+        print("Error: File path not found.")
 
-except ImportError:
-    print("\n--- ERROR ---")
-    print("This practical requires TensorFlow and TensorFlow Datasets.")
-    print("Please install them using: pip install tensorflow tensorflow-datasets")
 except Exception as e:
     print(f"\nAn error occurred: {e}")
     print("Please ensure you have an internet connection to download the dataset.")
