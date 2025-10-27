@@ -1,71 +1,129 @@
 import tensorflow as tf
-from tensorflow.keras.applications import MobileNetV2
+import tensorflow_datasets as tfds
+from tensorflow.keras import layers, models
 from tensorflow.keras.preprocessing import image
-from tensorflow.keras.applications.mobilenet_v2 import preprocess_input, decode_predictions
 import numpy as np
 import os
 
 # Suppress TensorFlow logging (optional, for cleaner output)
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
+# --- 1. Define Image Size and Preprocessing ---
+IMG_SIZE = (128, 128) # Resize all images to this
+BATCH_SIZE = 32
+
+def preprocess(img, label):
+    """Resize and normalize images."""
+    img = tf.image.resize(img, IMG_SIZE)
+    img = tf.cast(img, tf.float32) / 255.0
+    return img, label
+
+# --- 2. Load and Prepare Dataset ---
+def load_dataset():
+    """Loads a small subset of cats_vs_dogs dataset."""
+    print("Loading dataset from TensorFlow Datasets...")
+    # Load 1000 for training, 200 for validation
+    # This dataset labels: 0=cat, 1=dog
+    ds_train = tfds.load('cats_vs_dogs', split='train[:1000]', as_supervised=True)
+    ds_val = tfds.load('cats_vs_dogs', split='train[1000:1200]', as_supervised=True)
+
+    print(f"Loaded {len(ds_train)} training images and {len(ds_val)} validation images.")
+    
+    # Apply preprocessing and batching
+    ds_train = ds_train.map(preprocess).batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
+    ds_val = ds_val.map(preprocess).batch(BATCH_SIZE).prefetch(tf.data.AUTOTUNE)
+    return ds_train, ds_val
+
+# --- 3. Build the 3-Layer CNN Model ---
+def build_model():
+    """Builds a simple 3-layer CNN."""
+    print("Building 3-layer CNN model...")
+    model = models.Sequential([
+        # Input layer (shape matches our resized images)
+        layers.Input(shape=(IMG_SIZE[0], IMG_SIZE[1], 3)),
+        
+        # Layer 1
+        layers.Conv2D(32, (3, 3), activation='relu'),
+        layers.MaxPooling2D((2, 2)),
+        
+        # Layer 2
+        layers.Conv2D(64, (3, 3), activation='relu'),
+        layers.MaxPooling2D((2, 2)),
+        
+        # Layer 3
+        layers.Conv2D(128, (3, 3), activation='relu'),
+        layers.MaxPooling2D((2, 2)),
+        
+        # Classifier layers
+        layers.Flatten(),
+        layers.Dense(128, activation='relu'),
+        layers.Dense(1, activation='sigmoid') # Sigmoid for binary (cat/dog)
+    ])
+    
+    model.compile(
+        optimizer='adam',
+        loss='binary_crossentropy',
+        metrics=['accuracy']
+    )
+    return model
+
+# --- 4. Function to Classify a Local Image ---
 def classify_local_image(image_path, model):
     """Loads, preprocesses, and classifies a single local image."""
     try:
-        # Check if the file exists
         if not os.path.exists(image_path):
             print(f"Error: Image path not found: {image_path}")
             return
 
         print(f"\nClassifying image: {image_path}")
-
-        # Load and resize the image (MobileNetV2 uses 224x224)
-        img = image.load_img(image_path, target_size=(224, 224))
         
-        # Convert image to numpy array
+        img = image.load_img(image_path, target_size=IMG_SIZE)
         img_array = image.img_to_array(img)
+        img_array = img_array / 255.0 # Normalize
+        img_batch = np.expand_dims(img_array, axis=0) # Create batch
         
-        # Expand dimensions to create a "batch" of 1
-        img_batch = np.expand_dims(img_array, axis=0)
+        prediction = model.predict(img_batch, verbose=0)[0][0]
         
-        # Preprocess the image for the model
-        img_preprocessed = preprocess_input(img_batch)
-        
-        # Make prediction
-        predictions = model.predict(img_preprocessed, verbose=0)
-        
-        # Decode the prediction
-        decoded = decode_predictions(predictions, top=3)[0]
-        
-        print("Top 3 predictions:")
-        for i, (imagenet_id, label, score) in enumerate(decoded):
-            print(f"{i+1}: {label} ({score*100:.2f}%)")
+        print("\n--- Prediction Result ---")
+        if prediction < 0.5:
+            print(f"Result: CAT ({100*(1-prediction):.2f}%)")
+        else:
+            print(f"Result: DOG ({100*prediction:.2f}%)")
             
     except Exception as e:
         print(f"Error processing {image_path}: {e}")
 
-print("--- Practical 09: CNN Image Classification ---")
-
-# --- 1. Load Pre-trained Model ---
-print("Loading pre-trained MobileNetV2 model...")
-# We load the model once to be efficient
+# --- Main Execution ---
+print("--- Practical 09: Build & Train a CNN ---")
 try:
-    model = MobileNetV2(weights='imagenet')
-    print("Model loaded successfully.")
+    # 1. Load Data
+    ds_train, ds_val = load_dataset()
     
-    # --- 2. Get Image Path from User ---
-    # We will ask the user for a local file path
-    print("\nPlease provide the full path to a cat or dog image.")
-    user_image_path = input("Enter image path: ")
+    # 2. Build Model
+    model = build_model()
+    model.summary() # Print model structure
+    
+    # 3. Train Model
+    print("\n--- Starting Model Training ---")
+    # We train for only 3 epochs so it finishes quickly
+    model.fit(
+        ds_train,
+        validation_data=ds_val,
+        epochs=3
+    )
+    print("--- Model Training Finished ---")
 
-    # --- 3. Classify the Local Image ---
+    # 4. Get User Image and Classify
+    print("\nPlease provide the full path to a cat or dog image to test.")
+    user_image_path = input("Enter image path: ")
     classify_local_image(user_image_path, model)
 
 except ImportError:
     print("\n--- ERROR ---")
-    print("This practical requires TensorFlow.")
-    print("Please install it using: pip install tensorflow")
+    print("This practical requires TensorFlow and TensorFlow Datasets.")
+    print("Please install them using: pip install tensorflow tensorflow-datasets")
 except Exception as e:
-    print(f"\nAn error occurred during model loading: {e}")
-    print("Please ensure you have an internet connection to download the model weights.")
+    print(f"\nAn error occurred: {e}")
+    print("Please ensure you have an internet connection to download the dataset.")
 
 print("\n--- End of Practical 09 ---")
