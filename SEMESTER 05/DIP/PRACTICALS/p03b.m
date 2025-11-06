@@ -2,27 +2,35 @@ clc;
 clear;
 close all;
 
-i = imread('sample/cameraman.jpeg');
-ad = im2double(i);
+img = imread('sample/cameraman.jpeg');
+
+if size(img, 3) == 3
+    img = rgb2gray(img);
+end
+
+img_double = im2double(img);
+
 nbits = 2;
 levels = 2^nbits;
-steps = 1/levels;
-bins = floor(ad/steps);
-qv = (bins * steps) + (steps / 2);
-qvimg = im2uint8(qv);
+steps = 1 / levels;
 
+bins = floor(img_double / steps);
+quantized_values = (bins * steps) + (steps / 2);
+quantized_img = im2uint8(quantized_values);
+
+figure;
 subplot(2, 2, 1);
-imshow(i);
+imshow(img);
 title('Original Image');
 
 subplot(2, 2, 2);
-imhist(i);
+imhist(img);
 title('Histogram of Original');
 
 subplot(2, 2, 3);
-imshow(qvimg);
-title('Quantized Image');
+imshow(quantized_img);
+title('Quantized Image (2-bit, 4 Levels)');
 
 subplot(2, 2, 4);
-imhist(qvimg);
-title('Histogram of Quantized Image');
+imhist(quantized_img);
+title('Histogram of Quantized');
