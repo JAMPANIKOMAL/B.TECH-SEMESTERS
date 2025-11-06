@@ -2,38 +2,43 @@ clc;
 clear;
 close all;
 
-i = imread('sample/cameraman.jpeg');
-j = imread('sample/badminton.jpg');
+img1 = imread('sample/badminton.jpg');
+img2 = imread('sample/basketball.jpeg');
 
-[r, c, ch] = size(i);
-j = imresize(j, [r, c]);
+img1_gray = rgb2gray(img1);
+[r, c] = size(img1_gray);
+img2_gray_resized = imresize(rgb2gray(img2), [r, c]);
 
-disp('Select an operation:');
-disp('1. And');
-disp('2. Or');
-disp('3. Not');
-disp('4. XOR');
+fprintf('Select a Bitwise Operation:\n');
+fprintf('1. AND\n');
+fprintf('2. OR\n');
+fprintf('3. NOT (on Image 1)\n');
+fprintf('4. XOR\n');
 
 choice = input('Enter your choice (1-4): ');
 
-result = [];
+figure;
 
 switch choice
     case 1
-        result = bitand(i, j);
+        result = bitand(img1_gray, img2_gray_resized);
+        subplot(1, 3, 1); imshow(img1_gray); title('Image 1');
+        subplot(1, 3, 2); imshow(img2_gray_resized); title('Image 2');
+        subplot(1, 3, 3); imshow(result); title('Result (Bitwise AND)');
     case 2
-        result = bitor(i, j);
+        result = bitor(img1_gray, img2_gray_resized);
+        subplot(1, 3, 1); imshow(img1_gray); title('Image 1');
+        subplot(1, 3, 2); imshow(img2_gray_resized); title('Image 2');
+        subplot(1, 3, 3); imshow(result); title('Result (Bitwise OR)');
     case 3
-        result = bitcmp(i);
+        result = bitcmp(img1_gray);
+        subplot(1, 2, 1); imshow(img1_gray); title('Original Image');
+        subplot(1, 2, 2); imshow(result); title('Result (Bitwise NOT)');
     case 4
-        result = bitxor(i, j);
+        result = bitxor(img1_gray, img2_gray_resized);
+        subplot(1, 3, 1); imshow(img1_gray); title('Image 1');
+        subplot(1, 3, 2); imshow(img2_gray_resized); title('Image 2');
+        subplot(1, 3, 3); imshow(result); title('Result (Bitwise XOR)');
     otherwise
-        disp('Invalid choice. Please select a valid operation.');
-end
-
-subplot(1, 3, 1); imshow(i); title('Image 1');
-subplot(1, 3, 2); imshow(j); title('Image 2');
-
-if ~isempty(result)
-    subplot(1, 3, 3); imshow(result); title('Result');
+        disp('Invalid choice. Please run the script again.');
 end

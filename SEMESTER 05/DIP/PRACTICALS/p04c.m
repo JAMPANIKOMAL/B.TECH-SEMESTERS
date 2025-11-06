@@ -2,25 +2,25 @@ clc;
 clear;
 close all;
 
-i = imread('sample/badminton.jpg');
+img = imread('sample/car.jpeg');
 
-r = i(:,:,1);
-g = i(:,:,2);
-b = i(:,:,3);
+R = img(:, :, 1);
+G = img(:, :, 2);
+B = img(:, :, 3);
 
 figure;
-subplot(2,2,1);
-imshow(i);
-title('Original');
+subplot(2, 2, 1);
+imshow(img);
+title('Original RGB Image');
 
-subplot(2,2,2);
-imshow(r);
-title('Red component');
+subplot(2, 2, 2);
+imshow(R);
+title('Red Channel');
 
-subplot(2,2,3);
-imshow(b);
-title('Blue component');
+subplot(2, 2, 3);
+imshow(G);
+title('Green Channel');
 
-subplot(2,2,4);
-imshow(g);
-title('Green component');
+subplot(2, 2, 4);
+imshow(B);
+title('Blue Channel');
