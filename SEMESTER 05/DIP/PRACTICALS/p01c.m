@@ -2,14 +2,15 @@ clc;
 clear;
 close all;
 
-i = imread('sample/badminton.jpg');
-j = rgb2gray(i);
+img_rgb = imread('sample/badminton.jpg');
+
+img_gray = rgb2gray(img_rgb);
 
 figure;
 subplot(1, 2, 1);
-imshow(i);
-title('Original RGB');
+imshow(img_rgb);
+title('Original RGB Image');
 
 subplot(1, 2, 2);
-imshow(j);
-title('Gray Scale');
+imshow(img_gray);
+title('Grayscale Image');
