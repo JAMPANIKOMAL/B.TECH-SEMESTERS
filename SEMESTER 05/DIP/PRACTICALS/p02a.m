@@ -2,34 +2,36 @@ clc;
 clear;
 close all;
 
-i = imread('sample/badminton.jpg');
-j = rgb2gray(i);
-k = imbinarize(j);
-l = rgb2ycbcr(i);
-m = rgb2hsv(i);
-n = 1 - im2double(i); 
+img_rgb = imread('sample/badminton.jpg');
+
+img_gray = rgb2gray(img_rgb);
+img_bw = imbinarize(img_gray);
+img_ycbcr = rgb2ycbcr(img_rgb);
+img_hsv = rgb2hsv(img_rgb);
+img_cmy = imcomplement(im2double(img_rgb));
 
 figure;
+
 subplot(2, 3, 1);
-imshow(i);
-title('Original RGB');
+imshow(img_rgb);
+title('RGB (Original)');
 
 subplot(2, 3, 2);
-imshow(j);
-title('Gray Scale');
+imshow(img_gray);
+title('Grayscale');
 
 subplot(2, 3, 3);
-imshow(k);
+imshow(img_bw);
 title('Black & White');
 
 subplot(2, 3, 4);
-imshow(l);
+imshow(img_ycbcr);
 title('YCbCr');
 
 subplot(2, 3, 5);
-imshow(m);
+imshow(img_hsv);
 title('HSV');
 
 subplot(2, 3, 6);
-imshow(n);
+imshow(img_cmy);
 title('CMY');
