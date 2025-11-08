@@ -2,7 +2,7 @@ clc;
 clear;
 close all;
 
-img = imread('sample/cameraman.jpeg');
+img = imread('sample/17A.jpg');
 
 if size(img, 3) == 3
     img = rgb2gray(img);
